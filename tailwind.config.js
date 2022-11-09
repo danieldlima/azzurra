@@ -10,13 +10,17 @@ module.exports = {
         'azzurra-navy-blue': '#242e63',
         'azzurra-dark-blue': '#0f1337',
         'azzurra-gold': '#bf9638',
+        'azzurra-opaque-gold': '#ddca96',
       },
       backgroundImage: {
-        'gradient-linear': 'linear-gradient(180deg, rgba(0,0,0,0.2511379551820728) 0%, rgba(0,0,0,0) 62%)',
+        'gradient-linear': 'linear-gradient(180deg, rgba(255,255,255,0.75) 5%, rgba(255,255,255,0) 60%)',
         'gradient-light': 'radial-gradient(circle, rgb(255 255 255 / 70%) 0%, rgb(255 255 255 / 0%) 50%)',
       },
       backgroundPosition: {
         brandHighlights: 'center 18px'
+      },
+      maxWidth: {
+        boxPdf: '18.5rem'
       }
     },
   },

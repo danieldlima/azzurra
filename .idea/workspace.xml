@@ -4,17 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f52c6ca-1be1-47f0-ae31-ceefa39145e8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/gatsby-browser.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/azzurra__brand-main.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/azzurra__hero-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/global.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/home.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby-config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/icon.png" beforeDir="false" />
+    <list default="true" id="7f52c6ca-1be1-47f0-ae31-ceefa39145e8" name="Changes" comment="feat(root): create hero layout">
+      <change afterPath="$PROJECT_DIR$/src/images/azzurra__ic__anbima--1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/azzurra__ic__anbima--2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/azzurra__ic__mail.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/azzurra__ic__pdf.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +34,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/famil/Dev/clientes/Murilhas/Azzurra/azzurra-initial/src/assets/images",
+    "last_opened_file_path": "C:/Users/famil/Dev/clientes/Murilhas/Azzurra/azzurra-initial/src/images",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -50,6 +47,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\src\images" />
       <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\src\assets\images" />
       <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\src" />
       <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\public\static" />
@@ -70,11 +68,24 @@
       <updated>1667949643132</updated>
       <workItem from="1667949644173" duration="902000" />
       <workItem from="1667951003540" duration="300000" />
-      <workItem from="1667951408049" duration="14791000" />
+      <workItem from="1667951408049" duration="15506000" />
+      <workItem from="1668005451222" duration="6187000" />
     </task>
+    <task id="LOCAL-00001" summary="feat(root): create hero layout">
+      <created>1667971988256</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1667971988256</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat(root): create hero layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(root): create hero layout" />
   </component>
 </project>
