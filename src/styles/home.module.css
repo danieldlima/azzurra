@@ -1,0 +1,39 @@
+html {
+    font-family: 'Tajawal', sans-serif;
+
+    --azzurra-navy-blue: #242e63;
+    --azzurra-dark-blue: #0f1337;
+    --azzurra-gold: #bf9638;
+}
+
+body {
+    background-color: var(--azzurra-navy-blue);
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container__hero {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container__brand-wrapper {
+    position: relative;
+}
+
+.container__brand-wrapper svg {
+    width: 100%;
+}
+
+.backgroundImage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}

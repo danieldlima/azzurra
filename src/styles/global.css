@@ -1,0 +1,6 @@
+@import "home.module.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
