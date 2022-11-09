@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  important: '#___gatsby',
   content: [
     "./src/pages/**/*.{js,jsx,ts,tsx}",
     "./src/components/**/*.{js,jsx,ts,tsx}",
@@ -10,6 +11,7 @@ module.exports = {
         'azzurra-navy-blue': '#242e63',
         'azzurra-dark-blue': '#0f1337',
         'azzurra-gold': '#bf9638',
+        'azzurra-dark-gold': '#9f7b34',
         'azzurra-opaque-gold': '#ddca96',
       },
       backgroundImage: {

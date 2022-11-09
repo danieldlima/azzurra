@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f52c6ca-1be1-47f0-ae31-ceefa39145e8" name="Changes" comment="feat(root): create hero layout">
-      <change afterPath="$PROJECT_DIR$/src/images/azzurra__ic__anbima--1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/azzurra__ic__anbima--2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/azzurra__ic__mail.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/azzurra__ic__pdf.svg" afterDir="false" />
+    <list default="true" id="7f52c6ca-1be1-47f0-ae31-ceefa39145e8" name="Changes" comment="feat(home): created column of the Regulatory Documents">
+      <change afterPath="$PROJECT_DIR$/src/static/azzurra__hero-bg.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/home.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/home.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +32,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/famil/Dev/clientes/Murilhas/Azzurra/azzurra-initial/src/images",
+    "last_opened_file_path": "C:/Users/famil/Dev/clientes/Murilhas/Azzurra/azzurra-initial/src/static",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -47,10 +45,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\src\static" />
+      <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\public" />
+      <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\public\static" />
       <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\src\images" />
       <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\src\assets\images" />
-      <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\src" />
-      <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\public\static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\src" />
@@ -69,7 +68,7 @@
       <workItem from="1667949644173" duration="902000" />
       <workItem from="1667951003540" duration="300000" />
       <workItem from="1667951408049" duration="15506000" />
-      <workItem from="1668005451222" duration="6187000" />
+      <workItem from="1668005451222" duration="18521000" />
     </task>
     <task id="LOCAL-00001" summary="feat(root): create hero layout">
       <created>1667971988256</created>
@@ -78,7 +77,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667971988256</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat(home): created column of the Regulatory Documents">
+      <created>1668012957792</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668012957792</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -86,6 +92,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat(root): create hero layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(root): create hero layout" />
+    <MESSAGE value="feat(home): created column of the Regulatory Documents" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(home): created column of the Regulatory Documents" />
   </component>
 </project>
