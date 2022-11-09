@@ -4,12 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f52c6ca-1be1-47f0-ae31-ceefa39145e8" name="Changes" comment="feat(home): created column of the Regulatory Documents">
-      <change afterPath="$PROJECT_DIR$/src/static/azzurra__hero-bg.jpg" afterDir="false" />
+    <list default="true" id="7f52c6ca-1be1-47f0-ae31-ceefa39145e8" name="Changes" comment="refactor(home): finished the home page layout">
+      <change afterPath="$PROJECT_DIR$/src/components/Icons/AzzurraBrand/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Icons/Mail/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Icons/PdfFile/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/azzurra__brand-main.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/azzurra__ic__mail.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/azzurra__ic__pdf.svg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/home.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/home.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/azzurra__hero-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/azzurra__hero-bg.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +37,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/famil/Dev/clientes/Murilhas/Azzurra/azzurra-initial/src/static",
+    "last_opened_file_path": "C:/Users/famil/Dev/clientes/Murilhas/Azzurra/azzurra-initial/static/images",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -45,14 +50,16 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\static\images" />
       <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\src\static" />
       <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\public" />
       <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\public\static" />
       <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\src\images" />
-      <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\src\assets\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\src" />
+      <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\static" />
+      <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial" />
       <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\src\styles" />
       <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\src\assets\images" />
     </key>
@@ -68,7 +75,7 @@
       <workItem from="1667949644173" duration="902000" />
       <workItem from="1667951003540" duration="300000" />
       <workItem from="1667951408049" duration="15506000" />
-      <workItem from="1668005451222" duration="18521000" />
+      <workItem from="1668005451222" duration="22848000" />
     </task>
     <task id="LOCAL-00001" summary="feat(root): create hero layout">
       <created>1667971988256</created>
@@ -84,7 +91,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668012957792</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="refactor(home): finished the home page layout">
+      <created>1668033838531</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668033838531</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,6 +107,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat(root): create hero layout" />
     <MESSAGE value="feat(home): created column of the Regulatory Documents" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(home): created column of the Regulatory Documents" />
+    <MESSAGE value="refactor(home): finished the home page layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor(home): finished the home page layout" />
   </component>
 </project>

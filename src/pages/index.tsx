@@ -2,17 +2,13 @@ import * as React from "react"
 import type {HeadFC, PageProps} from "gatsby";
 import {StaticImage} from "gatsby-plugin-image";
 
-// @ts-ignore
-import {ReactComponent as Brand} from '../images/azzurra__brand-main.svg'
-
-// @ts-ignore
-import {ReactComponent as IcPdf} from '../images/azzurra__ic__pdf.svg'
-
-// @ts-ignore
-import {ReactComponent as IcMail} from '../images/azzurra__ic__mail.svg'
+import AzzurraBrand from "../components/Icons/AzzurraBrand";
+import PdfFile from "../components/Icons/PdfFile";
+import Mail from "../components/Icons/Mail";
 
 // @ts-ignore
 import * as styles from '../styles/home.module.css';
+
 
 const IndexPage: React.FC<PageProps> = () => {
     return (
@@ -31,7 +27,7 @@ const IndexPage: React.FC<PageProps> = () => {
                         <div className="flex flex-col md:flex-row items-center lg:items-start mb-6 md:mb-16">
                             <div className="container__brand-wrapper flex-auto basis-1/4">
                                 <div className="w-64 md:w-80 px-6">
-                                    <Brand />
+                                    <AzzurraBrand />
                                 </div>
                             </div>
 
@@ -53,9 +49,9 @@ const IndexPage: React.FC<PageProps> = () => {
                                         <span className="block font-bold">Regulatórios</span>
                                     </h2>
 
-                                    <a href="../static/azzurra__hero-bg.jpg" download className="max-w-boxPdf mx-auto md:mx-0 p-3 rounded flex flex-row items-center bg-azzurra-opaque-gold hover:bg-azzurra-gold ease-in-out duration-200 cursor-pointer mb-6v md:mb-6">
-                                        <div className="w-7">
-                                            <IcPdf />
+                                    <a href="/images/azzurra__hero-bg.jpg" download className="max-w-boxPdf mx-auto md:mx-0 p-3 rounded flex flex-row items-center bg-azzurra-opaque-gold hover:bg-azzurra-gold ease-in-out duration-200 cursor-pointer mb-6v md:mb-6">
+                                        <div className="w-7 text-white">
+                                            <PdfFile />
                                         </div>
                                         <p className="font-normal text-sm md:text-lg text-black leading-none ml-3">
                                             <span className="block leading-none">
@@ -130,7 +126,7 @@ const IndexPage: React.FC<PageProps> = () => {
 
                                     <div className="text-white max-w-boxPdf p-3 rounded mx-auto md:mx-0 flex flex-row items-center hover:bg-azzurra-dark-gold bg-azzurra-gold ease-in-out duration-200 cursor-pointer mb-10 md:mb-0">
                                         <div className="w-7">
-                                            <IcMail />
+                                            <Mail />
                                         </div>
                                         <a href="mailto:contato@azzurra.com.br" className="block text-lg font-light ml-3">
                                             Envie sua mensagem
