@@ -2,8 +2,6 @@ import * as React from 'react'
 import type {HeadFC, PageProps} from 'gatsby';
 import {StaticImage} from 'gatsby-plugin-image';
 
-import AzzurraBrand from '../components/Icons/AzzurraBrand';
-import PdfFile from '../components/Icons/PdfFile';
 import Mail from '../components/Icons/Mail';
 
 // @ts-ignore
@@ -127,15 +125,15 @@ const IndexPage: React.FC<PageProps> = () => {
                 </span>
 
                 <span className="block">
-                  Conj. 81 - Jardim Paulista
+                  ConJ. 81 - Edifício JK Tower
                 </span>
 
                 <span className="block">
-                  São Paulo – SP
+                  Itaim Bibi - São Paulo - SP
                 </span>
 
                 <span className="block">
-                  CEP 04542-000
+                  CEP: 04542-000
                 </span>
               </p>
             </div>
@@ -162,7 +160,19 @@ export const Head: HeadFC = () => {
         href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
         rel="stylesheet"/>
 
-      <title>Home Page</title>
+      <title>Azzurra Capital - Nosso site está em construção</title>
+
+      <meta property="og:locale" content="pt_BR" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Azzurra Capital" />
+      <meta property="og:description" content="Azzurra Capital - Construindo e preservando seu patrimônio, juntos!" />
+      <meta property="og:url" content="http://azzurracapital.com.br/" />
+      <meta property="og:site_name" content="Azzurra Capital" />
+      <meta property="og:image" content="http://azzurracapital.com.br/images/azzurra__social-media.jpg" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="628" />
+      <meta property="og:image:type" content="image/jpg" />
+      <meta name="twitter:card" content="summary_large_image" />
     </>
   );
 }
