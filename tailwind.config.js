@@ -13,6 +13,7 @@ module.exports = {
         'azzurra-gold': '#bf9638',
         'azzurra-dark-gold': '#9f7b34',
         'azzurra-opaque-gold': '#ddca96',
+        'azzurra-gray-70': '#828180',
       },
       backgroundImage: {
         'gradient-linear': 'linear-gradient(180deg, rgba(255,255,255,0.75) 5%, rgba(255,255,255,0) 60%)',
@@ -23,6 +24,14 @@ module.exports = {
       },
       maxWidth: {
         boxPdf: '18.5rem'
+      },
+      spacing: {
+        width: {
+          'w-screen': '100vw',
+        },
+        height: {
+          'h-screen': '100vh',
+        },
       }
     },
   },

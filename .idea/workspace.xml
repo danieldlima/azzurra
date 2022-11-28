@@ -4,15 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f52c6ca-1be1-47f0-ae31-ceefa39145e8" name="Changes" comment="refactor(images): updated .gitignore file to ignore IDE settings">
-      <change afterPath="$PROJECT_DIR$/src/components/Buttons/ButtonLink/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ContentPage/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Icons/ArrowLeft/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="7f52c6ca-1be1-47f0-ae31-ceefa39145e8" name="Changes" comment="feat(pages): created NotFound page">
+      <change afterPath="$PROJECT_DIR$/src/components/DocumentFileCard/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/documents/11. Política de Conheça Seu Cliente e Prevenção e Combate à Lavagem de Dinheiro.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/documents/12. Código de Ética.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/documents/13. Regras, Procedimentos e Descrição dos Controles Internos.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/documents/14. Política de Compra e Venda de Valores Mobiliários.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/documents/15. Manual Previsto no art. 25 da Instrução CVM 558_15.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/documents/16. Política de Gestão de Riscos.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/documents/17. Política de Rateio e Divisão de Ordens.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/documents/5. Formulário de Referência.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icons/Mail/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icons/Mail/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/404.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/404.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContentPage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContentPage/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/home.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/home.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +42,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/famil/Dev/clientes/Murilhas/Azzurra/azzurra-initial/static/images",
+    "last_opened_file_path": "C:/Users/famil/Dev/clientes/Murilhas/Azzurra/azzurra-initial/static/documents",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -48,11 +55,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\static\documents" />
       <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\static\images" />
       <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\src\static" />
       <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\public" />
       <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\public\static" />
-      <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\src\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\src\components\Buttons\ButtonLink" />
@@ -73,7 +80,9 @@
       <workItem from="1667949644173" duration="902000" />
       <workItem from="1667951003540" duration="300000" />
       <workItem from="1667951408049" duration="15506000" />
-      <workItem from="1668005451222" duration="28687000" />
+      <workItem from="1668005451222" duration="29945000" />
+      <workItem from="1669260064782" duration="4899000" />
+      <workItem from="1669596588211" duration="7123000" />
     </task>
     <task id="LOCAL-00001" summary="feat(root): create hero layout">
       <created>1667971988256</created>
@@ -110,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668037993084</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="feat(pages): created NotFound page">
+      <created>1668043836729</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1668043836729</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,6 +138,7 @@
     <MESSAGE value="refactor(home): finished the home page layout" />
     <MESSAGE value="refactor(images): converted the SVG file in a component React" />
     <MESSAGE value="refactor(images): updated .gitignore file to ignore IDE settings" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor(images): updated .gitignore file to ignore IDE settings" />
+    <MESSAGE value="feat(pages): created NotFound page" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(pages): created NotFound page" />
   </component>
 </project>

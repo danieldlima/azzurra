@@ -1,19 +1,23 @@
 html {
     font-family: 'Tajawal', sans-serif;
 
-    --azzurra-navy-blue: #242e63;
-    --azzurra-dark-blue: #0f1337;
-    --azzurra-gold: #bf9638;
+    --color-white: #ffffff;
+    --color-black: #000000;
+
+    --color-azzurra-navy-blue: #242e63;
+    --color-azzurra-dark-blue: #0f1337;
+    --color-azzurra-gold: #bf9638;
+    --color-azzurra-gray-70: #828180;
 }
 
 body {
-    background-color: var(--azzurra-dark-blue);
+    min-height: 100vh;
+    background-color: var(--color-azzurra-dark-blue);
 }
 
 .container {
+    width: 100%;
     position: relative;
-    width: 100vw;
-    height: 100vh;
 }
 
 .container__hero {
@@ -34,4 +38,16 @@ body {
 
 .backgroundImage {
     position: absolute !important;
+}
+
+.download-card__wrapper {
+    color: var(--color-azzurra-gray-70);
+}
+
+.download-card__wrapper:hover .download-card__icon {
+    color: var(--color-black);
+}
+
+.download-card__wrapper .download-card__icon + span {
+    line-height: 1.2 !important;
 }
