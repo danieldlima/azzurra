@@ -4,22 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f52c6ca-1be1-47f0-ae31-ceefa39145e8" name="Changes" comment="feat(pages): created NotFound page">
-      <change afterPath="$PROJECT_DIR$/src/components/DocumentFileCard/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/documents/11. Política de Conheça Seu Cliente e Prevenção e Combate à Lavagem de Dinheiro.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/documents/12. Código de Ética.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/documents/13. Regras, Procedimentos e Descrição dos Controles Internos.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/documents/14. Política de Compra e Venda de Valores Mobiliários.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/documents/15. Manual Previsto no art. 25 da Instrução CVM 558_15.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/documents/16. Política de Gestão de Riscos.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/documents/17. Política de Rateio e Divisão de Ordens.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/documents/5. Formulário de Referência.docx" afterDir="false" />
+    <list default="true" id="7f52c6ca-1be1-47f0-ae31-ceefa39145e8" name="Changes" comment="refactor(root): add initial setup the project">
+      <change afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/declaration.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tsconfig.paths.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-browser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-browser.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Buttons/ButtonLink/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Buttons/ButtonLink/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ContentPage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContentPage/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DocumentFileCard/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DocumentFileCard/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Icons/ArrowLeft/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icons/ArrowLeft/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Icons/AzzurraBrand/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icons/AzzurraBrand/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Icons/DocxFile/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icons/DocxFile/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Icons/Mail/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icons/Mail/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Icons/PdfFile/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icons/PdfFile/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gatsby-types.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/gatsby-types.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/404.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/404.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/home.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/home.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/home.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/home.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +37,13 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -42,31 +58,35 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/famil/Dev/clientes/Murilhas/Azzurra/azzurra-initial/static/documents",
+    "last_opened_file_path": "//wsl$/Ubuntu-20.04/home/danielslima/Dev/freela/murilhas/azzurra/web",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\Users\\famil\\Dev\\clientes\\Murilhas\\Azzurra\\azzurra-initial\\node_modules\\typescript\\lib",
+    "prettier.import.notification.dismissed": "true",
+    "prettierjs.PrettierConfiguration.Package": "\\\\wsl$\\Ubuntu-20.04\\home\\danielslima\\Dev\\freela\\murilhas\\azzurra\\web\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
+    "ts.external.directory.path": "\\\\wsl$\\Ubuntu-20.04\\home\\danielslima\\Dev\\freela\\murilhas\\azzurra\\web\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu-20.04\home\danielslima\Dev\freela\murilhas\azzurra\web" />
       <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\static\documents" />
       <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\static\images" />
       <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\src\static" />
       <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\public" />
-      <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\public\static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu-20.04\home\danielslima\Dev\freela\murilhas\azzurra\web\src" />
       <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\src\components\Buttons\ButtonLink" />
       <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\src\type" />
       <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\src" />
       <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\static" />
-      <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -83,6 +103,8 @@
       <workItem from="1668005451222" duration="29945000" />
       <workItem from="1669260064782" duration="4899000" />
       <workItem from="1669596588211" duration="7123000" />
+      <workItem from="1671495911793" duration="2276000" />
+      <workItem from="1671498251805" duration="5338000" />
     </task>
     <task id="LOCAL-00001" summary="feat(root): create hero layout">
       <created>1667971988256</created>
@@ -139,6 +161,11 @@
     <MESSAGE value="refactor(images): converted the SVG file in a component React" />
     <MESSAGE value="refactor(images): updated .gitignore file to ignore IDE settings" />
     <MESSAGE value="feat(pages): created NotFound page" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(pages): created NotFound page" />
+    <MESSAGE value="refactor(root): add initial setup the project" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor(root): add initial setup the project" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

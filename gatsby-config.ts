@@ -1,20 +1,37 @@
-import type { GatsbyConfig } from "gatsby"
+import type { GatsbyConfig } from 'gatsby';
+
+// eslint-disable-next-line
+const path = require('path');
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://www.yourdomain.tld`
   },
-  // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
-  // If you use VSCode you can also use the GraphQL plugin
-  // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
     'gatsby-plugin-postcss',
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
     'gatsby-plugin-svgr',
-  ],
-}
+    {
+      resolve: `gatsby-plugin-sass`
+    },
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          '@root': path.resolve(__dirname, 'src'),
+          '@static': path.resolve(__dirname, 'static'),
+          '@components': path.resolve(__dirname, 'src/components'),
+          '@pages': path.resolve(__dirname, 'src/pages'),
+          '@styles': path.resolve(__dirname, 'src/styles')
+        },
+        extensions: []
+      }
+    }
+  ]
+};
 
-export default config
+export default config;

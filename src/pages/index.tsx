@@ -1,15 +1,12 @@
-import * as React from 'react'
-import type {HeadFC, PageProps} from 'gatsby';
-import {StaticImage} from 'gatsby-plugin-image';
+import * as React from 'react';
 
-import Mail from '../components/Icons/Mail';
+import type { HeadFC, PageProps } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
 
-// @ts-ignore
-import * as styles from '../styles/home.module.css';
-import ContentPage from '../components/ContentPage';
-import ButtonLink from '../components/Buttons/ButtonLink';
-import DocumentFileCard from '../components/DocumentFileCard';
-
+import ButtonLink from '@components/Buttons/ButtonLink';
+import ContentPage from '@components/ContentPage';
+import DocumentFileCard from '@components/DocumentFileCard';
+import Mail from '@components/Icons/Mail';
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -18,10 +15,8 @@ const IndexPage: React.FC<PageProps> = () => {
         <div className="container__brand-wrapper flex-auto basis-3/6 mb-10 lg:mb-0 w-11/12 lg:w-4/6 lg:pr-16">
           <div className="flex flex-col items-center lg:items-start gap-5 text-center lg:text-left text-white">
             <div>
-              <h2
-                className="font-light text-2xl md:text-2xl lg:text-4xl mb-1">
-                Documentos{' '}
-                <span className="font-bold">Regulatórios</span>
+              <h2 className="font-light text-2xl md:text-2xl lg:text-4xl mb-1">
+                Documentos <span className="font-bold">Regulatórios</span>
               </h2>
 
               <p className="w-full border-b-2 pb-4 lg:border-0 lg:pb-0 normal-case text-xl font-light mb-1">
@@ -93,19 +88,15 @@ const IndexPage: React.FC<PageProps> = () => {
 
         <div className="container__brand-wrapper flex-auto v text-center lg:text-left w-5/6 lg:w-4/6 lg:w-auto">
           <div className="flex flex-col gap-5">
-            <h3
-              className="border-b pb-4 lg:border-0 lg:pb-0 font-light text-white text-2xl md:text-2xl lg:text-4xl text-center lg:text-left">
+            <h3 className="border-b pb-4 lg:border-0 lg:pb-0 font-light text-white text-2xl md:text-2xl lg:text-4xl text-center lg:text-left">
               <span className="lg:block">Fale com</span>
               <span className="lg:block font-bold">
-                <span className="font-light">a</span>{' '}
-                Azurra Capital
+                <span className="font-light">a</span> Azurra Capital
               </span>
             </h3>
 
             <div className="text-white">
-              <p className="font-bold text-xl">
-                ENTRE EM CONTATO:
-              </p>
+              <p className="font-bold text-xl">ENTRE EM CONTATO:</p>
               <a href="tel:+551132631089" className="block text-lg font-light">
                 +55 (11) 3263-1089
               </a>
@@ -115,64 +106,68 @@ const IndexPage: React.FC<PageProps> = () => {
             </div>
 
             <div className="text-white normal-case">
-              <p className="font-bold text-xl">
-                FAÇA UMA VISITA:
-              </p>
+              <p className="font-bold text-xl">FAÇA UMA VISITA:</p>
 
               <p>
                 <span className="block">
                   R. Leopoldo Couto Magalhães Júnior, 110
                 </span>
 
-                <span className="block">
-                  ConJ. 81 - Edifício JK Tower
-                </span>
+                <span className="block">ConJ. 81 - Edifício JK Tower</span>
 
-                <span className="block">
-                  Itaim Bibi - São Paulo - SP
-                </span>
+                <span className="block">Itaim Bibi - São Paulo - SP</span>
 
-                <span className="block">
-                  CEP: 04542-000
-                </span>
+                <span className="block">CEP: 04542-000</span>
               </p>
             </div>
 
             <div className="mx-auto lg:mx-0">
-              <ButtonLink href="mailto:contato@azzurra.com.br" icon={<Mail/>} title="Envie sua mensagem"/>
+              <ButtonLink
+                href="mailto:contato@azzurra.com.br"
+                icon={<Mail />}
+                title="Envie sua mensagem"
+              />
             </div>
           </div>
         </div>
       </div>
     </ContentPage>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const Head: HeadFC = () => {
   return (
     <>
-      <link rel="preconnect" href="https://fonts.googleapis.com"/>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
       {/* @ts-ignore */}
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
       <link
         href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
-        rel="stylesheet"/>
+        rel="stylesheet"
+      />
 
       <title>Azzurra Capital - Nosso site está em construção</title>
 
       <meta property="og:locale" content="pt_BR" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="Azzurra Capital" />
-      <meta property="og:description" content="Azzurra Capital - Construindo e preservando seu patrimônio, juntos!" />
+      <meta
+        property="og:description"
+        content="Azzurra Capital - Construindo e preservando seu patrimônio, juntos!"
+      />
       <meta property="og:url" content="http://azzurracapital.com.br/" />
       <meta property="og:site_name" content="Azzurra Capital" />
-      <meta property="og:image" content="http://azzurracapital.com.br/images/azzurra__social-media.jpg" />
+      <meta
+        property="og:image"
+        content="http://azzurracapital.com.br/images/azzurra__social-media.jpg"
+      />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="628" />
       <meta property="og:image:type" content="image/jpg" />
       <meta name="twitter:card" content="summary_large_image" />
     </>
   );
-}
+};
