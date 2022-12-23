@@ -12,7 +12,6 @@ const config: GatsbyConfig = {
     'gatsby-plugin-postcss',
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
     'gatsby-plugin-svgr',
     {

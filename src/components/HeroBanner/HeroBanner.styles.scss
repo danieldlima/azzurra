@@ -1,0 +1,22 @@
+.azzurra-swiper-slider {
+  &__img-wrapper {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+  }
+
+  &__img-content {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+//width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,8px));
+//height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,8px));
+//display: inline-block;
+//border-radius: 50%;
+//                 background: var(--swiper-pagination-bullet-inactive-color,#000);
+//opacity: var(--swiper-pagination-bullet-inactive-opacity, .2);
