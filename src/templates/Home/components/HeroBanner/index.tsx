@@ -41,12 +41,7 @@ const HeroBanner = () => {
             'bg-azzurra-dark-gold opacity-100 border-opacity-100'
         }}
       >
-        <SwiperSlide
-          onChange={(e) => {
-            console.log('event', e);
-          }}
-          className="azzurra-swiper-slider__wrapper"
-        >
+        <SwiperSlide className="azzurra-swiper-slider__wrapper">
           <div className="h-screen w-full">
             <StaticImage
               breakpoints={[640, 768, 1024, 1280, 1536, 1920]}
@@ -55,7 +50,7 @@ const HeroBanner = () => {
               height={1080}
               layout={'fullWidth'}
               className="h-screen w-full flex items-center justify-center"
-              src="../../images/azzurra__hero-banner.jpg"
+              src="../../../../images/azzurra__hero-banner.jpg"
               alt="Imagem"
             />
           </div>
@@ -96,7 +91,7 @@ const HeroBanner = () => {
               height={1080}
               layout={'fullWidth'}
               className="h-screen w-full flex items-center justify-center"
-              src="../../images/azzurra__hero-bg.jpg"
+              src="../../../../images/azzurra__hero-bg.jpg"
               alt="Imagem"
             />
           </div>
