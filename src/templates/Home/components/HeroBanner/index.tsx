@@ -16,7 +16,7 @@ const HeroBanner = () => {
     <div className="max-h-screen-75 sm:max-h-screen relative overflow-hidden">
       <Swiper
         loop
-        className="azzurra-swiper-slider "
+        className="azzurra-swiper-slider"
         centeredSlides
         spaceBetween={0}
         slidesPerView={1}
