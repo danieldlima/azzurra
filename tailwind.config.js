@@ -23,7 +23,8 @@ module.exports = {
         'gradient-linear':
           'linear-gradient(180deg, rgba(255,255,255,0.75) 5%, rgba(255,255,255,0) 60%)',
         'gradient-light':
-          'radial-gradient(circle, rgb(255 255 255 / 70%) 0%, rgb(255 255 255 / 0%) 50%)'
+          'radial-gradient(circle, rgb(255 255 255 / 70%) 0%, rgb(255 255 255 / 0%) 50%)',
+        'team-section': `url('/images/azzurra__team-section__bg.jpg')`
       },
       backgroundPosition: {
         brandHighlights: 'center 18px'

@@ -2,8 +2,9 @@ import * as React from 'react';
 
 import { HomeProvider } from '@root/modules/providers';
 
-import AboutSection from './components/AboutSection';
-import HeroBanner from './components/HeroBanner';
+import AboutSection from '@templates/Home/components/AboutSection';
+import HeroBanner from '@templates/Home/components/HeroBanner';
+import TeamSection from '@templates/Home/components/TeamSection';
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <HeroBanner />
       <main>
         <AboutSection />
+        <TeamSection />
       </main>
     </HomeProvider>
   );

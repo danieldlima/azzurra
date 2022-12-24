@@ -2,12 +2,12 @@ import * as React from 'react';
 
 import Container from '@root/components/Layout/Container';
 
-import AboutItem from '@templates/Home/components/AboutItem';
-import DetailsSectionCompass from '@templates/Home/components/DetailsSectionCompass';
-
 import IcAbout from '@components/Icons/About';
 import IcLighthouse from '@components/Icons/Lighthouse';
 import GridAboutCard from '@components/Layout/GridAboutCard';
+
+import AboutItem from './components/AboutItem';
+import DetailsSectionCompass from './components/DetailsSectionCompass';
 
 const AboutSection = () => {
   return (

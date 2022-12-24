@@ -1,20 +1,20 @@
 import * as React from 'react';
 import { useContext, useRef } from 'react';
 
-import Container from '@root/components/Layout/Container';
 import { HomeContext } from '@root/modules/providers';
-
-import AboutItem from '@templates/Home/components/AboutItem';
-import ButtonCompassDetails from '@templates/Home/components/ButtonCompassDetails';
-import CardFamilyOffice from '@templates/Home/components/CardFamilyOffice';
 
 import AboutMandala from '@components/Icons/AboutMandala';
 import IcCentralization from '@components/Icons/Centralization';
 import IcCompass from '@components/Icons/Compass';
 import IcConsolidation from '@components/Icons/Consolidation';
 import IcManagement from '@components/Icons/Management';
+import Container from '@components/Layout/Container';
 import GridAboutCard from '@components/Layout/GridAboutCard';
 import Text from '@components/Text';
+
+import AboutItem from '../AboutItem';
+import ButtonCompassDetails from '../ButtonCompassDetails';
+import CardFamilyOffice from '../CardFamilyOffice';
 
 function DetailsSectionCompass() {
   const {

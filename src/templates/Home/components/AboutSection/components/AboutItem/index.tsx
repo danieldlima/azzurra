@@ -1,8 +1,7 @@
 import React, { ReactElement } from 'react';
 
-import GridAboutCard from '@root/components/Layout/GridAboutCard';
-
 import Container from '@components/Layout/Container';
+import GridAboutCard from '@components/Layout/GridAboutCard';
 import Text from '@components/Text';
 
 interface AboutItemProps {
