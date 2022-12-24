@@ -3,6 +3,7 @@ import type { GatsbyConfig } from 'gatsby';
 // eslint-disable-next-line
 const path = require('path');
 
+/** @type {import('tailwindcss').Config} */
 const config: GatsbyConfig = {
   siteMetadata: {
     siteUrl: `https://www.yourdomain.tld`
@@ -14,9 +15,7 @@ const config: GatsbyConfig = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     'gatsby-plugin-svgr',
-    {
-      resolve: `gatsby-plugin-sass`
-    },
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
