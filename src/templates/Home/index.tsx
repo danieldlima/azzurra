@@ -1,16 +1,18 @@
 import * as React from 'react';
 
+import { HomeProvider } from '@root/modules/providers';
+
 import AboutSection from './components/AboutSection';
 import HeroBanner from './components/HeroBanner';
 
 const Home = () => {
   return (
-    <>
+    <HomeProvider>
       <HeroBanner />
-      <main className="px-4 lg:px-0">
+      <main>
         <AboutSection />
       </main>
-    </>
+    </HomeProvider>
   );
 };
 
