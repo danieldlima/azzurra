@@ -21,8 +21,8 @@ type TextProps<E extends ElementType = typeof defaultElement> =
     label: string;
     className?: string;
     fontWeight?: 'light' | 'normal' | 'medium' | 'bold';
-    size?: 'xs' | 'sm' | 'normal' | 'lg' | 'xl' | 'paragraph';
-    color?: 'primary' | 'secondary';
+    size?: 'xs' | 'sm' | 'normal' | 'lg' | 'xl' | 'paragraph' | 'custom';
+    color?: 'primary' | 'secondary' | 'black' | 'white';
   };
 function Text<E extends ElementType = typeof defaultElement>({
   label,
@@ -38,6 +38,7 @@ function Text<E extends ElementType = typeof defaultElement>({
     xs: '',
     sm: '',
     normal: '',
+    custom: '',
     lg: 'text-xl sm:text-3xl',
     xl: 'text-2xl sm:text-5xl',
     paragraph: 'text-lg leading-6'
@@ -45,7 +46,9 @@ function Text<E extends ElementType = typeof defaultElement>({
 
   const classColor = {
     primary: 'text-azzurra-navy-blue',
-    secondary: 'text-azzurra-gold'
+    secondary: 'text-azzurra-gold',
+    black: 'text-black',
+    white: 'text-white'
   };
 
   const classFontWeight = {

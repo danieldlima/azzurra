@@ -37,6 +37,7 @@ const AboutItem = ({
               as="p"
               size="paragraph"
               fontWeight="normal"
+              color="black"
               className={'mb-2 sm:mb-4'}
               label={description}
             />

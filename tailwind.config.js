@@ -11,6 +11,7 @@ module.exports = {
       colors: {
         'azzurra-navy-blue': '#242e63',
         'azzurra-dark-blue': '#0f1337',
+        'azzurra-brown': '#6F5B3C',
         'azzurra-gold': '#bf9638',
         'azzurra-dark-gold': '#9f7b34',
         'azzurra-opaque-gold': '#ddca96',
