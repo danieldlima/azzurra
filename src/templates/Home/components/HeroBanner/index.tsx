@@ -4,12 +4,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { StaticImage } from 'gatsby-plugin-image';
 import { Pagination, EffectFade, Autoplay } from 'swiper';
 
-import HeroImageMask from '@root/images/azzurra__hero-banner--mask--2.png';
-
-import './HeroBanner.styles.scss';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import AzzurraBrand from '@components/Icons/AzzurraBrand';
+import SectionMask from '@components/SectionMask';
 
 const HeroBanner = () => {
   return (
@@ -124,13 +122,7 @@ const HeroBanner = () => {
         </SwiperSlide>
       </Swiper>
 
-      <div className="azzurra-swiper-slider__img-wrapper pointer-events-none">
-        <img
-          src={HeroImageMask}
-          alt=""
-          className="azzurra-swiper-slider__img-content"
-        />
-      </div>
+      <SectionMask />
     </div>
   );
 };
