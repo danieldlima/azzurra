@@ -1,7 +1,8 @@
 import React, {
   ComponentPropsWithoutRef,
   ElementType,
-  PropsWithChildren
+  PropsWithChildren,
+  ReactNode
 } from 'react';
 
 import { addClassName } from '@root/modules/utils';
@@ -18,11 +19,11 @@ const defaultElement = 'h3';
 
 type TextProps<E extends ElementType = typeof defaultElement> =
   PolymorphicProps<E> & {
-    label: string;
+    label: ReactNode;
     className?: string;
     fontWeight?: 'light' | 'normal' | 'medium' | 'bold';
     size?: 'xs' | 'sm' | 'normal' | 'lg' | 'xl' | 'paragraph' | 'custom';
-    color?: 'primary' | 'secondary' | 'black' | 'white';
+    color?: AzzurraColor;
   };
 function Text<E extends ElementType = typeof defaultElement>({
   label,
@@ -48,7 +49,12 @@ function Text<E extends ElementType = typeof defaultElement>({
     primary: 'text-azzurra-navy-blue',
     secondary: 'text-azzurra-gold',
     black: 'text-black',
-    white: 'text-white'
+    white: 'text-white',
+    'navy-blue': 'text-azzurra-navy-blue',
+    'gold-100': 'text-azzurra-gold-100',
+    'light-blue': 'text-azzurra-light-blue',
+    'opaque-gold': 'text-azzurra-opaque-gold',
+    brown: 'text-azzurra-brown'
   };
 
   const classFontWeight = {

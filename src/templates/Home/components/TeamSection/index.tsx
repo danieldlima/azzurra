@@ -2,6 +2,7 @@ import React from 'react';
 
 import Container from '@components/Layout/Container';
 import SectionMask from '@components/SectionMask';
+import Title from '@components/Title';
 
 import PersonCard from './components/PersonCard';
 
@@ -14,12 +15,7 @@ function TeamSection() {
         <Container>
           <div className={'grid row-auto lg:grid-cols-3 gap-12'}>
             <div>
-              <h3 className={'text-5xl sm:text-7xl text-white'}>
-                Conheça{' '}
-                <span className="block">
-                  <strong>nosso time</strong>
-                </span>
-              </h3>
+              <Title color="white" label={['Conheça', 'nosso time']} />
             </div>
 
             <PersonCard
