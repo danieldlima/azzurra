@@ -18,11 +18,43 @@ function TeamSection() {
             </h3>
           </div>
 
-          <PersonCard />
-          <PersonCard />
-          <PersonCard />
-          <PersonCard />
-          <PersonCard />
+          <PersonCard
+            name="leandro alves"
+            bio={{ fullName: 'leandro alves' }}
+          />
+
+          <PersonCard
+            name="gilvan rudge"
+            bio={{
+              fullName: 'Gilvam Rudge Filho',
+              text:
+                'Formado em Relações Internacionais pela FAAP, atuou em instituições financeiras nas bolsas ' +
+                'do Brasil, Nova Iorque, Chicago e Londres, com mais de 15 anos de experiência. Foi broker ' +
+                'de mercado futuro na ICAP Brasil e financial advisor institucional no Private do Banco Wells Fargo, ' +
+                'se especializando em fundos offshore e produtos estruturados.'
+            }}
+          />
+
+          <PersonCard
+            name="Robson Guedes"
+            bio={{
+              fullName: 'Robson Guedes'
+            }}
+          />
+
+          <PersonCard
+            name="Leonardo Prates"
+            bio={{
+              fullName: 'Leonardo Prates'
+            }}
+          />
+
+          <PersonCard
+            name="Marco Fuoco"
+            bio={{
+              fullName: 'Marco Fuoco'
+            }}
+          />
         </div>
       </Container>
     </div>
