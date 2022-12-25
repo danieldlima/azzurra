@@ -8,8 +8,8 @@ import InvestmentPolicyItem from './components/InvestmentPolicyItem';
 
 function InvestmentPolicySection() {
   return (
-    <section className={'investment-policy'}>
-      <Container className={'py-20 sm:py-32 px-6'}>
+    <section id="investment-policy">
+      <Container className={'py-20 sm:py-32 px-6 xl:px-0'}>
         <div
           className={
             'flex flex-col lg:flex-row gap-12 md:gap-14 lg:gap-8 justify-between ' +

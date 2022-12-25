@@ -8,7 +8,7 @@ import PersonCard from './components/PersonCard';
 
 function TeamSection() {
   return (
-    <section className="relative">
+    <section id="team" className="relative">
       <SectionMask position="top" />
 
       <div className="px-16 md:px-52 lg:px-20 pt-20 sm:pt-64 pb-36 bg-team-section">

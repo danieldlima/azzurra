@@ -28,7 +28,7 @@ const IndexPage: React.FC<PageProps> = () => {
                 </p>
               </div>
 
-              <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-10 lg:mb-16">
+              <div className="grid grid-cols-3 grid-rows-3 justify-center lg:justify-start gap-4 mb-10 lg:mb-16">
                 <DocumentFileCard
                   to="/documents/5. Formulário de Referência.docx"
                   title="Formulário de Referência"

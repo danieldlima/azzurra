@@ -19,6 +19,7 @@ module.exports = {
         'azzurra-opaque-gold': '#ddca96',
         'azzurra-gray-70': '#828180',
         'azzurra-gray-60': '#A1A1A1',
+        'azzurra-gray-50': '#d1d1d1',
         'azzurra-gray-20': '#f1f2f2',
         transparent: 'rgba(241,242,242,0)'
       },
@@ -38,7 +39,8 @@ module.exports = {
         'gradient-light':
           'radial-gradient(circle, rgb(255 255 255 / 70%) 0%, rgb(255 255 255 / 0%) 50%)',
         'team-section': `url('/images/azzurra__team-section__bg.jpg')`,
-        'team-person-card': `url('/images/azzurra__team-section__fallback-profile-img.png')`
+        'team-person-card': `url('/images/azzurra__team-section__fallback-profile-img.png')`,
+        'regulatory-information': `url('/images/azzurra__investment-policy__bg.jpg')`
       },
       backgroundPosition: {
         brandHighlights: 'center 18px'
