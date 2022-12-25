@@ -17,14 +17,26 @@ module.exports = {
         'azzurra-opaque-gold': '#ddca96',
         'azzurra-gray-70': '#828180',
         'azzurra-gray-60': '#A1A1A1',
-        'azzurra-gray-20': '#f1f2f2'
+        'azzurra-gray-20': '#f1f2f2',
+        transparent: 'rgba(241,242,242,0)'
+      },
+      backgroundSize: {
+        '50%': '50%',
+        '70%': '70%',
+        '80%': '80%',
+        '90%': '90%'
       },
       backgroundImage: {
+        'azzurra-gold-linear':
+          'linear-gradient(-168deg, rgb(221,202,150) 0%, rgb(179,140,63) 100%)',
+        'azzurra-blue-linear':
+          'linear-gradient(116deg, rgb(36,46,99) 0%, rgb(56,97,122) 100%)',
         'gradient-linear':
           'linear-gradient(180deg, rgba(255,255,255,0.75) 5%, rgba(255,255,255,0) 60%)',
         'gradient-light':
           'radial-gradient(circle, rgb(255 255 255 / 70%) 0%, rgb(255 255 255 / 0%) 50%)',
-        'team-section': `url('/images/azzurra__team-section__bg.jpg')`
+        'team-section': `url('/images/azzurra__team-section__bg.jpg')`,
+        'team-person-card': `url('/images/azzurra__team-section__fallback-profile-img.png')`
       },
       backgroundPosition: {
         brandHighlights: 'center 18px'
