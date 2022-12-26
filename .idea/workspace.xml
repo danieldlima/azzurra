@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f52c6ca-1be1-47f0-ae31-ceefa39145e8" name="Changes" comment="feat(TeamSection): create team section and organized folders">
-      <change afterPath="$PROJECT_DIR$/src/templates/Home/components/TeamSection/components/PersonCard/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/azzurra__team-section__fallback-profile-img.png" afterDir="false" />
+    <list default="true" id="7f52c6ca-1be1-47f0-ae31-ceefa39145e8" name="Changes" comment="fix(textareafield): fix textarea focus in mobile view">
+      <change afterPath="$PROJECT_DIR$/src/components/Buttons/Button/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Text/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Text/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/Home/components/TeamSection/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/Home/components/TeamSection/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Buttons/ButtonLink/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Buttons/ButtonLink/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/Home/components/ContactSection/components/Form/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/Home/components/ContactSection/components/Form/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/Home/components/ContactSection/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/Home/components/ContactSection/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,26 +34,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/famil/Dev/clientes/Murilhas/Azzurra/web/static/images",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettier.import.notification.dismissed": "true",
-    "prettierjs.PrettierConfiguration.Package": "\\\\wsl$\\Ubuntu-20.04\\home\\danielslima\\Dev\\freela\\murilhas\\azzurra\\web\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
-    "ts.external.directory.path": "C:\\Users\\famil\\Dev\\clientes\\Murilhas\\Azzurra\\web\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/famil/Dev/clientes/Murilhas/Azzurra/web/static/images&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettier.import.notification.dismissed&quot;: &quot;true&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;\\\\wsl$\\Ubuntu-20.04\\home\\danielslima\\Dev\\freela\\murilhas\\azzurra\\web\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\famil\\Dev\\clientes\\Murilhas\\Azzurra\\web\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\web\static\images" />
@@ -64,11 +63,11 @@
       <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\static\documents" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\web\src\components\Buttons" />
       <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\web\src\templates\Home\components\AboutSection\components" />
       <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\web\src\templates\Home\components" />
       <recent name="\\wsl$\Ubuntu-20.04\home\danielslima\Dev\freela\murilhas\azzurra\web\src" />
       <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\src\components\Buttons\ButtonLink" />
-      <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\src\type" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -96,6 +95,9 @@
       <workItem from="1671811257937" duration="4920000" />
       <workItem from="1671816265119" duration="14520000" />
       <workItem from="1671832840573" duration="14586000" />
+      <workItem from="1671986602230" duration="13792000" />
+      <workItem from="1672002466480" duration="27444000" />
+      <workItem from="1672036939375" duration="2276000" />
     </task>
     <task id="LOCAL-00001" summary="feat(root): create hero layout">
       <created>1667971988256</created>
@@ -181,7 +183,70 @@
       <option name="project" value="LOCAL" />
       <updated>1671858015320</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="feat(teamSection): create person card layout">
+      <created>1671942570192</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1671942570192</updated>
+    </task>
+    <task id="LOCAL-00014" summary="feat(teamsection): finished team section&#10;&#10;Added scroll to the card in-person bio section and added props in the&#10;PersonCard component.">
+      <created>1671989837738</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1671989837738</updated>
+    </task>
+    <task id="LOCAL-00015" summary="refactor(components): create SectionMask component">
+      <created>1671992685073</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1671992685073</updated>
+    </task>
+    <task id="LOCAL-00016" summary="feat(templates): create Investment Policy section">
+      <created>1672000941664</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1672000941664</updated>
+    </task>
+    <task id="LOCAL-00017" summary="feat(templates): create a Regulatory Information section">
+      <created>1672010528323</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1672010528323</updated>
+    </task>
+    <task id="LOCAL-00018" summary="feat(templates): create contact form section layout">
+      <created>1672018519034</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1672018519034</updated>
+    </task>
+    <task id="LOCAL-00019" summary="feat(templates): create field styles in contact form section">
+      <created>1672031524614</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1672031524614</updated>
+    </task>
+    <task id="LOCAL-00020" summary="fix(templates): fix fields focus">
+      <created>1672035145991</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1672035145991</updated>
+    </task>
+    <task id="LOCAL-00021" summary="fix(textareafield): fix textarea focus in mobile view">
+      <created>1672036187554</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1672036187554</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,7 +265,16 @@
     <MESSAGE value="refactor(about): finished about section layout closed" />
     <MESSAGE value="feat(detailssection): create detail view of section about" />
     <MESSAGE value="feat(TeamSection): create team section and organized folders" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(TeamSection): create team section and organized folders" />
+    <MESSAGE value="feat(teamSection): create person card layout" />
+    <MESSAGE value="feat(teamsection): finished team section&#10;&#10;Added scroll to the card in-person bio section and added props in the&#10;PersonCard component." />
+    <MESSAGE value="refactor(components): create SectionMask component" />
+    <MESSAGE value="feat(templates): create Investment Policy section" />
+    <MESSAGE value="feat(templates): create a Regulatory Information section" />
+    <MESSAGE value="feat(templates): create contact form section layout" />
+    <MESSAGE value="feat(templates): create field styles in contact form section" />
+    <MESSAGE value="fix(templates): fix fields focus" />
+    <MESSAGE value="fix(textareafield): fix textarea focus in mobile view" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix(textareafield): fix textarea focus in mobile view" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -9,7 +9,7 @@ function ContactSection() {
     <section
       id="contact-section"
       className={
-        'relative min-h-[1030px] bg-contact-form bg-cover bg-bottom pt-20'
+        'relative min-h-[1030px] lg:min-h-[860px] bg-contact-form bg-cover bg-bottom pt-20'
       }
     >
       <Container
