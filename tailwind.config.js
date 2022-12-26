@@ -62,7 +62,7 @@ module.exports = {
         'screen-75': '90vh'
       },
       boxShadow: {
-        'level-1': '0px 5px 10px 0px rgba(0, 0, 0, 0.1)'
+        1: '0px 5px 10px 0px rgba(0, 0, 0, 0.1)'
       },
       spacing: {
         width: {
@@ -87,5 +87,8 @@ module.exports = {
       }
     }
   },
-  plugins: [require('@savvywombat/tailwindcss-grid-areas')]
+  plugins: [
+    require('@savvywombat/tailwindcss-grid-areas'),
+    require('@tailwindcss/forms')
+  ]
 };

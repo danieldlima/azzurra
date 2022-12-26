@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Form from '@templates/Home/components/ContactSection/components/Form';
+
 import Container from '@components/Layout/Container';
 
 function ContactSection() {
@@ -10,7 +12,9 @@ function ContactSection() {
         'relative min-h-[1030px] bg-contact-form bg-cover bg-bottom pt-20'
       }
     >
-      <Container className={'px-6 xl:px-0 flex flex-col lg:flex-row'}>
+      <Container
+        className={'px-6 xl:px-0 flex flex-col lg:flex-row justify-between'}
+      >
         <div className="lg:w-4/12 mb-8 lg:mb-0">
           <h3
             className={`text-5xl sm:text-7xl mb-6 sm:mb-4 md:mb-14 text-azzurra-navy-blue`}
@@ -54,13 +58,13 @@ function ContactSection() {
           </div>
         </div>
 
-        <div className="relative lg:w-8/12">
+        <div className="relative lg:w-7/12">
           <div
             className={
-              'absolute top-0 left-0 w-full flex bg-white p-8 rounded-lg shadow-level-1'
+              'absolute top-0 left-0 w-full flex bg-white p-8 rounded-lg shadow-1'
             }
           >
-            <h2>Envie sua mensagem</h2>
+            <Form />
           </div>
         </div>
       </Container>

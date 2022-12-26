@@ -1,14 +1,14 @@
 import * as React from 'react';
 
-type MailProps = {
+interface MailProps extends IconBaseProps {
   width?: string | number;
   height?: string | number;
-};
+}
 
-const Mail = ({ width = 22, height = 19 }: MailProps) => {
+const Mail = ({ className, width = 22, height = 19 }: MailProps) => {
   return (
     <svg
-      className="mail"
+      className={className}
       xmlns="http://www.w3.org/2000/svg"
       width={width}
       height={height}

@@ -33,6 +33,7 @@
   },
   "devDependencies": {
     "@savvywombat/tailwindcss-grid-areas": "^3.0.0",
+    "@tailwindcss/forms": "^0.5.3",
     "@types/node": "^18.11.17",
     "@types/node-sass": "^4.11.3",
     "@types/react": "^18.0.26",
