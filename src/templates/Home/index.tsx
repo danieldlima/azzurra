@@ -4,6 +4,7 @@ import { HomeProvider } from '@root/modules/providers';
 
 import AboutSection from '@templates/Home/components/AboutSection';
 import ContactSection from '@templates/Home/components/ContactSection';
+import Footer from '@templates/Home/components/Footer';
 import HeroBanner from '@templates/Home/components/HeroBanner';
 import InvestmentPolicySection from '@templates/Home/components/InvestmentPolicySection';
 import RegulatoryInformationSection from '@templates/Home/components/RegulatoryInformationSection';
@@ -20,6 +21,7 @@ const Home = () => {
         <RegulatoryInformationSection />
         <ContactSection />
       </main>
+      <Footer />
     </HomeProvider>
   );
 };

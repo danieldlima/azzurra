@@ -7,12 +7,19 @@ export interface AboutCompassItem {
   setIsDetailsOpen?: (make: boolean) => void;
   toggleDetails?: () => void;
 }
+
 export interface HomeContextProps {
-  aboutSection: {
+  aboutSection?: {
     layout: {
       grid: string;
     };
     compassItem: AboutCompassItem;
+  };
+  footer?: {
+    y?: {
+      value: number;
+      setValue: (position: number) => void;
+    };
   };
 }
 
@@ -20,6 +27,7 @@ export const HomeContext = createContext<HomeContextProps>(null!);
 
 export const HomeProvider = ({ children }: HomeProviderProps) => {
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
+  const [footer, setFooter] = useState(0);
 
   function toggleDetails() {
     setIsDetailsOpen((prevState) => !prevState);
@@ -28,6 +36,12 @@ export const HomeProvider = ({ children }: HomeProviderProps) => {
   return (
     <HomeContext.Provider
       value={{
+        footer: {
+          y: {
+            value: footer,
+            setValue: setFooter
+          }
+        },
         aboutSection: {
           layout: {
             grid: `grid grid-cols-about-card grid-areas-about-card gap-x-4 sm:gap-x-10`

@@ -3,4 +3,4 @@ node_modules/
 public
 src/types/gatsby-types.d.ts
 
-.idea
+.idea/*

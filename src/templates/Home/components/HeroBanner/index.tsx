@@ -19,12 +19,6 @@ const HeroBanner = () => {
         spaceBetween={0}
         slidesPerView={1}
         modules={[Pagination, EffectFade, Autoplay]}
-        onSlideChange={(slider) => {
-          console.log('slide change', slider.activeIndex);
-        }}
-        onSwiper={(swiper) => {
-          console.log(swiper);
-        }}
         autoplay={{
           delay: 10000,
           disableOnInteraction: false

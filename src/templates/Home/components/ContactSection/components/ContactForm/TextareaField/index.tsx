@@ -11,13 +11,6 @@ interface TextareaField {
 
 function TextareaField({ className, required, name, label }: TextareaField) {
   const [value, setValue] = useState('');
-  const [focussed, setFocussed] = useState(false);
-
-  function handleFocussed() {
-    setFocussed((prevState) => !prevState);
-  }
-
-  console.log('focussed ->', focussed);
 
   return (
     <div className={`relative mb-6 ${addClassName(className)}`}>
@@ -25,15 +18,13 @@ function TextareaField({ className, required, name, label }: TextareaField) {
         <textarea
           required={required}
           name={name}
-          rows={8}
+          rows={6}
           spellCheck={false}
           autoFocus
           className={
             'w-full min-h-48 relative top-6 group/field form-input px-0.5 py-0 border-0 ' +
             'focus:ring-transparent focus:border-b-azzurra-gold-100 peer'
           }
-          onFocus={handleFocussed}
-          onBlur={handleFocussed}
           onChange={(e) => {
             setValue(e.target.value);
           }}
