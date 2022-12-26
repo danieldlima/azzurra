@@ -29,7 +29,7 @@ function TextareaField({ className, required, name, label }: TextareaField) {
           spellCheck={false}
           autoFocus
           className={
-            'w-full relative top-6 group/field form-input px-0.5 py-0 border-l-0 border-r-0 border-t-0 ' +
+            'w-full min-h-48 relative top-6 group/field form-input px-0.5 py-0 border-l-0 border-r-0 border-t-0 ' +
             'focus:ring-transparent focus:border-b focus:border-b-azzurra-gold-100 peer'
           }
           onFocus={handleFocussed}
@@ -49,6 +49,13 @@ function TextareaField({ className, required, name, label }: TextareaField) {
         >
           {label}
         </span>
+
+        <span
+          className={
+            'absolute w-full h-px -bottom-[17px] left-0 peer-focus:h-0.5 block ' +
+            `peer-focus:bg-azzurra-gold-100 bg-azzurra-gray-70`
+          }
+        />
       </label>
     </div>
   );

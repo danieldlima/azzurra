@@ -41,7 +41,9 @@ function Form() {
             required={false}
           />
 
-          <TextareaField name="message" label="Sua Mensagem" />
+          <div className="pt-4">
+            <TextareaField name="message" label="Sua Mensagem" />
+          </div>
         </div>
       </form>
     </div>

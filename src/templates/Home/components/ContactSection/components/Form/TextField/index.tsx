@@ -30,7 +30,7 @@ function TextField({ name, type, label, required, className }: TextFieldProps) {
         />
 
         <span
-          className={`absolute block peer-focus:bottom-12
+          className={`absolute block peer-focus:bottom-12 peer-focus:text-azzurra-gold-100
                text-lg peer-focus:text-xs transition-all ${addClassName(
                  value
                    ? 'bottom-12 text-xs text-azzurra-gold-100'
@@ -39,6 +39,13 @@ function TextField({ name, type, label, required, className }: TextFieldProps) {
         >
           {label}
         </span>
+
+        <span
+          className={
+            'absolute w-full h-px bottom-0 peer-focus:h-0.5 block ' +
+            `peer-focus:bg-azzurra-gold-100 bg-azzurra-gray-70`
+          }
+        />
       </label>
     </div>
   );
