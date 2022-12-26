@@ -61,7 +61,7 @@ function ContactSection() {
         <div className="relative lg:w-7/12">
           <div
             className={
-              'absolute top-0 left-0 w-full flex bg-white p-8 rounded-lg shadow-1'
+              'absolute top-0 left-0 w-full flex bg-white px-8 py-16 rounded-lg shadow-1 z-20'
             }
           >
             <Form />
