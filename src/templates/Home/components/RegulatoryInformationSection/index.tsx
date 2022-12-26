@@ -90,7 +90,7 @@ function RegulatoryInformationSection() {
           style={{ height }}
           className={
             'absolute bottom-0 left-1/2 w-6/12 hidden lg:flex justify-end bg-regulatory-information ' +
-            'bg-cover bg-center'
+            'bg-cover bg-center rounded-tl-lg rounded-bl-lg'
           }
         />
       </div>

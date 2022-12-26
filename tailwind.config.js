@@ -40,7 +40,8 @@ module.exports = {
           'radial-gradient(circle, rgb(255 255 255 / 70%) 0%, rgb(255 255 255 / 0%) 50%)',
         'team-section': `url('/images/azzurra__team-section__bg.jpg')`,
         'team-person-card': `url('/images/azzurra__team-section__fallback-profile-img.png')`,
-        'regulatory-information': `url('/images/azzurra__investment-policy__bg.jpg')`
+        'regulatory-information': `url('/images/azzurra__investment-policy__bg.jpg')`,
+        'contact-form': `url('/images/azzurra__contact-section__bg.png')`
       },
       backgroundPosition: {
         brandHighlights: 'center 18px'
@@ -59,6 +60,9 @@ module.exports = {
       },
       maxHeight: {
         'screen-75': '90vh'
+      },
+      boxShadow: {
+        'level-1': '0px 5px 10px 0px rgba(0, 0, 0, 0.1)'
       },
       spacing: {
         width: {

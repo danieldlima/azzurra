@@ -13,7 +13,7 @@ function InvestmentPolicySection() {
         <div
           className={
             'flex flex-col lg:flex-row gap-12 md:gap-14 lg:gap-8 justify-between ' +
-            'text-left sm:text-center lg:text-left'
+            'text-left md:text-center lg:text-left'
           }
         >
           <div className="w-full lg:w-5/12 investment-policy__mandala-container">
