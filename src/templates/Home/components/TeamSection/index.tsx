@@ -20,18 +20,27 @@ function TeamSection() {
 
             <PersonCard
               name="leandro alves"
-              bio={{ fullName: 'leandro alves' }}
+              bio={{
+                fullName: 'LEANDRO CALDEIRA ALVES',
+                text:
+                  'Possui mais de 7 anos de experiência em importantes instituições financeiras no Exterior ' +
+                  'como Financial Advisor. Atuou em grande instituição financeira brasileira por mais de 8 anos. ' +
+                  'Graduado em Gestão Comercial, com MBA em Gestão de Negócios pela Fundação Getúlio Vargas, ' +
+                  'MBA em Gestão Comercial pela Fundação Dom Cabral. Possui certificação CPA-20 pela ANBIMA.'
+              }}
             />
 
             <PersonCard
-              name="gilvan rudge"
+              name="ANTONIO CARLOS"
               bio={{
-                fullName: 'Gilvam Rudge Filho',
+                fullName: 'ANTONIO CARLOS GOMES JUNIOR',
                 text:
-                  'Formado em Relações Internacionais pela FAAP, atuou em instituições financeiras nas bolsas ' +
-                  'do Brasil, Nova Iorque, Chicago e Londres, com mais de 15 anos de experiência. Foi broker ' +
-                  'de mercado futuro na ICAP Brasil e financial advisor institucional no Private do Banco Wells Fargo, ' +
-                  'se especializando em fundos offshore e produtos estruturados.'
+                  'Há 10 anos atuando como Financial Advisor e Corretor de Seguros de Vida e Previdência, ' +
+                  'trabalhou em grandes bancos como gestor de negócios na área de financiamentos. Tem MBA ' +
+                  'em Finanças pela FGV, cursos de Estratégias de Investimentos e Gestão de Portfólios pela ' +
+                  'Wharton (Penn University - USA), e título de International Financial Advisor por plataformas ' +
+                  'de investimentos globais. É um profissional com certificação de Planejador Financeiro ' +
+                  'Pessoal CFP e registrado na CVM como Consultor de Investimentos Mobiliários.'
               }}
             />
 
@@ -50,9 +59,15 @@ function TeamSection() {
             />
 
             <PersonCard
-              name="Marco Fuoco"
+              name="RODRIGO MELATI"
               bio={{
-                fullName: 'Marco Fuoco'
+                fullName: 'RODRIGO MELATI',
+                text:
+                  'Economista, professor de certificação para gestores pela FK Partners, certificado em fusões ' +
+                  'e aquisições pelo INSPER. Atuou em áreas de planejamento comercial em multinacionais ' +
+                  'e começou no mercado financeiro como assessor de investimentos, sendo convidado a integrar ' +
+                  'a área macroeconômica de um dos maiores escritórios da XP. Atuou também com carteiras ' +
+                  'administradas e foi gestor de fundos de investimentos em renda variável.'
               }}
             />
           </div>

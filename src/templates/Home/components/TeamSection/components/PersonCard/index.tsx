@@ -20,7 +20,7 @@ function PersonCard({ name, bio }: PersonCardProps) {
   return (
     <div
       className={
-        'relative  min-h-[380px] sm:min-h-[450px] bg-team-person-card bg-azzurra-gray-70 ' +
+        'relative min-h-[380px] sm:min-h-[450px] bg-team-person-card bg-azzurra-gray-70 ' +
         'bg-cover bg-90% bg-no-repeat bg-center rounded-lg p-6 overflow-hidden'
       }
     >
@@ -67,7 +67,7 @@ function PersonCard({ name, bio }: PersonCardProps) {
           <button
             type="button"
             className={
-              'rotate-0 focus-visible:border-0 ' +
+              'rotate-0 focus-visible:border-0 -mr-2 ' +
               'focus-visible:outline-0 focus-visible:border focus-visible:border-white focus-visible:rounded-lg'
             }
             onClick={(e) => {
@@ -75,25 +75,29 @@ function PersonCard({ name, bio }: PersonCardProps) {
               toggleDetails();
             }}
           >
-            <div
+            <span
               className={
                 'flex flex-end w-11 h-11 p-1.5 bg-opacity-0 hover:bg-azzurra-gray-20 text-azzurra-gray-20 ' +
                 'hover:text-azzurra-gold rounded-lg transition-all cursor-pointer'
               }
             >
               <IcArrowDown className={'w-full h-full'} />
-            </div>
+            </span>
           </button>
         </div>
 
         <div className={'relative -top-10'}>
-          <span className={'sm:text-xl block font-bold uppercase mb-3'}>
-            {bio.fullName}
-          </span>
+          <div className={'pr-12'}>
+            <button
+              className={'text-left sm:text-xl block font-bold uppercase mb-3'}
+            >
+              {bio.fullName}
+            </button>
 
-          <p className={'text-base sm:text-lg leading-5 font-normal'}>
-            {bio.text}
-          </p>
+            <p className={'text-base sm:text-lg leading-5 font-normal'}>
+              {bio.text}
+            </p>
+          </div>
         </div>
       </div>
     </div>
