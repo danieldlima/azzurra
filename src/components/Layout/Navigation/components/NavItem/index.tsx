@@ -11,8 +11,6 @@ interface NavItem {
 }
 
 function NavItem({ to, label, className, onClick }: NavItem) {
-  // border-azzurra-opaque-gold
-
   return (
     <Link
       spy
