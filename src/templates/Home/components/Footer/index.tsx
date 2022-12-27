@@ -23,7 +23,7 @@ function Footer() {
 
   return (
     <footer
-      className="relative pt-24 pb-6 bg-azzurra-navy-blue transition-all"
+      className="relative pt-24 pb-20 bg-azzurra-navy-blue transition-all"
       style={{ top: footer?.y?.value ?? 0 }}
     >
       <Container
@@ -39,7 +39,7 @@ function Footer() {
         </div>
 
         <div className="w-full lg:w-7/12 text-white flex flex-row flex-wrap">
-          <div className="w-8/12 lg:w-4/12">
+          <div className="w-8/12 md:w-4/12">
             <ul className={'list-none leading-7'}>
               <li>
                 <span className="font-bold uppercase text-sm">
@@ -132,14 +132,14 @@ function Footer() {
             </ul>
           </div>
 
-          <div className="w-4/12 lg:w-4/12 flex justify-center">
-            <div className="w-6/12 flex flex-col gap-4">
+          <div className="w-4/12 md:w-4/12 flex justify-center">
+            <div className="w-full sm:w-7/12 md:w-5/12 lg:w-6/12 flex flex-col gap-4">
               <img src={Anbima1} alt="Selo AMBIMA: gestão de patrimônio" />
               <img src={Anbima2} alt="Selo AMBIMA: gestão de recursos" />
             </div>
           </div>
 
-          <div className="w-full lg:w-4/12 flex justify-start mt-10 lg:mt-0">
+          <div className="w-full md:w-4/12 flex justify-start mt-10 md:mt-0">
             <ul>
               <li>
                 <span className="block font-bold uppercase text-sm mb-2">

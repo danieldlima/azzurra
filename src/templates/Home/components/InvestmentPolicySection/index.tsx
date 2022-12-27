@@ -8,7 +8,7 @@ import InvestmentPolicyItem from './components/InvestmentPolicyItem';
 
 function InvestmentPolicySection() {
   return (
-    <section id="investment-policy">
+    <div id="investment-policy">
       <Container className={'py-20 sm:py-32 px-6 xl:px-0'}>
         <div
           className={
@@ -98,7 +98,7 @@ function InvestmentPolicySection() {
           </div>
         </div>
       </Container>
-    </section>
+    </div>
   );
 }
 

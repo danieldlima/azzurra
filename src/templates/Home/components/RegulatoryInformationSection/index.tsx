@@ -15,7 +15,7 @@ function RegulatoryInformationSection() {
   }
 
   return (
-    <section id="regulatory-information" className={'mb-20 lg:mb-32'}>
+    <div id="regulatory-information" className={'mb-20 lg:mb-32'}>
       <div className="relative flex w-full overflow-x-hidden">
         <Container className={'relative flex px-6 xl:px-0'}>
           <div className={'relative w-full lg:w-6/12 lg:pr-8'}>
@@ -94,7 +94,7 @@ function RegulatoryInformationSection() {
           }
         />
       </div>
-    </section>
+    </div>
   );
 }
 

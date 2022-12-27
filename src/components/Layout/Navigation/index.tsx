@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
+import { useLockedBody } from 'usehooks-ts';
+
+import Container from '@components/Layout/Container';
+import NavItem from '@components/Layout/Navigation/components/NavItem';
+
 function Navigation() {
   const [open, setOpen] = useState(false);
   const [isScroll, setIsScroll] = useState(false);
@@ -14,7 +19,6 @@ function Navigation() {
 
   function handleResize() {
     if (open) setOpen(false);
-    console.log('resize');
   }
 
   useEffect(() => {
@@ -35,8 +39,37 @@ function Navigation() {
     // eslint-disable-next-line
   }, []);
 
+  useLockedBody(open, 'body');
+
   return (
     <>
+      <nav
+        className={
+          'fixed z-50 w-full bg-top bg-cover ' +
+          `${isScroll ? 'bg-hero-banner shadow-1' : 'bg-transparent shadow-0'}`
+        }
+      >
+        <div className={isScroll ? 'backdrop-blur-xl' : 'backdrop-blur-0'}>
+          <Container>
+            <div className="hidden md:flex items-center space-x-1 uppercase sm:px-4 xl:px-0">
+              <NavItem to="about" label="A AZZURRA capital" />
+
+              <NavItem to="team" label="Nosso time" />
+
+              <NavItem to="investment" label="Política de investimento" />
+
+              <NavItem
+                to="investment-policy"
+                label="Blog azzurra"
+                className={'hidden'}
+              />
+
+              <NavItem to="contact" label="Contato" />
+            </div>
+          </Container>
+        </div>
+      </nav>
+
       <div
         className={
           'md:hidden mobile-menu w-full fixed inset-y-0 left-0 z-40 transition-all ' +
@@ -45,8 +78,8 @@ function Navigation() {
       >
         <div
           className={
-            'relative w-full h-full transition-all pointer-events-auto ' +
-            `pointer-events-none`
+            'relative w-full transition-all pointer-events-auto pointer-events-none ' +
+            `${open ? 'h-full' : 'h-auto'}`
           }
         >
           <div
@@ -54,9 +87,8 @@ function Navigation() {
               'w-full h-14 transition-all flex items-center backdrop-blur-nav-light ' +
               'absolute top-0 left-0 w-full z-10 ' +
               `${
-                isScroll || open
-                  ? 'bg-azzurra-navy-blue backdrop-saturate-nav-light ' +
-                    'backdrop-blur-nav-light border-b border-b-azzurra-opaque-gold/25'
+                isScroll && !open
+                  ? 'bg-azzurra-navy-blue backdrop-saturate-nav-light backdrop-blur-nav-light'
                   : 'bg-azzurra-navy-blue/0 backdrop-blur-0'
               }`
             }
@@ -103,7 +135,12 @@ function Navigation() {
               } `
             }
           >
-            <ul className="w-5/6 text-center text-white font-bold text-2xl px-4">
+            <ul
+              className={
+                'w-5/6 text-center text-white font-bold text-2xl px-4 ' +
+                `${open ? 'opacity-100' : 'opacity-0'} `
+              }
+            >
               <li className="active">
                 <a href="#" className="block px-6 py-4">
                   Home

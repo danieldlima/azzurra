@@ -17,8 +17,10 @@ const Home = () => {
       <main>
         <AboutSection />
         <TeamSection />
-        <InvestmentPolicySection />
-        <RegulatoryInformationSection />
+        <section id="investment">
+          <InvestmentPolicySection />
+          <RegulatoryInformationSection />
+        </section>
         <ContactSection />
       </main>
       <Footer />

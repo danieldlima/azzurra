@@ -48,7 +48,8 @@ module.exports = {
         'team-section': `url('/images/azzurra__team-section__bg.jpg')`,
         'team-person-card': `url('/images/azzurra__team-section__fallback-profile-img.png')`,
         'regulatory-information': `url('/images/azzurra__investment-policy__bg.jpg')`,
-        'contact-form': `url('/images/azzurra__contact-section__bg.png')`
+        'contact-form': `url('/images/azzurra__contact-section__bg.png')`,
+        'hero-banner': `url('/images/azzurra__hero-banner.jpg')`
       },
       backgroundPosition: {
         brandHighlights: 'center 18px'
