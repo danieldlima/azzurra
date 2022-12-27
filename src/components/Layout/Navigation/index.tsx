@@ -6,7 +6,7 @@ import Container from '@components/Layout/Container';
 import NavItem from '@components/Layout/Navigation/components/NavItem';
 
 function Navigation() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   const [isScroll, setIsScroll] = useState(false);
 
   function handleClick() {
@@ -72,7 +72,7 @@ function Navigation() {
 
       <div
         className={
-          'md:hidden mobile-menu w-full fixed inset-y-0 left-0 z-40 transition-all ' +
+          'mobile-menu w-full fixed inset-y-0 left-0 z-40 transition-all ' +
           `pointer-events-none`
         }
       >
@@ -137,50 +137,45 @@ function Navigation() {
           >
             <ul
               className={
-                'w-5/6 text-center text-white font-bold text-2xl px-4 ' +
+                'w-5/6 text-center text-white font-bold text-2xl px-4 uppercase text-center ' +
                 `${open ? 'opacity-100' : 'opacity-0'} `
               }
             >
-              <li className="active">
-                <a href="#" className="block px-6 py-4">
-                  Home
-                </a>
+              <li className="flex justify-center items-center">
+                <NavItem
+                  to="about"
+                  label="A AZZURRA capital"
+                  onClick={handleClick}
+                />
               </li>
-              <li>
-                <a href="#" className="block px-6 py-4 transition duration-300">
-                  Services
-                </a>
+
+              <li className="flex justify-center items-center">
+                <NavItem to="team" label="Nosso time" onClick={handleClick} />
               </li>
-              <li>
-                <a href="#" className="block px-6 py-4 transition duration-300">
-                  About
-                </a>
+
+              <li className="flex justify-center items-center">
+                <NavItem
+                  to="investment"
+                  label="Política de investimento"
+                  onClick={handleClick}
+                />
               </li>
-              <li>
-                <a href="#" className="block px-6 py-4 transition duration-300">
-                  Contact Us
-                </a>
+
+              <li className="flex justify-center items-center">
+                <NavItem
+                  to="investment-policy"
+                  label="Blog azzurra"
+                  className={'hidden'}
+                  onClick={handleClick}
+                />
+              </li>
+
+              <li className="flex justify-center items-center">
+                <NavItem to="contact" label="Contato" onClick={handleClick} />
               </li>
             </ul>
           </div>
         </div>
-      </div>
-
-      {/*md:hidden*/}
-      <div className="hidden items-center">
-        <button className="outline-none menu-button">
-          <svg
-            className="w-6 h-6 text-gray-500"
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 00 24 24"
-            stroke="currentColor"
-          >
-            <path d="m4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
       </div>
     </>
   );

@@ -7,9 +7,10 @@ interface NavItem {
   to: string;
   label: string;
   className?: string;
+  onClick?: () => void;
 }
 
-function NavItem({ to, label, className }: NavItem) {
+function NavItem({ to, label, className, onClick }: NavItem) {
   // border-azzurra-opaque-gold
 
   return (
@@ -18,8 +19,9 @@ function NavItem({ to, label, className }: NavItem) {
       smooth
       activeClass="group active text-azzurra-opaque-gold"
       to={to}
-      offset={16}
+      offset={-50}
       duration={500}
+      onClick={onClick}
       className={
         'relative py-4 px-2 text-white border-b-4' +
         'font-normal cursor-pointer' +
