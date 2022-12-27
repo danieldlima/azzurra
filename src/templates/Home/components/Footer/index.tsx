@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-scroll';
 
 import BrFrag from '@images/azzurra__ic-br__flag.svg';
 import UsFrag from '@images/azzurra__ic-us__flag.svg';
@@ -12,14 +13,6 @@ import Container from '@components/Layout/Container';
 
 function Footer() {
   const { footer, aboutSection } = useContext(HomeContext);
-
-  function handleClick(elementId: string) {
-    const element = document.getElementById(elementId);
-
-    if (element) {
-      element.scrollIntoView({ block: 'start', behavior: 'smooth' });
-    }
-  }
 
   return (
     <footer
@@ -43,31 +36,50 @@ function Footer() {
             <div className="w-8/12 md:w-4/12">
               <ul className={'list-none leading-7'}>
                 <li>
-                  <span className="font-bold uppercase text-sm">
+                  <Link
+                    spy
+                    smooth
+                    to="about"
+                    offset={-100}
+                    duration={500}
+                    className={'cursor-pointer font-bold uppercase text-base'}
+                  >
                     A AZZURRA capital
-                  </span>
+                  </Link>
                   <ul className={'ml-3'}>
                     <li>
-                      <button
-                        onClick={() => {
-                          handleClick('meet-azzurra');
-                        }}
+                      <Link
+                        spy
+                        smooth
+                        to="meet-azzurra"
+                        offset={-100}
+                        duration={500}
+                        className={'cursor-pointer'}
                       >
                         Conheça a Azzurra Capital
-                      </button>
+                      </Link>
                     </li>
                     <li>
-                      <button
-                        onClick={() => {
-                          handleClick('why-azzurra');
-                        }}
+                      <Link
+                        spy
+                        smooth
+                        to="why-azzurra"
+                        offset={-100}
+                        duration={500}
+                        className={'cursor-pointer'}
                       >
                         Por que a Azzurra Capital?
-                      </button>
+                      </Link>
 
                       <ul className={'ml-3'}>
                         <li>
-                          <button
+                          <Link
+                            spy
+                            smooth
+                            to="about-compass"
+                            offset={80}
+                            duration={500}
+                            className={'cursor-pointer'}
                             onClick={() => {
                               if (
                                 aboutSection?.compassItem &&
@@ -75,45 +87,49 @@ function Footer() {
                               ) {
                                 aboutSection.compassItem.setIsDetailsOpen(true);
                               }
-
-                              handleClick('about-compass');
                             }}
                           >
                             Explore a nossa visão
-                          </button>
+                          </Link>
                         </li>
                       </ul>
                     </li>
                     <li>
-                      <button
-                        onClick={() => {
-                          handleClick('capacity-and-services');
-                        }}
+                      <Link
+                        spy
+                        smooth
+                        to="capacity-and-services"
+                        offset={-100}
+                        duration={500}
+                        className={'cursor-pointer'}
                       >
                         Capacidade & Serviços
-                      </button>
+                      </Link>
                     </li>
                   </ul>
                 </li>
                 <li className={'uppercase'}>
-                  <button
-                    className="font-bold uppercase text-sm"
-                    onClick={() => {
-                      handleClick('team');
-                    }}
+                  <Link
+                    spy
+                    smooth
+                    to="team"
+                    offset={-50}
+                    duration={500}
+                    className={'cursor-pointer font-bold uppercase text-base'}
                   >
                     NOSSO TIME
-                  </button>
+                  </Link>
                 </li>
                 <li className={'uppercase'}>
-                  <button
-                    className="font-bold uppercase text-sm"
-                    onClick={() => {
-                      handleClick('investment-policy');
-                    }}
+                  <Link
+                    spy
+                    smooth
+                    to="investment-policy"
+                    duration={500}
+                    className={'cursor-pointer font-bold uppercase text-base'}
                   >
                     política de investimento
-                  </button>
+                  </Link>
                 </li>
                 <li className={'uppercase hidden'}>
                   <button className="font-bold uppercase text-sm">
@@ -121,14 +137,16 @@ function Footer() {
                   </button>
                 </li>
                 <li className={'uppercase'}>
-                  <button
-                    className="font-bold uppercase text-sm"
-                    onClick={() => {
-                      handleClick('contact');
-                    }}
+                  <Link
+                    spy
+                    smooth
+                    to="contact"
+                    offset={-50}
+                    duration={500}
+                    className={'cursor-pointer font-bold uppercase text-base'}
                   >
                     CONTATO
-                  </button>
+                  </Link>
                 </li>
               </ul>
             </div>
