@@ -34,7 +34,7 @@ module.exports = {
         'nav-light': '180%'
       },
       backdropBlur: {
-        'nav-light': '20px'
+        'nav-light': '10px'
       },
       backgroundImage: {
         'azzurra-gold-linear':
