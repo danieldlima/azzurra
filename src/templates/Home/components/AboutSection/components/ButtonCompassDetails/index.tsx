@@ -21,12 +21,13 @@ function ButtonCompassDetails({
   label = 'Button',
   className = ''
 }: ButtonCompassDetailsProps) {
-  const {
-    aboutSection: { compassItem }
-  } = useContext(HomeContext);
+  const { aboutSection } = useContext(HomeContext);
 
   const handleClick = () => {
-    if (compassItem.toggleDetails) compassItem.toggleDetails();
+    if (aboutSection?.compassItem.toggleDetails) {
+      aboutSection?.compassItem.toggleDetails();
+    }
+
     if (onClick) onClick();
   };
 
@@ -38,7 +39,7 @@ function ButtonCompassDetails({
     >
       <div
         className={`w-full h-[2px] sm:h-px bg-azzurra-navy-blue absolute top-1/2 -transform-x-1/2 transition-opacity ${
-          compassItem.isDetailsOpen
+          aboutSection?.compassItem.isDetailsOpen
             ? 'sm:opacity-100'
             : 'opacity-100 sm:opacity-0'
         }`}

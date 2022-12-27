@@ -17,13 +17,11 @@ import ButtonCompassDetails from '../ButtonCompassDetails';
 import CardFamilyOffice from '../CardFamilyOffice';
 
 function DetailsSectionCompass() {
-  const {
-    aboutSection: { compassItem }
-  } = useContext(HomeContext);
+  const { aboutSection } = useContext(HomeContext);
 
   const aboutCompassRef = useRef<HTMLDivElement>(null!);
 
-  const isHidden = !compassItem.isDetailsOpen ? ' hidden ' : '';
+  const isHidden = !aboutSection?.compassItem.isDetailsOpen ? ' hidden ' : '';
 
   function handleClick() {
     const element = document.getElementById('about-compass');
@@ -45,13 +43,15 @@ function DetailsSectionCompass() {
       className={'flex flex-col justify-center items-center w-full'}
     >
       <AboutItem
+        id="why-azzurra"
         title="Por que a Azzurra Capital?"
         description="Com foco no cliente e utilizando uma visão 360°, buscamos entender suas necessidades e construímos relacionamentos por meio da tomada de decisão feita em conjunto."
         icon={<IcCompass className="w-full" />}
       >
         <ButtonCompassDetails
+          id="explore-our-vision"
           className={'mt-8 sm:mt-10'}
-          arrowAngle={compassItem.isDetailsOpen ? 180 : 0}
+          arrowAngle={aboutSection?.compassItem.isDetailsOpen ? 180 : 0}
           label={
             <>
               Foco no cliente: <strong>Visão 360º</strong>

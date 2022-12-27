@@ -7,7 +7,8 @@ import Text from '@components/Text';
 interface AboutItemProps {
   children?: ReactElement | string | null;
   icon: JSX.Element;
-  title: string;
+  title?: string;
+  id?: string;
   description: string;
   className?: string;
 }
@@ -16,11 +17,12 @@ const AboutItem = ({
   title,
   description,
   icon,
-  className = '',
-  children
+  children,
+  id,
+  className = ''
 }: AboutItemProps) => {
   return (
-    <div className={`w-full px-4 lg:px-0 ${className}`}>
+    <div id={id} className={`w-full px-4 lg:px-0 ${className}`}>
       <Container>
         <GridAboutCard>
           <div

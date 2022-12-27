@@ -33,7 +33,7 @@ function ContactSection() {
   return (
     <>
       <section
-        id="contact-section"
+        id="contact"
         ref={sectionRef}
         className={
           'relative min-h-[1030px] lg:min-h-[860px] bg-contact-form bg-cover bg-bottom ' +
@@ -104,6 +104,7 @@ function ContactSection() {
               }
             >
               <ContactForm />
+
               <div ref={newsletterRef}>
                 <NewsletterForm />
               </div>
