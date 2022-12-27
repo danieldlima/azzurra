@@ -21,6 +21,7 @@ module.exports = {
         'azzurra-gray-60': '#A1A1A1',
         'azzurra-gray-50': '#d1d1d1',
         'azzurra-gray-20': '#f1f2f2',
+        'nav-light': 'rgba(255,255,255,0.72)',
         transparent: 'rgba(241,242,242,0)'
       },
       backgroundSize: {
@@ -28,6 +29,12 @@ module.exports = {
         '70%': '70%',
         '80%': '80%',
         '90%': '90%'
+      },
+      backdropSaturate: {
+        'nav-light': '180%'
+      },
+      backdropBlur: {
+        'nav-light': '20px'
       },
       backgroundImage: {
         'azzurra-gold-linear':
@@ -61,6 +68,9 @@ module.exports = {
       maxHeight: {
         'screen-75': '90vh'
       },
+      margin: {
+        '75%': '75%'
+      },
       boxShadow: {
         1: '0px 5px 10px 0px rgba(0, 0, 0, 0.1)'
       },
@@ -75,15 +85,24 @@ module.exports = {
       keyframes: {
         up: {
           '0%': {
-            transform: 'translateY(-15px)'
+            transform: 'translateY(-100%)'
           },
           '100%': {
             transform: 'translateY(0)'
           }
+        },
+        down: {
+          '0%': {
+            transform: 'translateY(0)'
+          },
+          '100%': {
+            transform: 'translateY(-100%)'
+          }
         }
       },
       animation: {
-        'to-up': 'up 0.3s linear'
+        'to-up': 'up 0.3s linear',
+        'to-down': 'down 0.3s linear'
       }
     }
   },
