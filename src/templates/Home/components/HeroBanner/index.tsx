@@ -44,16 +44,19 @@ const HeroBanner = () => {
               'guiar a jornada rumo ao seu futuro.'
             }
             staticImage={
-              <StaticImage
-                breakpoints={[640, 768, 1024, 1280, 1536, 1920]}
-                quality={100}
-                width={1920}
-                height={1080}
-                layout={'fullWidth'}
-                className="h-screen w-full flex items-center justify-center"
-                src="../../../../images/azzurra__hero-banner.jpg"
-                alt="Imagem"
-              />
+              <div className="grid">
+                <StaticImage
+                  breakpoints={[320, 640, 768, 1024, 1280, 1536, 1920]}
+                  quality={100}
+                  width={1920}
+                  height={1080}
+                  layout={'fullWidth'}
+                  imgClassName={'w-[150%] -left-2/4 sm:w-full sm:left-0'}
+                  className="h-screen w-full flex items-center justify-center"
+                  src="../../../../images/azzurra__hero-banner.jpg"
+                  alt="Imagem"
+                />
+              </div>
             }
           />
         </SwiperSlide>
