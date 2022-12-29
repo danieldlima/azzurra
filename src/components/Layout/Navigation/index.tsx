@@ -25,8 +25,6 @@ function Navigation() {
     else setIsScroll(true);
   }
 
-  console.log('scrollDirection ->', scrollDirection);
-
   function handleResize() {
     if (open) setOpen(false);
   }
