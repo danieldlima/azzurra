@@ -5,6 +5,7 @@ import React, {
   useState
 } from 'react';
 
+import { BreakpointKeys } from '@root/modules/hooks';
 import { getVisibility } from '@root/modules/utils';
 
 import { InvestmentStep } from '@templates/Home/components/InvestmentPolicySection';
@@ -13,13 +14,15 @@ interface InvestmentPolicyMandalaProps extends IconBaseProps {
   onClick?: MouseEventHandler<SVGPathElement>;
   onVisibility?: (hoverId: InvestmentStep | undefined) => void;
   investmentStep?: InvestmentStep;
+  breakpoint?: BreakpointKeys;
 }
 
 function InvestmentPolicyMandala({
   className,
   onClick,
   onVisibility,
-  investmentStep
+  investmentStep,
+  breakpoint = 'xs'
 }: InvestmentPolicyMandalaProps) {
   const [step, setStep] = useState<InvestmentStep | undefined>(undefined);
 
@@ -52,10 +55,12 @@ function InvestmentPolicyMandala({
       fill="none"
       viewBox="0 0 363 363"
     >
+      <path className={'opacity-25 opacity-100'} />
       <path
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        className={'transition-all ' + getVisibility(4, investmentStep)}
+        style={getVisibility(4, investmentStep, { breakpoint }).style}
+        className={'transition-all'}
         data-path-id={1}
         onClick={onClick}
         data-id={4}
@@ -83,7 +88,8 @@ function InvestmentPolicyMandala({
       <path
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        className={'transition-all ' + getVisibility(1, investmentStep)}
+        style={getVisibility(1, investmentStep, { breakpoint }).style}
+        className={'transition-all'}
         data-id={1}
         data-path-id={5}
         onClick={onClick}
@@ -121,7 +127,8 @@ function InvestmentPolicyMandala({
       <path
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        className={'transition-all ' + getVisibility(2, investmentStep)}
+        style={getVisibility(2, investmentStep, { breakpoint }).style}
+        className={'transition-all '}
         data-path-id={11}
         data-id={2}
         onClick={onClick}
@@ -164,7 +171,8 @@ function InvestmentPolicyMandala({
       <path
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        className={'transition-all ' + getVisibility(3, investmentStep)}
+        style={getVisibility(3, investmentStep, { breakpoint }).style}
+        className={'transition-all'}
         data-path-id={18}
         data-id={3}
         onClick={onClick}
@@ -237,7 +245,8 @@ function InvestmentPolicyMandala({
       <path
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        className={'transition-all ' + getVisibility(5, investmentStep)}
+        style={getVisibility(5, investmentStep, { breakpoint }).style}
+        className={'transition-all'}
         data-path-id={31}
         data-id={5}
         onClick={onClick}

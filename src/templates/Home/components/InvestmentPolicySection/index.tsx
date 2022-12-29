@@ -23,7 +23,9 @@ function InvestmentPolicySection() {
     InvestmentStep | undefined
   >(undefined);
 
-  const breakpoint = useBreakpointType(window.innerWidth);
+  const breakpoint = useBreakpointType(
+    typeof window !== 'undefined' ? window.innerWidth : 0
+  );
 
   function handleBtnToTop(e: MouseEvent<SVGPathElement>) {
     const target = e.currentTarget as SVGPathElement;
@@ -70,7 +72,6 @@ function InvestmentPolicySection() {
               className={'mb-8 sm:mb-24 md:mb-14'}
               label={['Política de', 'Investimento']}
             />
-
             <div
               className={
                 'md:w-2/3 lg:w-full md:mx-auto investment-policy__mandala-wrapper'
@@ -81,6 +82,7 @@ function InvestmentPolicySection() {
                 onClick={handleBtnToTop}
                 onVisibility={setInvestmentStep}
                 investmentStep={investmentStepHovered}
+                breakpoint={breakpoint}
               />
             </div>
           </div>
@@ -91,7 +93,8 @@ function InvestmentPolicySection() {
           >
             <Element
               name={'investment-step-1'}
-              className={'transition-all ' + getVisibility(1, investmentStep)}
+              style={getVisibility(1, investmentStep, { breakpoint }).style}
+              className={'transition-all'}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
@@ -111,7 +114,8 @@ function InvestmentPolicySection() {
 
             <Element
               name={'investment-step-2'}
-              className={'transition-all ' + getVisibility(2, investmentStep)}
+              style={getVisibility(2, investmentStep, { breakpoint }).style}
+              className={'transition-all'}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
@@ -129,7 +133,8 @@ function InvestmentPolicySection() {
 
             <Element
               name={'investment-step-3'}
-              className={'transition-all ' + getVisibility(3, investmentStep)}
+              style={getVisibility(3, investmentStep, { breakpoint }).style}
+              className={'transition-all'}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
@@ -149,7 +154,8 @@ function InvestmentPolicySection() {
 
             <Element
               name={'investment-step-4'}
-              className={'transition-all ' + getVisibility(4, investmentStep)}
+              style={getVisibility(4, investmentStep, { breakpoint }).style}
+              className={'transition-all'}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
@@ -167,7 +173,8 @@ function InvestmentPolicySection() {
 
             <Element
               name={'investment-step-5'}
-              className={'transition-all ' + getVisibility(5, investmentStep)}
+              style={getVisibility(5, investmentStep, { breakpoint }).style}
+              className={'transition-all'}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >

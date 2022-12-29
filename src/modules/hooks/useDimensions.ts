@@ -6,7 +6,7 @@ import ResizeObserverPolyfill from 'resize-observer-polyfill';
 
 import { useBreakpointType } from '@root/modules/hooks/useBreakpointType';
 import { getClientSizes } from '@root/modules/utils/getSizes';
-import { BreakpointKeys, DOMSizes } from '@root/types';
+import { DOMSizes } from '@root/types';
 
 type OptimizedType = 'debounce' | 'throttle';
 
@@ -15,7 +15,7 @@ type UseDimensionsReturned<T> = [
   dimensions: {
     sizes: DOMSizes;
     window: Pick<DOMSizes, 'width' | 'height'>;
-    breakpoint: BreakpointKeys;
+    breakpoint: ReturnType<typeof useBreakpointType>;
   }
 ];
 
