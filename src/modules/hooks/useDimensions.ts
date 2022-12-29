@@ -19,7 +19,7 @@ type UseDimensionsReturned<T> = [
   }
 ];
 
-interface IUseDimensions {
+interface UseDimensionsOptions {
   wait: number;
   optimizedType: OptimizedType;
 }
@@ -39,7 +39,7 @@ const INITIAL_STATE_WINDOW = {
 };
 
 export const useDimensions = <T extends HTMLDivElement = HTMLDivElement>(
-  options: IUseDimensions = {
+  options: UseDimensionsOptions = {
     wait: 500,
     optimizedType: 'debounce'
   }
@@ -52,7 +52,8 @@ export const useDimensions = <T extends HTMLDivElement = HTMLDivElement>(
   const observerRef = useRef<ResizeObserver>(null!);
 
   const { wait, optimizedType } = options;
-  const bodyElement = document.body;
+  const bodyElement =
+    typeof document !== 'undefined' ? document.body : undefined;
 
   useEffect(() => {
     const DOMElement = ref.current;
@@ -79,14 +80,14 @@ export const useDimensions = <T extends HTMLDivElement = HTMLDivElement>(
       new ResizeObserver(observerFn) || new ResizeObserverPolyfill(observerFn);
 
     return () => {
-      if (observerRef.current && DOMElement) {
+      if (observerRef.current && DOMElement && bodyElement) {
         observerRef.current.unobserve(bodyElement);
       }
     };
   }, [bodyElement, optimizedType, wait]);
 
   useEffect(() => {
-    if (observerRef.current) {
+    if (observerRef.current && bodyElement) {
       observerRef.current.observe(bodyElement);
     }
   }, [ref, bodyElement]);

@@ -4,7 +4,7 @@ export type BreakpointKeys = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
 export const useBreakpointType = (width: number): BreakpointKeys => {
   return useMemo(() => {
-    if (width || window.innerWidth) {
+    if (typeof window !== 'undefined' && (width || window.innerWidth)) {
       switch (true) {
         case width > 0 && width < 600:
           return 'xs';
