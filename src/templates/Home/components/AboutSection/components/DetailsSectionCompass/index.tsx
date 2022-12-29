@@ -69,7 +69,7 @@ function DetailsSectionCompass() {
         }
       >
         <Container>
-          <GridAboutCard className={'pr-4 lg:pr-0'}>
+          <GridAboutCard className={'pr-4 md:pr-0'}>
             <div
               className={
                 'flex flex-col gap-8 sm:gap-10 col-start-icon col-end-description lg:col-start-description'
@@ -153,7 +153,7 @@ function DetailsSectionCompass() {
 
                 <div
                   className={
-                    'grid grid-rows-1 lg:grid-cols-3 gap-10 px-6 sm:px-0'
+                    'grid grid-rows-1 md:grid-cols-3 gap-10 px-6 sm:px-0'
                   }
                 >
                   <CardFamilyOffice

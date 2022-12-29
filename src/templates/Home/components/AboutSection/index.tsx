@@ -31,7 +31,7 @@ const AboutSection = () => {
         >
           <Container>
             <GridAboutCard>
-              <div className="grid-in-description mt-8">
+              <div className="grid-in-description mt-8 pr-8 lg:pr-0">
                 <h4 className="text-xl sm:text-2xl font-bold text-azzurra-navy-blue mb-2 sm:mb-4">
                   GESTÃO DE RECURSOS
                 </h4>
