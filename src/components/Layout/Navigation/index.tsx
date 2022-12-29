@@ -3,6 +3,7 @@ import { animateScroll as scroll } from 'react-scroll';
 
 import { useLockedBody } from 'usehooks-ts';
 
+import { useScrollDirection } from '@root/modules/hooks';
 import { addClassName } from '@root/modules/utils';
 
 import AzzurraBrand from '@components/Icons/AzzurraBrand';
@@ -13,13 +14,18 @@ function Navigation() {
   const [open, setOpen] = useState(false);
   const [isScroll, setIsScroll] = useState(false);
 
+  const scrollDirection = useScrollDirection();
+
   function handleClick() {
     setOpen((prevState) => !prevState);
   }
+
   function handleScroll() {
     if (window.scrollY <= 100) setIsScroll(false);
     else setIsScroll(true);
   }
+
+  console.log('scrollDirection ->', scrollDirection);
 
   function handleResize() {
     if (open) setOpen(false);
@@ -31,6 +37,8 @@ function Navigation() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
+
+    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {
@@ -96,13 +104,13 @@ function Navigation() {
         >
           <div
             className={
-              'w-full h-14 transition-all flex items-center ' +
-              'absolute top-0 left-0 w-full z-10 ' +
-              `${
+              'w-full h-14 transition-all flex items-center absolute left-0 w-full z-10 ' +
+              addClassName(
                 isScroll && !open
                   ? 'bg-azzurra-navy-blue backdrop-saturate-nav-light backdrop-blur-nav-light'
                   : 'bg-azzurra-navy-blue/0 backdrop-blur-0'
-              }`
+              ) +
+              addClassName(scrollDirection === 'down' ? '-top-16' : 'top-0')
             }
             onClick={handleClick}
           >
