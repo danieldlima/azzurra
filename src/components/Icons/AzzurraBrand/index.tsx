@@ -3,6 +3,7 @@ import * as React from 'react';
 interface AzzurraBrandProps {
   color?: 'color' | 'white';
   width?: number;
+  iconOnly?: boolean;
   height?: number;
   className?: string;
 }
@@ -11,8 +12,28 @@ const AzzurraBrand = ({
   className,
   color = 'color',
   width = 233,
-  height = 120
+  height = 120,
+  iconOnly = false
 }: AzzurraBrandProps) => {
+  function AzzurraBrandIcon() {
+    return (
+      <svg
+        className={className}
+        width={width ? width : 104}
+        height={height ? height : 115}
+        fill="none"
+        viewBox="0 0 104 115"
+      >
+        <path
+          fill="currentColor"
+          d="M44.71 6.29h-3.5L3.93 89.81h3.5L44.71 6.29ZM103.32 71.16c0-12.6-1.57-24.11-4.68-34.19-2.55-8.28-6.13-15.65-10.65-21.89C80.35 4.53 72.34.52 71.21 0l-1.3 2.92c1.4.66 8.46 4.34 15.49 14.04 4.31 5.95 7.74 13 10.19 20.95 2.79 9.08 4.31 19.39 4.51 30.65l.02 1H85.39l-.1-.86c-.93-7.66-2.44-14.92-4.48-21.56-3.06-9.94-7.36-18.77-12.78-26.26a71.76 71.76 0 0 0-4.25-5.32l-.42-.47 5.09-11.4h-3.5l-3.96 8.88-1.01-.97c-6.3-6.05-11.51-8.54-12.08-8.8l-.42-.19-1.3 2.92.39.18c.99.45 6.23 3.05 12.56 9.53l.47.48-25.46 57.06h48.4l.08.89c.35 3.89.55 7.91.61 11.96v1H27.95l-1.43 3.2h59.92v-1.6c0-4.89-.2-9.72-.6-14.38l-.09-1.07h17.59v-1.6l-.02-.02Zm-64.28-1.6 22.89-51.29 1.01 1.23c.85 1.05 1.7 2.14 2.5 3.25 5.21 7.2 9.36 15.72 12.31 25.32 1.94 6.29 3.38 13.15 4.29 20.38l.14 1.1H39.05l-.01.01ZM63.19 95.42H1.43L0 98.62h61.77l1.42-3.2ZM18.95 106.71h59.4l1.42-3.2H20.38l-1.43 3.2ZM31.13 114.81h23.38l1.42-3.2H32.56l-1.43 3.2Z"
+        />
+      </svg>
+    );
+  }
+
+  if (iconOnly) return <AzzurraBrandIcon />;
+
   return (
     <svg
       className={className}

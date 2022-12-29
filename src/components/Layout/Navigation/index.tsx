@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from 'react';
+import { animateScroll as scroll } from 'react-scroll';
 
 import { useLockedBody } from 'usehooks-ts';
 
+import { addClassName } from '@root/modules/utils';
+
+import AzzurraBrand from '@components/Icons/AzzurraBrand';
 import Container from '@components/Layout/Container';
 import NavItem from '@components/Layout/Navigation/components/NavItem';
 
 function Navigation() {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const [isScroll, setIsScroll] = useState(false);
 
   function handleClick() {
@@ -41,6 +45,14 @@ function Navigation() {
 
   useLockedBody(open, 'body');
 
+  function handleBtnToTop(e: React.MouseEvent<HTMLDivElement, MouseEvent>) {
+    e.stopPropagation();
+
+    if (open) setOpen(false);
+
+    scroll.scrollToTop();
+  }
+
   return (
     <>
       <nav
@@ -72,7 +84,7 @@ function Navigation() {
 
       <div
         className={
-          'mobile-menu w-full fixed inset-y-0 left-0 z-40 transition-all ' +
+          'md:hidden mobile-menu w-full fixed inset-y-0 left-0 z-40 transition-all ' +
           `pointer-events-none`
         }
       >
@@ -84,7 +96,7 @@ function Navigation() {
         >
           <div
             className={
-              'w-full h-14 transition-all flex items-center backdrop-blur-nav-light ' +
+              'w-full h-14 transition-all flex items-center ' +
               'absolute top-0 left-0 w-full z-10 ' +
               `${
                 isScroll && !open
@@ -123,11 +135,21 @@ function Navigation() {
                 }
               />
             </div>
+
+            <div
+              onClick={handleBtnToTop}
+              className={
+                'absolute w-9 h-full py-2.5 text-azzurra-gold-100 transition-all' +
+                `${addClassName(!isScroll ? '-right-full' : 'right-6')}`
+              }
+            >
+              <AzzurraBrand className={'w-full h-full'} iconOnly />
+            </div>
           </div>
 
           <div
             className={
-              ' overflow-hidden transition-all duration-300 flex items-center justify-center ' +
+              'overflow-hidden transition-all duration-300 flex items-center justify-center ' +
               `${
                 open
                   ? 'h-full bg-azzurra-navy-blue/95 backdrop-blur-nav-light'

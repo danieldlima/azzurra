@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { ChangeEvent, useState } from 'react';
 
 import { addClassName } from '@root/modules/utils';
 
@@ -12,6 +12,10 @@ interface TextareaField {
 function TextareaField({ className, required, name, label }: TextareaField) {
   const [value, setValue] = useState('');
 
+  function handleChange(e: ChangeEvent<HTMLTextAreaElement>) {
+    setValue(e.target.value);
+  }
+
   return (
     <div className={`relative mb-6 ${addClassName(className)}`}>
       <label className="block relative">
@@ -20,14 +24,11 @@ function TextareaField({ className, required, name, label }: TextareaField) {
           name={name}
           rows={6}
           spellCheck={false}
-          autoFocus
           className={
             'w-full min-h-48 relative top-6 group/field form-input px-0.5 py-0 border-0 ' +
             'focus:ring-transparent focus:border-b-azzurra-gold-100 peer'
           }
-          onChange={(e) => {
-            setValue(e.target.value);
-          }}
+          onChange={handleChange}
         />
 
         <span
