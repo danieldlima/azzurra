@@ -26,7 +26,7 @@ module.exports = {
       },
       screens: {
         'mobile-landscape': {
-          raw: '(min-width: 321px) and (max-width: 896px)'
+          raw: '(min-width: 321px) and (max-width: 896px) and (orientation: landscape)'
         }
       },
       backgroundSize: {

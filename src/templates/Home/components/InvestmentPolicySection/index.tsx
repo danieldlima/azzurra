@@ -59,13 +59,16 @@ function InvestmentPolicySection() {
       <Container className={'py-20 sm:py-32 mobile-landscape:pb-16'}>
         <div
           className={
-            'flex flex-col mobile-landscape:flex-row lg:flex-row gap-12 md:gap-14 justify-between ' +
+            'relative flex flex-col mobile-landscape:flex-row lg:flex-row gap-12 md:gap-14 justify-between ' +
             'lg:gap-14 mobile-landscape:gap-4 text-left mobile-landscape:text-left md:text-center lg:text-left'
           }
         >
           <div
             className={
-              'w-full lg:w-5/12 investment-policy__mandala-container px-6 xl:px-0 mobile-landscape:pr-0 mobile-landscape:w-5/12'
+              'mobile-landscape:sticky mobile-landscape:top-20 mobile-landscape:left-0 mobile-landscape:h-fit ' +
+              'mobile-landscape:pr-0 mobile-landscape:w-5/12 sm:relative sm:top-0 sm:h-auto w-full lg:w-5/12' +
+              'sticky top-20 left-0 h-fit sm:relative sm:top-0 sm:h-auto w-full lg:w-5/12 px-6 xl:px-0 ' +
+              'investment-policy__mandala-container'
             }
           >
             <Title
