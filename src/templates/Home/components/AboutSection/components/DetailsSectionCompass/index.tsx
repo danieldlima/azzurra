@@ -2,6 +2,7 @@ import * as React from 'react';
 import { useContext, useRef } from 'react';
 
 import { HomeContext } from '@root/modules/providers';
+import { addClassName } from '@root/modules/utils';
 
 import AboutMandala from '@components/Icons/AboutMandala';
 import IcCentralization from '@components/Icons/Centralization';
@@ -21,7 +22,8 @@ function DetailsSectionCompass() {
 
   const aboutCompassRef = useRef<HTMLDivElement>(null!);
 
-  const isHidden = !aboutSection?.compassItem.isDetailsOpen ? ' hidden ' : '';
+  const { isDetailsOpen } = aboutSection?.compassItem;
+  const isHidden = !isDetailsOpen ? ' hidden ' : '';
 
   function handleClick() {
     const element = document.getElementById('about-compass');
@@ -61,7 +63,10 @@ function DetailsSectionCompass() {
       </AboutItem>
 
       <div
-        className={`w-full px-4 p-14 text-left -mt-6 sm:-mt-5 xl:px-0 bg-azzurra-gray-20 -mt-6 ${isHidden}`}
+        className={
+          'w-full px-4 text-left -mt-6 sm:-mt-5 xl:px-0 bg-azzurra-gray-20 -mt-6 overflow-hidden transition-all' +
+          addClassName(isDetailsOpen ? 'h-auto py-14' : 'h-0')
+        }
       >
         <Container>
           <GridAboutCard className={'pr-4 lg:pr-0'}>

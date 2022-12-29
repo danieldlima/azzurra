@@ -3,13 +3,13 @@ import React, { createContext, PropsWithChildren, useState } from 'react';
 export type HomeProviderProps = PropsWithChildren;
 
 export interface AboutCompassItem {
-  isDetailsOpen?: boolean;
+  isDetailsOpen: boolean;
   setIsDetailsOpen?: (make: boolean) => void;
-  toggleDetails?: () => void;
+  toggleDetails: () => void;
 }
 
 export interface HomeContextProps {
-  aboutSection?: {
+  aboutSection: {
     layout: {
       grid: string;
     };

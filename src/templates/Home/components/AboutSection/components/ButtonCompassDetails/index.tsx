@@ -1,6 +1,7 @@
 import React, { ReactNode, useContext } from 'react';
 
 import { HomeContext } from '@root/modules/providers';
+import { addClassName } from '@root/modules/utils';
 
 import IcArrowDown from '@components/Icons/ArrowDown';
 
@@ -37,12 +38,25 @@ function ButtonCompassDetails({
       id={id}
       className={`relative w-full sm:max-w-6xl mx-auto ${className}`}
     >
+      <div className={''}></div>
       <div
-        className={`w-full h-[2px] sm:h-px bg-azzurra-navy-blue absolute top-1/2 -transform-x-1/2 transition-opacity ${
-          aboutSection?.compassItem.isDetailsOpen
-            ? 'sm:opacity-100'
-            : 'opacity-100 sm:opacity-0'
-        }`}
+        className={
+          'h-[2px] sm:h-px bg-azzurra-navy-blue absolute top-1/2 transition-all delay-100 left-2/4 ' +
+          'origin-left -scale-x-100' +
+          addClassName(
+            aboutSection?.compassItem.isDetailsOpen ? 'w-2/4' : 'w-0'
+          )
+        }
+      />
+
+      <div
+        className={
+          'h-[2px] sm:h-px bg-azzurra-navy-blue absolute top-1/2 transition-all delay-100 right-2/4 ' +
+          'origin-right -scale-x-100' +
+          addClassName(
+            aboutSection?.compassItem.isDetailsOpen ? 'w-2/4' : 'w-0'
+          )
+        }
       />
 
       <button
