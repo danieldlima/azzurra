@@ -3,6 +3,7 @@ import React, { ReactNode } from 'react';
 import Text from '@components/Text';
 
 interface InvestmentPolicyItemProps {
+  id?: string;
   title: {
     text: string;
     color: AzzurraColor;
@@ -15,7 +16,7 @@ function InvestmentPolicyItem({
   description
 }: InvestmentPolicyItemProps) {
   return (
-    <div>
+    <>
       <Text
         as="h3"
         size="paragraph"
@@ -32,7 +33,7 @@ function InvestmentPolicyItem({
         color="black"
         label={description}
       />
-    </div>
+    </>
   );
 }
 

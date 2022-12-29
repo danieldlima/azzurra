@@ -15,6 +15,10 @@ export interface HomeContextProps {
     };
     compassItem: AboutCompassItem;
   };
+  investmentPolicySection: {
+    mandalaId: number | null;
+    setMandalaId: (make: number | null) => void;
+  };
   footer?: {
     y?: {
       value: number;
@@ -27,6 +31,7 @@ export const HomeContext = createContext<HomeContextProps>(null!);
 
 export const HomeProvider = ({ children }: HomeProviderProps) => {
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
+  const [mandalaId, setMandalaId] = useState<number | null>(null);
   const [footer, setFooter] = useState(0);
 
   function toggleDetails() {
@@ -42,6 +47,7 @@ export const HomeProvider = ({ children }: HomeProviderProps) => {
             setValue: setFooter
           }
         },
+        investmentPolicySection: { mandalaId, setMandalaId },
         aboutSection: {
           layout: {
             grid: `grid grid-cols-about-card grid-areas-about-card gap-x-4 sm:gap-x-10`
