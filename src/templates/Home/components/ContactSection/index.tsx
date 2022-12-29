@@ -45,15 +45,15 @@ function ContactSection() {
         >
           <div className="lg:w-4/12 mb-8 lg:mb-0">
             <h3
-              className={`text-5xl sm:text-7xl mb-6 sm:mb-4 md:mb-14 text-azzurra-navy-blue`}
+              className={`text-5xl sm:text-7xl mb-6 mobile-landscape:mb-4 sm:mb-4 md:mb-14 text-azzurra-navy-blue`}
             >
               Fale com{' '}
-              <span className="inline-block">
+              <span className="inline-block mobile-landscape:block">
                 a <strong>Azzurra Capital</strong>
               </span>
             </h3>
 
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-5 mobile-landscape:flex-row mobile-landscape:gap-20">
               <div className="text-black">
                 <p className="font-bold text-xl">
                   LIGUE PARA A AZZURRA CAPITAL:
@@ -100,7 +100,7 @@ function ContactSection() {
             <div
               className={
                 'absolute top-0 left-0 w-full flex flex-col bg-white px-8 ' +
-                'pt-16 pb-24 rounded-lg shadow-1 z-20 gap-20 lg:gap-28'
+                'pt-16 pb-24 mobile-landscape:pt-12 rounded-lg shadow-1 z-20 gap-20 lg:gap-28'
               }
             >
               <ContactForm />

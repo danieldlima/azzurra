@@ -13,7 +13,7 @@ import DetailsSectionCompass from './components/DetailsSectionCompass';
 const AboutSection = () => {
   return (
     <section id="about">
-      <div className="flex flex-col items-center justify-center pb-20 pt-16 sm:pb-24 sm:pt-12 gap-16">
+      <div className="flex flex-col items-center justify-center mobile-landscape:pb-10 pb-20 pt-16 sm:pb-24 sm:pt-12 gap-16">
         <AboutItem
           id="meet-azzurra"
           title="Conheça a Azzurra Capital"

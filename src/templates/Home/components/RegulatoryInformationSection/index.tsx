@@ -30,7 +30,8 @@ function RegulatoryInformationSection() {
             <div>
               <ParentSize
                 className={
-                  'grid grid-cols-2 grid-rows-4 xl:grid-cols-3 xl:grid-rows-3' +
+                  'grid grid-cols-2 grid-rows-4 mobile-landscape:grid-rows-2 mobile-landscape:grid-cols-4 xl:grid-cols-3' +
+                  ' xl:grid-rows-3' +
                   ' justify-center lg:justify-start gap-4'
                 }
               >

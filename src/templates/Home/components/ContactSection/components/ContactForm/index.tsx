@@ -10,7 +10,11 @@ import TextareaField from './TextareaField';
 function ContactForm() {
   return (
     <div className="w-full flex flex-col">
-      <div className={'w-8 sm:w-14 lg:w-16 text-azzurra-gold mb-2 lg:mb-5'}>
+      <div
+        className={
+          'w-8 sm:w-14 lg:w-16 text-azzurra-gold mb-2 mobile-landscape:mb-4 lg:mb-5'
+        }
+      >
         <Mail className={'w-full h-full'} />
       </div>
 

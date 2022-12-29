@@ -56,16 +56,16 @@ function InvestmentPolicySection() {
 
   return (
     <div id="investment-policy">
-      <Container className={'py-20 sm:py-32'}>
+      <Container className={'py-20 sm:py-32 mobile-landscape:pb-16'}>
         <div
           className={
-            'flex flex-col lg:flex-row gap-12 md:gap-14 lg:gap-8 justify-between ' +
-            'text-left md:text-center lg:text-left'
+            'flex flex-col mobile-landscape:flex-row lg:flex-row gap-12 md:gap-14 justify-between ' +
+            'lg:gap-14 mobile-landscape:gap-4 text-left mobile-landscape:text-left md:text-center lg:text-left'
           }
         >
           <div
             className={
-              'w-full lg:w-5/12 investment-policy__mandala-container px-6 xl:px-0'
+              'w-full lg:w-5/12 investment-policy__mandala-container px-6 xl:px-0 mobile-landscape:pr-0 mobile-landscape:w-5/12'
             }
           >
             <Title
@@ -74,7 +74,7 @@ function InvestmentPolicySection() {
             />
             <div
               className={
-                'md:w-2/3 lg:w-full md:mx-auto investment-policy__mandala-wrapper'
+                'md:w-2/3 mobile-landscape:w-full lg:w-full md:mx-auto investment-policy__mandala-wrapper'
               }
             >
               <InvestmentPolicyMandala
@@ -89,7 +89,7 @@ function InvestmentPolicySection() {
 
           <Element
             name={'investment-policy-steps'}
-            className="w-full lg:w-6/12 flex flex-col gap-8 px-6 xl:px-0"
+            className="w-full mobile-landscape:w-7/12 lg:w-6/12 flex flex-col gap-8 px-6 xl:px-0"
           >
             <Element
               name={'investment-step-1'}

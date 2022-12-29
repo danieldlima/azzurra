@@ -16,9 +16,9 @@ function Title({ className, label = ['', ''], color = 'blue' }: TitleProps) {
 
   return (
     <h3
-      className={`text-5xl sm:text-7xl ${colorClass[color]}${addClassName(
-        className
-      )}`}
+      className={`mobile-landscape:text-5xl text-5xl sm:text-7xl ${
+        colorClass[color]
+      }${addClassName(className)}`}
     >
       {label[0]}{' '}
       <span className="block">

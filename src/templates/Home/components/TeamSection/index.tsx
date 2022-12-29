@@ -11,9 +11,13 @@ function TeamSection() {
     <section id="team" className="relative">
       <SectionMask position="top" />
 
-      <div className="px-16 md:px-52 lg:px-20 pt-20 sm:pt-64 pb-36 bg-team-section">
+      <div className="px-16 mobile-landscape:px-20 md:px-52 lg:px-20 pt-20 sm:pt-64 pb-36 bg-team-section">
         <Container>
-          <div className={'grid row-auto lg:grid-cols-3 gap-12'}>
+          <div
+            className={
+              'grid row-auto mobile-landscape:grid-cols-2 lg:grid-cols-3 gap-12'
+            }
+          >
             <div>
               <Title color="white" label={['Conheça', 'nosso time']} />
             </div>

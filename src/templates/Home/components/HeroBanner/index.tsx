@@ -22,7 +22,7 @@ const initialPagination = {
 
 const HeroBanner = () => {
   return (
-    <div className="max-h-screen-75 sm:max-h-screen relative overflow-hidden">
+    <div className="max-h-screen-75 mobile-landscape:min-h-[700px] relative overflow-hidden">
       <Swiper
         loop={false}
         className="azzurra-swiper-slider"
@@ -44,19 +44,17 @@ const HeroBanner = () => {
               'guiar a jornada rumo ao seu futuro.'
             }
             staticImage={
-              <div className="grid">
-                <StaticImage
-                  breakpoints={[320, 640, 768, 1024, 1280, 1536, 1920]}
-                  quality={100}
-                  width={1920}
-                  height={1080}
-                  layout={'fullWidth'}
-                  imgClassName={'w-[150%] -left-2/4 sm:w-full sm:left-0'}
-                  className="h-screen w-full flex items-center justify-center"
-                  src="../../../../images/azzurra__hero-banner.jpg"
-                  alt="Imagem"
-                />
-              </div>
+              <StaticImage
+                breakpoints={[320, 640, 768, 1024, 1280, 1536, 1920]}
+                quality={100}
+                width={1920}
+                height={1080}
+                layout={'fullWidth'}
+                imgClassName={'w-[150%] -left-2/4 sm:w-full sm:left-0'}
+                className="h-screen mobile-landscape:min-h-[700px] w-full flex items-center justify-center"
+                src="../../../../images/azzurra__hero-banner.jpg"
+                alt="Imagem"
+              />
             }
           />
         </SwiperSlide>

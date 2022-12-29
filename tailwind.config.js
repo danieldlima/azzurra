@@ -24,6 +24,11 @@ module.exports = {
         'nav-light': 'rgba(255,255,255,0.72)',
         transparent: 'rgba(241,242,242,0)'
       },
+      screens: {
+        'mobile-landscape': {
+          raw: '(min-width: 321px) and (max-width: 896px)'
+        }
+      },
       backgroundSize: {
         '50%': '50%',
         '70%': '70%',

@@ -13,7 +13,7 @@ function SliderItem({ title, description, staticImage }: SliderItemProps) {
     <div>
       <div
         className={
-          'h-screen w-full after:w-full after:h-full after:bg-black/40 md:after:bg-black/40 ' +
+          'h-screen mobile-landscape:min-h-[700px] w-full after:w-full after:h-full after:bg-black/40 md:after:bg-black/40 ' +
           'lg:after:bg-black/0 after:absolute after:top-0 after:left-0 '
         }
       >
