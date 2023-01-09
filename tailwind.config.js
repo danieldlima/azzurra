@@ -66,6 +66,8 @@ module.exports = {
         'about-card': 'minmax(4rem, 5rem) minmax(83.333333%, 1fr)'
       },
       height: {
+        'content-custom': 'calc(100% - 100px)',
+        'text-content-90': '90%',
         'text-content-80': '80%'
       },
       maxWidth: {

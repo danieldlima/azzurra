@@ -21,8 +21,12 @@ const initialPagination = {
 };
 
 const HeroBanner = () => {
+  const minHeight = 'min-h-[700px]';
+
   return (
-    <div className="max-h-screen-75 mobile-landscape:min-h-[700px] relative overflow-hidden">
+    <div
+      className={`${minHeight} mobile-landscape:min-h-[700px] relative overflow-hidden`}
+    >
       <Swiper
         loop={false}
         className="azzurra-swiper-slider"
@@ -36,25 +40,30 @@ const HeroBanner = () => {
         }}
         pagination={initialPagination}
       >
-        <SwiperSlide className="azzurra-swiper-slider__wrapper">
+        <SwiperSlide className={`${minHeight} azzurra-swiper-slider__wrapper`}>
           <SliderItem
             title={['Bons ventos para', 'os seus investimentos!']}
             description={
               'Conheça a Azzurra Capital, a gestora de recursos que vai ' +
               'guiar a jornada rumo ao seu futuro.'
             }
-            staticImage={
-              <StaticImage
-                breakpoints={[320, 640, 768, 1024, 1280, 1536, 1920]}
-                quality={100}
-                width={1920}
-                height={1080}
-                layout={'fullWidth'}
-                imgClassName={'w-[150%] -left-2/4 sm:w-full sm:left-0'}
-                className="h-screen mobile-landscape:min-h-[700px] w-full flex items-center justify-center"
-                src="../../../../images/azzurra__hero-banner.jpg"
-                alt="Imagem"
-              />
+            element={
+              <>
+                <StaticImage
+                  breakpoints={[320, 640, 768, 1024, 1280, 1536, 1920]}
+                  quality={100}
+                  width={1920}
+                  height={1080}
+                  layout={'fullWidth'}
+                  imgClassName={'w-[150%] -left-2/4 sm:w-full sm:left-0'}
+                  className={
+                    `lg:hidden h-screen ${minHeight} ` +
+                    'mobile-landscape:min-h-[700px] w-full flex items-center justify-center'
+                  }
+                  src="../../../../images/azzurra__hero-banner.jpg"
+                  alt="Imagem"
+                />
+              </>
             }
           />
         </SwiperSlide>

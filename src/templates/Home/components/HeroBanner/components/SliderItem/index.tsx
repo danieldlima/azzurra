@@ -5,10 +5,10 @@ import AzzurraBrand from '@components/Icons/AzzurraBrand';
 interface SliderItemProps {
   title: [top: string, bottom: string];
   description: string;
-  staticImage: ReactNode;
+  element: ReactNode;
 }
 
-function SliderItem({ title, description, staticImage }: SliderItemProps) {
+function SliderItem({ title, description, element }: SliderItemProps) {
   return (
     <div>
       <div
@@ -17,14 +17,14 @@ function SliderItem({ title, description, staticImage }: SliderItemProps) {
           'lg:after:bg-black/0 after:absolute after:top-0 after:left-0 '
         }
       >
-        {staticImage}
+        {element}
       </div>
 
-      <div className="w-full h-text-content-80 z-10 top-0 flex flex-col lg:flex-row items-center absolute justify-center">
+      <div className="w-full h-content-custom z-10 top-0 flex flex-col lg:flex-row items-center absolute justify-center">
         <div className="container max-w-6xl mx-auto">
           <div className={'grid-col-2 mx-auto sm:mx-0 sm:px-4 xl:px-0'}>
             <div className="w-full lg:w-3/5 sm:mx-auto lg:mx-0 px-8 sm:px-0">
-              <div className="w-64 sm:w-80 mb-10 sm:mb-20 md:mt-8">
+              <div className="w-64 xl:w-80 mb-10 sm:mb-20">
                 <AzzurraBrand className="w-full h-auto" color={'white'} />
               </div>
 

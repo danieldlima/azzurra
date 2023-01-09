@@ -21,7 +21,7 @@ function Navigation() {
   }
 
   function handleScroll() {
-    if (window.scrollY <= 100) setIsScroll(false);
+    if (window.scrollY <= 50) setIsScroll(false);
     else setIsScroll(true);
   }
 
