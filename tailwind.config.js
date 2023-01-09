@@ -9,6 +9,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        'azzurra-navy-blue-fb': '#013c4d',
         'azzurra-navy-blue': '#242e63',
         'azzurra-dark-blue': '#0f1337',
         'azzurra-light-blue': '#4e778d',
@@ -106,11 +107,90 @@ module.exports = {
           '100%': {
             transform: 'translateY(-100%)'
           }
+        },
+        'entrance-opacity': {
+          '0%': {
+            opacity: 0
+          },
+          '10%': {
+            opacity: 0
+          },
+          '100%': {
+            opacity: 1
+          }
+        },
+        'entrance-forward': {
+          '0%': {
+            opacity: 0,
+            transform: 'scale(0.6)'
+          },
+          '100%': {
+            opacity: 1,
+            transform: 'scale(1)'
+          }
+        },
+        'entrance-l': {
+          '0%': {
+            opacity: 0,
+            transform: 'translateX(-60px)'
+          },
+          '10%': {
+            opacity: 0
+          },
+          '100%': {
+            opacity: 1,
+            transform: 'translateX(0)'
+          }
+        },
+        'entrance-r': {
+          '0%': {
+            opacity: 0,
+            transform: 'translateX(60px)'
+          },
+          '10%': {
+            opacity: 0
+          },
+          '100%': {
+            opacity: 1,
+            transform: 'translateX(0)'
+          }
+        },
+        'entrance-t': {
+          '0%': {
+            opacity: 0,
+            transform: 'translateY(-60px)'
+          },
+          '10%': {
+            opacity: 0
+          },
+          '100%': {
+            opacity: 1,
+            transform: 'translateY(0)'
+          }
+        },
+        'entrance-b': {
+          '0%': {
+            opacity: 0,
+            transform: 'translateY(60px)'
+          },
+          '10%': {
+            opacity: 0
+          },
+          '100%': {
+            opacity: 1,
+            transform: 'translateY(0)'
+          }
         }
       },
       animation: {
         'to-up': 'up 0.3s linear',
-        'to-down': 'down 0.3s linear'
+        'to-down': 'down 0.3s linear',
+        'entrance-opacity': 'entrance-opacity 3s ease 0s 1 normal forwards',
+        'entrance-forward': 'entrance-forward 1s ease 0s 1 normal forwards',
+        'entrance-r': 'entrance-r 2s ease-out 0s 1 normal forwards',
+        'entrance-l': 'entrance-l 2s ease-out 0s 1 normal forwards',
+        'entrance-t': 'entrance-t 2s ease-out 0s 1 normal forwards',
+        'entrance-b': 'entrance-b 2s ease-out 0s 1 normal forwards'
       }
     }
   },

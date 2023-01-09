@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { StaticImage } from 'gatsby-plugin-image';
@@ -48,7 +48,33 @@ const HeroBanner = () => {
               'guiar a jornada rumo ao seu futuro.'
             }
             element={
-              <>
+              <div className={'w-full h-full bg-azzurra-navy-blue-fb'}>
+                <div
+                  className={
+                    'entrance-opacity w-full h-full hidden object-cover lg:block'
+                  }
+                >
+                  <video
+                    autoPlay
+                    muted
+                    loop
+                    preload="auto"
+                    poster="/images/azzurra__hero-banner.webp"
+                    className={
+                      'w-full h-full video[poster]:w-full video[poster]:h-full object-cover'
+                    }
+                  >
+                    <source
+                      src="/video/azzurra__hero-video.webm"
+                      type="video/webm"
+                    />
+                    <source
+                      src="/video/azzurra__hero-video.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+
                 <StaticImage
                   breakpoints={[320, 640, 768, 1024, 1280, 1536, 1920]}
                   quality={100}
@@ -57,13 +83,13 @@ const HeroBanner = () => {
                   layout={'fullWidth'}
                   imgClassName={'w-[150%] -left-2/4 sm:w-full sm:left-0'}
                   className={
-                    `lg:hidden h-screen ${minHeight} ` +
-                    'mobile-landscape:min-h-[700px] w-full flex items-center justify-center'
+                    'h-full w-full flex items-center justify-center ' +
+                    `mobile-landscape:min-h-[700px] ${minHeight}`
                   }
                   src="../../../../images/azzurra__hero-banner.jpg"
-                  alt="Imagem"
+                  alt="Imagem do mar com um barco a direita"
                 />
-              </>
+              </div>
             }
           />
         </SwiperSlide>
