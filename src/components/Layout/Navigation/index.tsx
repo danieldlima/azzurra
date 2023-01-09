@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { animateScroll as scroll } from 'react-scroll';
+import { animateScroll as scroll, Link } from 'react-scroll';
 
 import { useLockedBody } from 'usehooks-ts';
 
@@ -69,26 +69,53 @@ function Navigation() {
       >
         <div className={isScroll ? 'backdrop-blur-xl' : 'backdrop-blur-0'}>
           <Container>
-            <div className="hidden md:flex items-center space-x-1 uppercase sm:px-4 xl:px-0">
-              <NavItem to="about" label="A AZZURRA capital" />
+            <div className="hidden md:flex h-14">
+              <Link
+                spy
+                smooth
+                to="hero-banner"
+                activeClass="group active"
+                className={
+                  'relative h-full w-7 mr-5 opacity-0 cursor-pointer ' +
+                  `${
+                    isScroll
+                      ? 'animate-[entrance-opacity_1.5ms_ease_0s_1_normal_forwards] text-white ' +
+                        'left-0'
+                      : '-left-12 text-white'
+                  }`
+                }
+              >
+                <span className={`group-[.active]:text-azzurra-opaque-gold`}>
+                  <AzzurraBrand className={'w-full h-full ml-0'} iconOnly />
+                </span>
+              </Link>
 
-              <NavItem to="team" label="Nosso time" />
+              <div
+                className={
+                  'relative md:flex items-center space-x-1 uppercase sm:px-4 xl:px-0 transition-all ' +
+                  `${!isScroll ? '-left-12' : 'left-0'}`
+                }
+              >
+                <NavItem to="about" label="A AZZURRA capital" />
 
-              <NavItem to="investment" label="Política de investimento" />
+                <NavItem to="team" label="Nosso time" />
 
-              <NavItem
-                to="investment-policy"
-                label="Blog azzurra"
-                className={'hidden'}
-              />
+                <NavItem to="investment" label="Política de investimento" />
 
-              <NavItem to="contact" label="Contato" />
+                <NavItem
+                  to="investment-policy"
+                  label="Blog azzurra"
+                  className={'hidden'}
+                />
+
+                <NavItem to="contact" label="Contato" />
+              </div>
             </div>
           </Container>
         </div>
       </nav>
 
-      <div
+      <nav
         className={
           'md:hidden mobile-menu w-full fixed inset-y-0 left-0 z-40 transition-all ' +
           `pointer-events-none`
@@ -204,7 +231,7 @@ function Navigation() {
             </ul>
           </div>
         </div>
-      </div>
+      </nav>
     </>
   );
 }

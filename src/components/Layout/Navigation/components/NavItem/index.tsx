@@ -21,8 +21,7 @@ function NavItem({ to, label, className, onClick }: NavItem) {
       duration={500}
       onClick={onClick}
       className={
-        'relative py-4 px-2 text-white border-b-4' +
-        'font-normal cursor-pointer' +
+        'relative py-4 px-2 text-white font-normal cursor-pointer' +
         `${addClassName(className)}`
       }
     >

@@ -27,6 +27,7 @@ const HeroBanner = () => {
     <div
       className={`${minHeight} mobile-landscape:min-h-[700px] relative overflow-hidden`}
     >
+      <div id="hero-banner" className={`absolute ${minHeight} opacity-0`} />
       <Swiper
         loop={false}
         className="azzurra-swiper-slider"
