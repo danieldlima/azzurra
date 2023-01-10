@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { UIEvent, useEffect, useRef, useState } from 'react';
 
 import IcArrowDown from '@components/Icons/ArrowDown';
 
@@ -10,8 +10,73 @@ interface PersonCardProps {
   };
 }
 
+const defaultContentHeight = 224;
+
 function PersonCard({ name, bio }: PersonCardProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [isShadowBottom, setIsShadowBottom] = useState(false);
+  const [isShadowTop, setIsShadowTop] = useState(false);
+  const [hasContentOverflows, setHasContentOverflows] = useState(false);
+  const [bioContent, setBioContent] = useState({
+    name: { height: 40 },
+    content: { height: defaultContentHeight }
+  });
+
+  const personNameRef = useRef<HTMLButtonElement>(null);
+  const bioContentRef = useRef<HTMLParagraphElement>(null);
+
+  useEffect(() => {
+    const { height: titleHeight } =
+      (personNameRef.current?.getBoundingClientRect() as DOMRect) || {
+        height: 0
+      };
+    const { height: contentHeight } =
+      (bioContentRef.current?.getBoundingClientRect() as DOMRect) || {
+        height: 0
+      };
+
+    if (titleHeight > 0) {
+      setBioContent((content) => ({
+        ...content,
+        name: { height: titleHeight }
+      }));
+    }
+
+    console.log('contentHeight ->', contentHeight);
+    console.log('defaultContentHeight ->', defaultContentHeight);
+
+    if (contentHeight > defaultContentHeight) {
+      setHasContentOverflows(true);
+    } else {
+      setHasContentOverflows(false);
+    }
+  }, [isOpen]);
+
+  const handleChange = (event: UIEvent<HTMLDivElement>) => {
+    const { height: titleHeight } =
+      (personNameRef.current?.getBoundingClientRect() as DOMRect) || {
+        height: 0
+      };
+    const { height: contentHeight } =
+      (bioContentRef.current?.getBoundingClientRect() as DOMRect) || {
+        height: 0
+      };
+
+    const height =
+      defaultContentHeight + event.currentTarget.scrollTop + (titleHeight - 40);
+
+    if (event.currentTarget.scrollTop > 10) {
+      setIsShadowTop(true);
+    } else {
+      setIsShadowTop(false);
+    }
+
+    if (height <= contentHeight) {
+      setIsShadowBottom(false);
+    } else {
+      setIsShadowBottom(true);
+    }
+  };
 
   const toggleDetails = () => {
     setIsOpen((prevState) => !prevState);
@@ -20,14 +85,14 @@ function PersonCard({ name, bio }: PersonCardProps) {
   return (
     <div
       className={
-        'relative min-h-[380px] sm:min-h-[450px] bg-team-person-card bg-azzurra-gray-70 ' +
-        'bg-cover bg-90% bg-no-repeat bg-center rounded-lg p-6 overflow-hidden'
+        'relative w-full min-h-[350px] sm:min-h-[270px] bg-team-person-card bg-azzurra-gray-70 ' +
+        'bg-cover bg-90% bg-no-repeat bg-center rounded-lg p-4 overflow-hidden'
       }
     >
       <div className="w-full h-full flex items-center justify-center">
         <span
           className={
-            'text-5xl sm:text-5xl block text-center font-bold text-white uppercase'
+            'text-3xl block text-center font-bold text-white uppercase'
           }
         >
           {name}
@@ -54,10 +119,9 @@ function PersonCard({ name, bio }: PersonCardProps) {
 
       <div
         className={
-          'absolute h-full w-full p-6 bottom-0 right-0 left-0 text-white ' +
-          `bg-azzurra-gold-linear transition-all overflow-y-scroll ${
-            isOpen ? 'top-0 bottom-0' : 'top-full'
-          }`
+          'absolute h-full w-full px-4 pt-4 pb-6 bottom-0 right-0 left-0 text-white ' +
+          'bg-azzurra-gold-linear transition-all bg-azzurra-gold-linear transition-all ' +
+          ` ${isOpen ? 'top-0 bottom-0' : 'top-full'}`
         }
       >
         <div
@@ -67,8 +131,9 @@ function PersonCard({ name, bio }: PersonCardProps) {
           <button
             type="button"
             className={
-              'rotate-0 focus-visible:border-0 -mr-2 ' +
-              'focus-visible:outline-0 focus-visible:border focus-visible:border-white focus-visible:rounded-lg'
+              ' ' +
+              'rotate-0 focus-visible:border-0 -mr-2 focus-visible:outline-0 focus-visible:border ' +
+              'focus-visible:border-white focus-visible:rounded-lg'
             }
             onClick={(e) => {
               e.stopPropagation();
@@ -77,7 +142,7 @@ function PersonCard({ name, bio }: PersonCardProps) {
           >
             <span
               className={
-                'flex flex-end w-11 h-11 p-1.5 bg-opacity-0 hover:bg-azzurra-gray-20 text-azzurra-gray-20 ' +
+                'flex flex-end w-10 h-10 p-1.5 hover:bg-azzurra-gray-20 text-azzurra-gray-20 ' +
                 'hover:text-azzurra-gold rounded-lg transition-all cursor-pointer'
               }
             >
@@ -86,17 +151,44 @@ function PersonCard({ name, bio }: PersonCardProps) {
           </button>
         </div>
 
-        <div className={'relative -top-10'}>
-          <div className={'pr-12'}>
+        <div className={'relative h-full -top-10'}>
+          <div className={'relative h-full overflow-hidden'}>
             <button
-              className={'text-left sm:text-xl block font-bold uppercase mb-3'}
+              ref={personNameRef}
+              className={
+                'flex items-center min-h-[2.5rem] text-left sm:text-person-name block font-bold uppercase mb-3 pr-12 '
+              }
             >
-              {bio.fullName}
+              <span className={'block'}>{bio.fullName || name}</span>
             </button>
 
-            <p className={'text-base sm:text-lg leading-5 font-normal'}>
-              {bio.text}
-            </p>
+            <div
+              style={{ height: `calc(100% - ${bioContent.name.height}px)` }}
+              className={
+                'card-bio-content relative after:absolute after:-top-8 after:left-2/4 after:-translate-x-2/4 ' +
+                'after:w-[150%] after:h-8 after:rounded-[50%] after:bg-scroll-t after:shadow-scroll-t ' +
+                'overflow-hidden h-[12rem] ' +
+                `${isShadowTop ? 'after:opacity-100' : 'after:opacity-0'} `
+              }
+            >
+              <div
+                className={
+                  'overflow-y-scroll h-full before:absolute before:-bottom-[20px] before:left-2/4 ' +
+                  'before:-translate-x-2/4 before:w-[100%] before:h-8 before:rounded-[50%] before:bg-scroll-b ' +
+                  'before:shadow-scroll-b ' +
+                  `${
+                    !isShadowBottom && hasContentOverflows
+                      ? 'before:opacity-100'
+                      : 'before:opacity-0'
+                  }`
+                }
+                onScroll={handleChange}
+              >
+                <p ref={bioContentRef} className={'text-person-bio pb-10'}>
+                  {bio.text}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

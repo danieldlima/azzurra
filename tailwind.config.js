@@ -1,3 +1,9 @@
+// name: string;
+// bio: {
+//   fullName: string;
+//   text?: string;
+// };
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   important: '#___gatsby',
@@ -24,6 +30,10 @@ module.exports = {
         'azzurra-gray-20': '#f1f2f2',
         'nav-light': 'rgba(255,255,255,0.72)',
         transparent: 'rgba(241,242,242,0)'
+      },
+      fontSize: {
+        'person-name': ['1.125rem', '1.25rem'],
+        'person-bio': ['1rem', '1.25rem']
       },
       screens: {
         'mobile-landscape': {
@@ -55,7 +65,9 @@ module.exports = {
         'team-person-card': `url('/images/azzurra__team-section__fallback-profile-img.png')`,
         'regulatory-information': `url('/images/azzurra__investment-policy__bg.jpg')`,
         'contact-form': `url('/images/azzurra__contact-section__bg.png')`,
-        'hero-banner': `url('/images/azzurra__hero-banner.jpg')`
+        'hero-banner': `url('/images/azzurra__hero-banner.jpg')`,
+        'scroll-t':
+          'linear-gradient(180deg, rgba(0,0,0,0.6264880952380952) 0%, rgba(0,0,0,0) 28%)'
       },
       backgroundPosition: {
         brandHighlights: 'center 18px'
@@ -81,7 +93,9 @@ module.exports = {
         '75%': '75%'
       },
       boxShadow: {
-        1: '0px 5px 10px 0px rgba(0, 0, 0, 0.1)'
+        1: '0px 5px 10px 0px rgba(0, 0, 0, 0.1)',
+        'scroll-t': '0 1px 12px #64552ec4',
+        'scroll-b': '0 -8px 12px rgba(100,85,46,0.6)'
       },
       spacing: {
         width: {
