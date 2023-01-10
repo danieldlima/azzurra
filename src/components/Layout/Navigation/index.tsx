@@ -63,7 +63,7 @@ function Navigation() {
     <>
       <nav
         className={
-          'fixed z-50 w-full bg-top bg-cover ' +
+          'fixed z-50 w-full bg-top bg-cover px-6 ' +
           `${isScroll ? 'bg-hero-banner shadow-1' : 'bg-transparent shadow-0'}`
         }
       >
