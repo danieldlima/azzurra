@@ -43,6 +43,7 @@ const HeroBanner = () => {
       >
         <SwiperSlide className={`${minHeight} azzurra-swiper-slider__wrapper`}>
           <SliderItem
+            minHeight={minHeight}
             title={['Bons ventos para', 'os seus investimentos!']}
             description={
               'Conheça a Azzurra Capital, a gestora de recursos que vai ' +

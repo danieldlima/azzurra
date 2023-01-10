@@ -5,17 +5,24 @@ import AzzurraBrand from '@components/Icons/AzzurraBrand';
 interface SliderItemProps {
   title: [top: string, bottom: string];
   description: string;
+  minHeight?: string;
   onOpen?: (make: boolean) => void;
   element: ReactNode;
 }
 
-function SliderItem({ title, description, element }: SliderItemProps) {
+function SliderItem({
+  title,
+  description,
+  element,
+  minHeight = 'h-full'
+}: SliderItemProps) {
   return (
-    <div>
+    <div className={minHeight}>
       <div
         className={
-          'h-screen mobile-landscape:min-h-[700px] w-full after:w-full after:h-full after:bg-black/40 ' +
-          'md:after:bg-black/40 lg:after:bg-black/50 after:absolute after:top-0 after:left-0 after:pointer-events-none'
+          'after:bg-black/40 md:after:bg-black/40 lg:after:bg-black/50 after:absolute ' +
+          'after:top-0 after:left-0 after:pointer-events-none ' +
+          `h-screen ${minHeight} mobile-landscape:min-h-[700px] w-full after:w-full after:h-full `
         }
       >
         {element}
