@@ -42,9 +42,6 @@ function PersonCard({ name, bio }: PersonCardProps) {
       }));
     }
 
-    console.log('contentHeight ->', contentHeight);
-    console.log('defaultContentHeight ->', defaultContentHeight);
-
     if (contentHeight > defaultContentHeight) {
       setHasContentOverflows(true);
     } else {
