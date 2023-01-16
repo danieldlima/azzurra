@@ -30,6 +30,8 @@ function Navigation() {
   }
 
   useEffect(() => {
+    handleScroll();
+
     window.addEventListener('scroll', handleScroll);
 
     return () => {
