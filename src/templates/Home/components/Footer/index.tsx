@@ -166,7 +166,7 @@ function Footer() {
                   </span>
                   <ul className={'ml-3 text-base'}>
                     <li className={'mb-3'}>
-                      <a href="#" className={'flex items-center gap-2'}>
+                      <button className={'flex items-center gap-2'}>
                         <span
                           className={
                             'w-8 h-8 sm:w-6 sm:h-6 rounded-full flex justify-center ' +
@@ -180,11 +180,16 @@ function Footer() {
                           />
                         </span>
                         <span>Português</span>
-                      </a>
+                      </button>
                     </li>
 
                     <li>
-                      <a href="#" className={'flex items-center gap-2'}>
+                      <button
+                        className={
+                          'flex items-center gap-2 disabled:opacity-75'
+                        }
+                        disabled
+                      >
                         <span
                           className={
                             'w-8 h-8 sm:w-6 sm:h-6 rounded-full flex justify-center ' +
@@ -198,7 +203,7 @@ function Footer() {
                           />
                         </span>
                         <span>English</span>
-                      </a>
+                      </button>
                     </li>
                   </ul>
                 </li>
