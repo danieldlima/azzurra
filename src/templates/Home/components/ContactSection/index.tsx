@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useContext, useMemo } from 'react';
+import { useContext, useEffect, useMemo } from 'react';
 
 import { useDimensions } from '@root/modules/hooks';
 import { HomeContext } from '@root/modules/providers';
@@ -28,6 +28,12 @@ function ContactSection() {
       0
     );
   }, [newsletterDimension.sizes.bottom, sectionDimension.sizes.bottom]);
+
+  useEffect(() => {
+    if (footer?.y) footer?.y?.setValue(yPosition);
+
+    // eslint-disable-next-line
+  }, [yPosition]);
 
   if (footer?.y) {
     footer?.y?.setValue(yPosition);
