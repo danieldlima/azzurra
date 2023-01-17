@@ -5,9 +5,6 @@ const path = require('path');
 
 /** @type {import('tailwindcss').Config} */
 const config: GatsbyConfig = {
-  siteMetadata: {
-    siteUrl: `https://www.yourdomain.tld`
-  },
   graphqlTypegen: true,
   plugins: [
     'gatsby-plugin-postcss',
