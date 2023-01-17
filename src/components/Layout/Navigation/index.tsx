@@ -65,7 +65,7 @@ function Navigation() {
     <>
       <nav
         className={
-          'fixed z-50 w-full bg-top bg-cover px-6 ' +
+          'fixed z-50 w-full bg-top bg-cover ' +
           `${
             isScroll
               ? 'bg-azzurra-navy-blue shadow-1'
@@ -73,7 +73,7 @@ function Navigation() {
           }`
         }
       >
-        <div className={isScroll ? 'backdrop-blur-xl' : 'backdrop-blur-0'}>
+        <div className={`px-6`}>
           <Container>
             <div className="hidden md:flex h-14">
               <Link
