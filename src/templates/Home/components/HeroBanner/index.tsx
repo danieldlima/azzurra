@@ -61,17 +61,17 @@ const HeroBanner = () => {
                     muted
                     loop
                     preload="auto"
-                    poster="/images/azzurra__hero-banner.webp"
+                    poster="./images/azzurra__hero-banner.webp"
                     className={
                       'w-full h-full video[poster]:w-full video[poster]:h-full object-cover'
                     }
                   >
                     <source
-                      src="/video/azzurra__hero-video.webm"
+                      src="./video/azzurra__hero-video.webm"
                       type="video/webm"
                     />
                     <source
-                      src="/video/azzurra__hero-video.mp4"
+                      src="./video/azzurra__hero-video.mp4"
                       type="video/mp4"
                     />
                   </video>
