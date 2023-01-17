@@ -1,4 +1,6 @@
-import React, { UIEvent, useEffect, useRef, useState } from 'react';
+import React, { UIEvent, useEffect, useMemo, useRef, useState } from 'react';
+
+import useWindowSize from '@root/modules/hooks/useWindowSize';
 
 import IcArrowDown from '@components/Icons/ArrowDown';
 
@@ -10,8 +12,6 @@ interface PersonCardProps {
   };
 }
 
-const defaultContentHeight = 224;
-
 function PersonCard({ name, bio }: PersonCardProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isShadowBottom, setIsShadowBottom] = useState(false);
@@ -19,16 +19,33 @@ function PersonCard({ name, bio }: PersonCardProps) {
   const [hasContentOverflows, setHasContentOverflows] = useState(false);
   const [bioContent, setBioContent] = useState({
     name: { height: 40 },
-    content: { height: defaultContentHeight }
+    content: { height: 230 }
   });
 
+  const cardRef = useRef<HTMLDivElement>(null);
   const personNameRef = useRef<HTMLButtonElement>(null);
   const bioContentRef = useRef<HTMLParagraphElement>(null);
+  const windowSize = useWindowSize();
+
+  const cardHeight = useMemo(() => {
+    const { height } =
+      (cardRef.current?.getBoundingClientRect() as DOMRect) || {
+        height: 0
+      };
+    const { height: titleHeight } =
+      (personNameRef.current?.getBoundingClientRect() as DOMRect) || {
+        height: 40
+      };
+
+    return height - titleHeight;
+
+    // eslint-disable-next-line
+  }, [windowSize.width]);
 
   useEffect(() => {
     const { height: titleHeight } =
       (personNameRef.current?.getBoundingClientRect() as DOMRect) || {
-        height: 0
+        height: 40
       };
     const { height: contentHeight } =
       (bioContentRef.current?.getBoundingClientRect() as DOMRect) || {
@@ -42,17 +59,17 @@ function PersonCard({ name, bio }: PersonCardProps) {
       }));
     }
 
-    if (contentHeight > defaultContentHeight) {
+    if (contentHeight > cardHeight) {
       setHasContentOverflows(true);
     } else {
       setHasContentOverflows(false);
     }
-  }, [isOpen]);
+  }, [cardHeight, isOpen]);
 
   const handleChange = (event: UIEvent<HTMLDivElement>) => {
     const { height: titleHeight } =
       (personNameRef.current?.getBoundingClientRect() as DOMRect) || {
-        height: 0
+        height: 40
       };
     const { height: contentHeight } =
       (bioContentRef.current?.getBoundingClientRect() as DOMRect) || {
@@ -60,7 +77,7 @@ function PersonCard({ name, bio }: PersonCardProps) {
       };
 
     const height =
-      defaultContentHeight + event.currentTarget.scrollTop + (titleHeight - 40);
+      cardHeight + event.currentTarget.scrollTop + (titleHeight - 40);
 
     if (event.currentTarget.scrollTop > 10) {
       setIsShadowTop(true);
@@ -81,6 +98,7 @@ function PersonCard({ name, bio }: PersonCardProps) {
 
   return (
     <div
+      ref={cardRef}
       className={
         'relative w-full min-h-[350px] sm:min-h-[270px] bg-team-person-card bg-azzurra-gray-70 ' +
         'bg-cover bg-90% bg-no-repeat bg-center rounded-lg p-4 overflow-hidden'
@@ -162,6 +180,7 @@ function PersonCard({ name, bio }: PersonCardProps) {
             <div
               style={{ height: `calc(100% - ${bioContent.name.height}px)` }}
               className={
+                'min-h-[230px]' +
                 'card-bio-content relative after:absolute after:-top-8 after:left-2/4 after:-translate-x-2/4 ' +
                 'after:w-[150%] after:h-8 after:rounded-[50%] after:bg-scroll-t after:shadow-scroll-t ' +
                 'overflow-hidden h-[12rem] ' +
