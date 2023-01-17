@@ -40,9 +40,13 @@ function Footer() {
                     spy
                     smooth
                     to="about"
-                    offset={-100}
+                    offset={-50}
                     duration={500}
-                    className={'cursor-pointer font-bold uppercase text-base'}
+                    className={
+                      'cursor-pointer hover:text-azzurra-opaque-gold hover:underline transition-all font-bold' +
+                      ' uppercase' +
+                      ' text-base'
+                    }
                   >
                     A AZZURRA capital
                   </Link>
@@ -52,9 +56,11 @@ function Footer() {
                         spy
                         smooth
                         to="meet-azzurra"
-                        offset={-100}
+                        offset={-80}
                         duration={500}
-                        className={'cursor-pointer'}
+                        className={
+                          'cursor-pointer hover:text-azzurra-opaque-gold hover:underline transition-all'
+                        }
                       >
                         Conheça a Azzurra Capital
                       </Link>
@@ -66,7 +72,9 @@ function Footer() {
                         to="why-azzurra"
                         offset={-100}
                         duration={500}
-                        className={'cursor-pointer'}
+                        className={
+                          'cursor-pointer hover:text-azzurra-opaque-gold hover:underline transition-all'
+                        }
                       >
                         Por que a Azzurra Capital?
                       </Link>
@@ -79,7 +87,9 @@ function Footer() {
                             to="about-compass"
                             offset={80}
                             duration={500}
-                            className={'cursor-pointer'}
+                            className={
+                              'cursor-pointer hover:text-azzurra-opaque-gold hover:underline transition-all'
+                            }
                             onClick={() => {
                               if (
                                 aboutSection?.compassItem &&
@@ -101,7 +111,9 @@ function Footer() {
                         to="capacity-and-services"
                         offset={-100}
                         duration={500}
-                        className={'cursor-pointer'}
+                        className={
+                          'cursor-pointer hover:text-azzurra-opaque-gold hover:underline transition-all'
+                        }
                       >
                         Capacidade & Serviços
                       </Link>
@@ -115,7 +127,11 @@ function Footer() {
                     to="team"
                     offset={-50}
                     duration={500}
-                    className={'cursor-pointer font-bold uppercase text-base'}
+                    className={
+                      'cursor-pointer hover:text-azzurra-opaque-gold hover:underline transition-all font-bold' +
+                      ' uppercase' +
+                      ' text-base'
+                    }
                   >
                     NOSSO TIME
                   </Link>
@@ -126,7 +142,11 @@ function Footer() {
                     smooth
                     to="investment-policy"
                     duration={500}
-                    className={'cursor-pointer font-bold uppercase text-base'}
+                    className={
+                      'cursor-pointer hover:text-azzurra-opaque-gold hover:underline transition-all font-bold' +
+                      ' uppercase' +
+                      ' text-base'
+                    }
                   >
                     política de investimento
                   </Link>
@@ -143,7 +163,11 @@ function Footer() {
                     to="contact"
                     offset={-50}
                     duration={500}
-                    className={'cursor-pointer font-bold uppercase text-base'}
+                    className={
+                      'cursor-pointer hover:text-azzurra-opaque-gold hover:underline transition-all font-bold' +
+                      ' uppercase' +
+                      ' text-base'
+                    }
                   >
                     CONTATO
                   </Link>
