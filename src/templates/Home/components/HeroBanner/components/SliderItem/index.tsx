@@ -23,8 +23,6 @@ function SliderItem({
     setOpen((prevState) => !prevState);
   };
 
-  console.log('open ->', open);
-
   return (
     <div className={minHeight}>
       <div
