@@ -1,12 +1,43 @@
-// name: string;
-// bio: {
-//   fullName: string;
-//   text?: string;
-// };
+/*
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  backdrop-filter: blur(2px);
+}
+
+.content {
+  background-color: white;
+  z-index: 2;
+  padding: 32px;
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+}
+*/
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  important: '#___gatsby',
   content: [
     './src/pages/**/*.{js,jsx,ts,tsx}',
     './src/templates/**/*.{js,jsx,ts,tsx}',
@@ -29,6 +60,8 @@ module.exports = {
         'azzurra-gray-50': '#d1d1d1',
         'azzurra-gray-20': '#f1f2f2',
         'nav-light': 'rgba(255,255,255,0.72)',
+        'backdrop-dark': 'rgba(26, 32, 39, 0.85)',
+        'border-modal': 'rgb(19, 47, 76)',
         transparent: 'rgba(241,242,242,0)'
       },
       fontSize: {
@@ -39,6 +72,9 @@ module.exports = {
         'mobile-landscape': {
           raw: '(min-width: 321px) and (max-width: 896px) and (orientation: landscape)'
         }
+      },
+      borderColor: {
+        modal: 'rgb(19, 47, 76)'
       },
       backgroundSize: {
         '50%': '50%',
@@ -81,7 +117,8 @@ module.exports = {
       height: {
         'content-custom': 'calc(100% - 100px)',
         'text-content-90': '90%',
-        'text-content-80': '80%'
+        'text-content-80': '80%',
+        inherit: 'inherit'
       },
       maxWidth: {
         boxPdf: '18.5rem'
@@ -95,6 +132,7 @@ module.exports = {
       boxShadow: {
         1: '0px 5px 10px 0px rgba(0, 0, 0, 0.1)',
         'scroll-t': '0 1px 12px #64552ec4',
+        highlight: '0px 11px 30px 0px rgb(78 119 141 / 42%)',
         'scroll-b': '0 -8px 12px rgba(100,85,46,0.6)'
       },
       spacing: {
@@ -202,7 +240,7 @@ module.exports = {
         'entrance-opacity': 'entrance-opacity 3s ease 0s 1 normal forwards',
         'entrance-forward': 'entrance-forward 1s ease 0s 1 normal forwards',
         'entrance-r': 'entrance-r 2s ease-out 0s 1 normal forwards',
-        'entrance-l': 'entrance-l 2s ease-out 0s 1 normal forwards',
+        'entrance-l': 'entrance-l 0.7s ease-out 0s 1 normal forwards',
         'entrance-t': 'entrance-t 2s ease-out 0s 1 normal forwards',
         'entrance-b': 'entrance-b 2s ease-out 0s 1 normal forwards'
       }

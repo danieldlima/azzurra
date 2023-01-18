@@ -14,6 +14,13 @@ const config: GatsbyConfig = {
     'gatsby-plugin-svgr',
     `gatsby-plugin-sass`,
     {
+      resolve: `gatsby-plugin-portal`,
+      options: {
+        key: 'portal',
+        id: 'portal'
+      }
+    },
+    {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
         alias: {
