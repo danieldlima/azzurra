@@ -1,64 +1,82 @@
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-// use PHPMailer\PHPMailer\SMTP;
+//use PHPMailer\PHPMailer\SMTP;
 
 require 'vendor/autoload.php';
 
-class ErrorType {
-  const Error = 'error';
-  const Warn = 'Warn';
-}
+const STATUS_TYPE_ERROR   = 'error';
+const STATUS_TYPE_WARN    = 'error';
+const STATUS_TYPE_SUCCESS = 'success';
+const ENTRY_TYPE_NAME     = 'name';
+const ENTRY_TYPE_EMAIL    = 'email';
+const ENTRY_TYPE_SUBJECT  = 'subject';
+const ENTRY_TYPE_MESSAGE  = 'message';
+const ENTRY_TYPE_LANG     = 'lang';
 
-class EntriesType {
-  const Name = 'name';
-  const Email = 'email';
-  const Subject = 'subject';
-  const Generic = 'generic';
-}
-
-$mail = new PHPMailer(true);
-$name = $_POST["name"];
-$email_address = $_POST["email"];
-$subject = $_POST["subject"];
-$message = $_POST["message"];
-$check = empty($name) || empty($subject);
+$mail          = new PHPMailer(true);
+$name          = $_POST[ENTRY_TYPE_NAME];
+$email_address = $_POST[ENTRY_TYPE_EMAIL];
+$subject       = $_POST[ENTRY_TYPE_SUBJECT];
+$message       = $_POST[ENTRY_TYPE_MESSAGE];
+$lang          = $_POST[ENTRY_TYPE_LANG];
+$check         = empty($name) || empty($subject);
+$lang_type     = $lang ?? 'pt-BR';
 
 $response = (object) [];
 $entries = array(
-  "name" => $name,
-  "email" => $email_address,
+  "name"    => $name,
+  "email"   => $email_address,
   "subject" => $subject,
 );
 
 $errors = array(
   "pt-BR" => [
-    "name" => 'O campo NOME é obrigatório.',
-    "email" => 'O campo E-MAIL é obrigatório.',
+    "name"    => 'O campo NOME é obrigatório.',
+    "email"   => 'O campo E-MAIL é obrigatório.',
     "subject" => 'O campo ASSUNTO é obrigatório.',
+    "success" => 'Email enviado com sucesso!',
     "generic" => "Erro ao enviar a sua mensagem. Verifique seu e-mail ou tente novamente mais tarde."
   ],
   "en" => [
-    "name" => 'The NAME field is required.',
-    "email" => 'The EMAIL field is required.',
+    "name"    => 'The NAME field is required.',
+    "email"   => 'The EMAIL field is required.',
     "subject" => 'The SUBJECT field is required.',
+    "success" => 'Message has been sent!',
     "generic" => "Error sending your message. Please check your email or try again later."
   ]
 );
+$error_message = $errors[$lang_type];
 
 foreach($entries as $key => $value) {
-  if (empty($value) && $key !== EntriesType::Email) {
+  if (empty($value) && $key !== ENTRY_TYPE_EMAIL) {
     $response->$key = [
-      "text" => $errors['pt-BR'][$key],
-      "type" => ErrorType::Warn
+      "text" => $error_message[$key],
+      "type" => STATUS_TYPE_WARN
     ];
+    $response->status = STATUS_TYPE_WARN;
   }
 }
 unset($key, $value);
 
+function array_every(array $arr, callable $predicate): bool
+{
+  foreach ($arr as $e) {
+    if (!call_user_func($predicate, $e)) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+function is_even($e): bool
+{
+  return !empty($e);
+}
+
 try {
-  // Server debug
-  // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+//   $mail->SMTPDebug = SMTP::DEBUG_SERVER;
 
   // Server settings
   $mail->isSMTP();
@@ -69,7 +87,6 @@ try {
   $mail->Port       = 587;
 
 
-  // process_data.php
   //Recipients
   $mail->setFrom('develop@azzurracapital.com.br', 'Develop');
   $mail->addAddress($email_address, $name);
@@ -82,53 +99,31 @@ try {
   $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
   $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
-  $obj = (object) [
-    /*"name" =>
-      isset($name)
-        ? null
-        : [
-          "text" => "Existe campo(s) obrigatório(s) não preenchidos.",
-          "type" => "warn"
-        ],
-    "email" =>
-      isset($name)
-        ? null
-        : [
-          "text" => "O campo SEU EMAIL é obrigatório.",
-          "type" => "error"
-        ],
-    "subject" =>
-      isset($name)
-        ? null
-        : [
-          "text" => "Existe campo(s) obrigatório(s) não preenchidos.",
-          "type" => "warn"
-        ]
-  */];
-  $obj->aBoll = false;
+  if (array_every($entries, "is_even")) {
+    $response->success = [
+      "text" => $error_message[STATUS_TYPE_SUCCESS],
+      "type" => STATUS_TYPE_SUCCESS
+    ];
+    $response->status = STATUS_TYPE_SUCCESS;
 
-
-  /*if (!$check) {
     $mail->send();
-//    echo "[[success]]Mensagem enviada com sucesso!";
-    echo json_encode($response);
-  } else {
-    echo '[[warn]]Existe campo(s) obrigatório(s) não preenchidos.';
-  }*/
+  }
 
   echo json_encode($response, JSON_UNESCAPED_UNICODE);
 } catch (Exception $e) {
   if (empty($email)) {
     $response->email = [
-      "text" => $errors['pt-BR']['email'],
-      "type" => ErrorType::Error
+      "text" => $error_message['email'],
+      "type" => STATUS_TYPE_ERROR
     ];
   } else {
     $response->generic = [
-      "text" => "O campo {$errors['pt-BR']['generic']} é obrigatório.",
-      "type" => ErrorType::Error
+      "text" => "O campo {$error_message['generic']} é obrigatório.",
+      "type" => STATUS_TYPE_ERROR
     ];
   }
+
+  $response->status = STATUS_TYPE_ERROR;
 
   echo json_encode($response, JSON_UNESCAPED_UNICODE);
 }
