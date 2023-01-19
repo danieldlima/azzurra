@@ -1,6 +1,5 @@
-import React, { ReactNode, useEffect, useRef } from 'react';
+import React, { ReactNode, useRef } from 'react';
 import { createPortal } from 'react-dom';
-import { animateScroll as scroll } from 'react-scroll';
 
 import { useLockedBody, useOnClickOutside } from 'usehooks-ts';
 
@@ -19,10 +18,6 @@ function Modal({ open, onClose, children }: ModalProps) {
   };
 
   useOnClickOutside(contentRef, handleClickOutside);
-
-  useEffect(() => {
-    if (open) scroll.scrollToTop();
-  }, [open]);
 
   if (!open) return null;
 
