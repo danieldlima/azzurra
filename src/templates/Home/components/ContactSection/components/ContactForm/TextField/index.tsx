@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { ChangeEvent, useState } from 'react';
 
 import { addClassName } from '@root/modules/utils';
+
+import { StatusType } from '@templates/Home/components/ContactSection/components/ContactForm';
 
 interface TextFieldProps {
   classes?: {
@@ -12,9 +14,10 @@ interface TextFieldProps {
   label: string;
   error?: {
     text?: string;
-    type?: 'error' | 'warn';
+    type?: StatusType;
   } | null;
   required?: boolean;
+  onChange?: (value: string) => void;
 }
 
 function TextField({
@@ -23,7 +26,8 @@ function TextField({
   label,
   required,
   classes,
-  error
+  error,
+  onChange
 }: TextFieldProps) {
   const [value, setValue] = useState('');
   const colorLabel = {
@@ -34,6 +38,14 @@ function TextField({
     error: 'bg-red-600 peer-focus:bg-red-600',
     warn: 'bg-orange-300 peer-focus:bg-orange-300'
   };
+
+  function handleChange(e: ChangeEvent<HTMLInputElement>) {
+    setValue(e.target.value);
+
+    if (onChange) {
+      onChange(e.target.value);
+    }
+  }
 
   return (
     <>
@@ -49,9 +61,7 @@ function TextField({
                 classes?.field
               )}`
             }
-            onChange={(e) => {
-              setValue(e.target.value);
-            }}
+            onChange={handleChange}
           />
 
           <span
@@ -73,7 +83,7 @@ function TextField({
                   : error?.type && required
                   ? addClassName(
                       error
-                        ? borderColor[error?.type]
+                        ? borderColor[error?.type as never]
                         : 'bg-azzurra-gray-70 peer-focus:bg-azzurra-gold-100'
                     )
                   : ''
@@ -85,7 +95,9 @@ function TextField({
       {!error || !required ? null : (
         <span
           className={`text-sm py-2 px-4 border rounded${
-            error?.type && required ? addClassName(colorLabel[error?.type]) : ''
+            error?.type && required
+              ? addClassName(colorLabel[error?.type as never])
+              : ''
           }`}
         >
           {error?.text}
