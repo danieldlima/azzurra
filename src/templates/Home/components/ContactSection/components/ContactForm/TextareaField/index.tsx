@@ -3,13 +3,16 @@ import React, { ChangeEvent, useState } from 'react';
 import { addClassName } from '@root/modules/utils';
 
 interface TextareaField {
-  className?: string;
+  classes?: {
+    root?: string;
+    field?: string;
+  };
   label: string;
   name: string;
   required?: boolean;
 }
 
-function TextareaField({ className, required, name, label }: TextareaField) {
+function TextareaField({ classes, required, name, label }: TextareaField) {
   const [value, setValue] = useState('');
 
   function handleChange(e: ChangeEvent<HTMLTextAreaElement>) {
@@ -17,7 +20,7 @@ function TextareaField({ className, required, name, label }: TextareaField) {
   }
 
   return (
-    <div className={`relative mb-6 ${addClassName(className)}`}>
+    <div className={`relative mb-6 ${addClassName(classes?.root)}`}>
       <label className="block relative">
         <textarea
           required={required}
@@ -26,7 +29,8 @@ function TextareaField({ className, required, name, label }: TextareaField) {
           spellCheck={false}
           className={
             'w-full min-h-48 relative top-6 group/field form-input px-0.5 py-0 border-0 ' +
-            'focus:ring-transparent focus:border-b-azzurra-gold-100 peer'
+            'focus:ring-transparent focus:border-b-azzurra-gold-100 peer' +
+            `${addClassName(classes?.field)}`
           }
           onChange={handleChange}
         />
