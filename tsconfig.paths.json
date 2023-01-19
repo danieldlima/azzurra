@@ -8,11 +8,14 @@
       "@content/*": [
         "content/*"
       ],
-      "@images/*": [
-        "src/images/*"
-      ],
       "@static/*": [
         "static/*"
+      ],
+      "@constant/*": [
+        "src/constant/*"
+      ],
+      "@images/*": [
+        "src/images/*"
       ],
       "@components/*": [
         "src/components/*"

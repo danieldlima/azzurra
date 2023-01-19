@@ -27,6 +27,7 @@ const config: GatsbyConfig = {
           '@root': path.resolve(__dirname, 'src'),
           '@static': path.resolve(__dirname, 'static'),
           '@content': path.resolve(__dirname, 'content'),
+          '@constant': path.resolve(__dirname, 'src/constant'),
           '@images': path.resolve(__dirname, 'src/images'),
           '@components': path.resolve(__dirname, 'src/components'),
           '@pages': path.resolve(__dirname, 'src/pages'),
