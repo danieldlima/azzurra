@@ -45,7 +45,9 @@ function TextField({
             type={type}
             className={
               'w-full h-12 relative group/field form-input px-0.5 py-0 border-l-0 border-r-0 border-t-0 ' +
-              'focus:ring-transparent focus:border-b focus:border-b-azzurra-gold-100 peer'
+              `focus:ring-transparent focus:border-b focus:border-b-azzurra-gold-100 peer${addClassName(
+                classes?.field
+              )}`
             }
             onChange={(e) => {
               setValue(e.target.value);
