@@ -77,16 +77,6 @@ function DetailsSectionCompass() {
             >
               <div>
                 <Text as="h4" size="lg" label={'Nossa visão 360º'} />
-
-                <Text
-                  as="p"
-                  size="paragraph"
-                  fontWeight="normal"
-                  color="black"
-                  label={
-                    'Com foco no cliente e utilizando uma visão 360°, buscamos entender suas necessidades e construímos relacionamentos por meio da tomada de decisão feita em conjunto com o cliente.'
-                  }
-                />
               </div>
 
               <div
@@ -146,8 +136,7 @@ function DetailsSectionCompass() {
                   color="black"
                   className={'mb-8'}
                   label={
-                    'Com foco no cliente e utilizando uma visão 360°, buscamos entender suas necessidades ' +
-                    'e construímos relacionamentos por meio da tomada de decisão feita em conjunto com o cliente.'
+                    'Buscamos a perpetuação do patrimônio por gerações através de:'
                   }
                 />
 
