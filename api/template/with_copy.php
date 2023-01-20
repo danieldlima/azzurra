@@ -174,18 +174,34 @@
             <table width="100%">
               <tbody>
               <tr>
-                <td style="font-family: arial, sans-serif; margin: 0px;"><span
-                    style="font-family:'Helvetica Neue Light', Helvetica; font-size:28px; color:rgb(0, 121, 193); font-weight:300; ">
-                    <p style="margin: 11px 0px; padding: 0px; font-size: 22.4px; color: rgb(0, 69, 124);">Um novo contato se cadastrou no site</p>
+                <td style="font-family: arial, sans-serif; margin: 0px;">
+                  <p
+                    style="font-family:'Helvetica Neue Light', Helvetica; font-size:28px; color:rgb(0, 121, 193);
+                    font-weight:300;">
+                    <span style="margin: 11px 0px; padding: 0px; font-size: 22.4px; color: rgb(0, 69, 124);">
+                      $title
                     </span>
-                  <p style="margin: 11px 0px; padding: 0px;">O contato se cadastrou no site através do fomulário de
-                    contato:</p>
-                  <p style="margin: 11px 0px; padding: 0px;"><strong>Nome:</strong> [your-name]</p>
-                  <p style="margin: 11px 0px; padding: 0px;"><strong>E-mail:</strong> [your-email]</p>
-                  <p style="margin: 11px 0px; padding: 0px;"><strong>Telefone:</strong> [tel-0001-contato]</p>
-                  <p style="margin: 11px 0px; padding: 0px;"><strong>Assunto:</strong> [your-subject]</p>
-                  <p style="margin: 11px 0px; padding: 0px;"><strong>Mensagem:</strong><br><br>
-                    [your-message]</p>
+                  </p>
+
+                  <p style="margin: 11px 0px; padding: 0px;">$description</p>
+
+                  <p style="margin: 11px 0px; padding: 0px;">
+                    <strong>$reply_to_name_label: </strong>$reply_to_name_value
+                  </p>
+
+                  <p style="margin: 11px 0px; padding: 0px;">
+                    <strong>$reply_to_email_label: </strong>$reply_to_email_value
+                  </p>
+
+                  <p style="margin: 11px 0px; padding: 0px;">
+                    <strong>$reply_to_subject_label: </strong>$reply_to_subject_value
+                  </p>
+
+                  <p style="margin: 11px 0px; padding: 0px;">
+                    <strong>$reply_to_message_label: </strong>
+                    <br><br>
+                    $reply_to_message_value
+                  </p>
               </tr>
               </tbody>
             </table>

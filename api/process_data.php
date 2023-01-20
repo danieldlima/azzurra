@@ -22,7 +22,8 @@ $lang          = $_POST[ENTRY_TYPE_LANG];
 
 $check         = empty($name) || empty($subject);
 $lang_type     = $lang ?? 'pt-BR';
-$body          = strval(file_get_contents('template/address_mail.php'));
+$body_address  = strval(file_get_contents('template/address_mail.php'));
+$body_replyTo  = strval(file_get_contents('template/with_copy.php'));
 $yarn          = date("Y");
 
 $response = (object) [];
@@ -32,7 +33,7 @@ $entries = array(
   "subject" => $subject,
 );
 
-$message_body = array(
+$msg_body_address = array(
   "pt-BR" => [
     "greeting_text_top"    => 'Olá $name',
     "greeting_text_bottom" => "Estamos felizes com seu contato.",
@@ -48,6 +49,27 @@ $message_body = array(
     "greeting_btn"         => "Thanks",
     "copyright"            => "All rights reserved.",
     "alt_text"             => "Hello! We are happy with your contact. Soon, we will contact you. Thanks ;)"
+  ]
+);
+
+$msg_body_reply_to = array(
+  "pt-BR" => [
+    "title"                  => 'Um novo contato se cadastrou no site',
+    "description"            => "O contato se cadastrou no site através do fomulário de contato:",
+    "subject"                => "Novo contato",
+    "reply_to_name_label"    => "Nome",
+    "reply_to_email_label"   => "E-mail",
+    "reply_to_subject_label" => "Assunto",
+    "reply_to_message_label" => "Mensagem",
+  ],
+  "en" => [
+    "title"                  => 'A new contact registered on the site',
+    "description"            => "The contact registered on the site using the contact form:",
+    "subject"                => "New contact",
+    "reply_to_name_label"    => "Name",
+    "reply_to_email_label"   => "Email",
+    "reply_to_subject_label" => "Subject",
+    "reply_to_message_label" => "Message",
   ]
 );
 
@@ -68,8 +90,9 @@ $errors = array(
   ]
 );
 
-$error_message_translated = $errors[$lang_type];
-$body_message_translated  = $message_body[$lang_type];
+$error_message_translated     = $errors["$lang_type"];
+$msg_body_address_translated  = $msg_body_address["$lang_type"];
+$msg_body_reply_to_translated = $msg_body_reply_to["$lang_type"];
 
 foreach($entries as $key => $value) {
   if (empty($value) && $key !== ENTRY_TYPE_EMAIL) {
@@ -110,27 +133,42 @@ try {
   $mail->Password   = 'azzurra@Dev1';
   $mail->Port       = 587;
 
+  // Replace variables body :: Address
+  $body_address = str_replace('$greeting_text_top', $msg_body_address_translated["greeting_text_top"], $body_address);
+  $body_address = str_replace('$greeting_text_bottom', $msg_body_address_translated["greeting_text_bottom"], $body_address);
+  $body_address = str_replace('$greeting_text_end', $msg_body_address_translated["greeting_text_end"], $body_address);
+  $body_address = str_replace('$greeting_btn', $msg_body_address_translated["greeting_btn"], $body_address);
+  $body_address = str_replace('$copyright', $msg_body_address_translated["copyright"], $body_address);
+  $body_address = str_replace('$name', $name, $body_address);
+  $body_address = str_replace('$yarn', $yarn, $body_address);
 
-  //Recipients
-  $mail->setFrom('develop@azzurracapital.com.br', 'Develop');
-  $mail->addAddress($email_address, $name);
+  // Replace variables body :: ReplyTo
+  $body_replyTo = str_replace('$title', $msg_body_reply_to_translated["title"], $body_replyTo);
+  $body_replyTo = str_replace('$description', $msg_body_reply_to_translated["description"], $body_replyTo);
 
-  // Replace variables body
-  $body = str_replace('$greeting_text_top', $body_message_translated["greeting_text_top"], $body);
-  $body = str_replace('$greeting_text_bottom', $body_message_translated["greeting_text_bottom"], $body);
-  $body = str_replace('$greeting_text_end', $body_message_translated["greeting_text_end"], $body);
-  $body = str_replace('$greeting_btn', $body_message_translated["greeting_btn"], $body);
-  $body = str_replace('$copyright', $body_message_translated["copyright"], $body);
-  $body = str_replace('$name', $name, $body);
-  $body = str_replace('$yarn', $yarn, $body);
+  // Replace variables body :: ReplyTo - Label
+  $body_replyTo = str_replace('$reply_to_name_label', $msg_body_reply_to_translated["reply_to_name_label"], $body_replyTo);
+  $body_replyTo = str_replace('$reply_to_email_label', $msg_body_reply_to_translated["reply_to_email_label"], $body_replyTo);
+  $body_replyTo = str_replace('$reply_to_subject_label', $msg_body_reply_to_translated["reply_to_subject_label"], $body_replyTo);
+  $body_replyTo = str_replace('$reply_to_message_label', $msg_body_reply_to_translated["reply_to_message_label"], $body_replyTo);
+
+  // Replace variables body :: ReplyTo - Value
+  $body_replyTo = str_replace('$reply_to_name_value', $name, $body_replyTo);
+  $body_replyTo = str_replace('$reply_to_email_value', $email_address, $body_replyTo);
+  $body_replyTo = str_replace('$reply_to_subject_value', $subject, $body_replyTo);
+  $body_replyTo = str_replace('$reply_to_message_value', $message, $body_replyTo);
 
   //Content
   $mail->IsHTML(true);
   $mail->CharSet = 'UTF-8';
 
+  //Recipients
+  $mail->setFrom('develop@azzurracapital.com.br', 'Develop');
+  $mail->addAddress($email_address, $name);
+
   $mail->Subject = $subject;
-  $mail->Body    = $body;
-  $mail->AltBody = 'Olá $name! Estamos felizes com seu contato. Em breve entraremos em contato com você. Obrigado ;)';
+  $mail->Body    = $body_address;
+  $mail->AltBody = $msg_body_address_translated["alt_text"];
 
   if (array_every($entries, "is_even")) {
     $response->success = [
@@ -139,6 +177,14 @@ try {
     ];
     $response->status = STATUS_TYPE_SUCCESS;
 
+    $mail->send();
+
+    $mail->clearAllRecipients();
+    $mail->setFrom('develop@azzurracapital.com.br', 'Azzurra Capital');
+    $mail->addAddress('familiasilva.daniellima@gmail.com', 'Daniel Lima');
+    $mail->Subject = $msg_body_reply_to_translated["subject"] . ' - ' . $name;
+    $mail->Body    = $body_replyTo;
+    $mail->AltBody = $msg_body_address_translated["alt_text"];
     $mail->send();
   }
 
