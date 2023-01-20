@@ -1,7 +1,7 @@
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-//use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\SMTP;
 
 require 'vendor/autoload.php';
 
@@ -14,20 +14,41 @@ const ENTRY_TYPE_SUBJECT  = 'subject';
 const ENTRY_TYPE_MESSAGE  = 'message';
 const ENTRY_TYPE_LANG     = 'lang';
 
-$mail          = new PHPMailer(true);
 $name          = $_POST[ENTRY_TYPE_NAME];
 $email_address = $_POST[ENTRY_TYPE_EMAIL];
 $subject       = $_POST[ENTRY_TYPE_SUBJECT];
 $message       = $_POST[ENTRY_TYPE_MESSAGE];
 $lang          = $_POST[ENTRY_TYPE_LANG];
+
 $check         = empty($name) || empty($subject);
 $lang_type     = $lang ?? 'pt-BR';
+$body          = strval(file_get_contents('template/address_mail.php'));
+$yarn          = date("Y");
 
 $response = (object) [];
 $entries = array(
   "name"    => $name,
   "email"   => $email_address,
   "subject" => $subject,
+);
+
+$message_body = array(
+  "pt-BR" => [
+    "greeting_text_top"    => 'Olá $name',
+    "greeting_text_bottom" => "Estamos felizes com seu contato.",
+    "greeting_text_end"    => "Em breve entraremos em contato com você.",
+    "greeting_btn"         => "Obrigado",
+    "copyright"            => "Todos os direitos reservados.",
+    "alt_text"             => "Olá! Estamos felizes com seu contato. Em breve entraremos em contato com você. Obrigado ;)"
+  ],
+  "en" => [
+    "greeting_text_top"    => 'Hello $name!',
+    "greeting_text_bottom" => "We are happy with your contact.",
+    "greeting_text_end"    => "Soon, we will contact you.",
+    "greeting_btn"         => "Thanks",
+    "copyright"            => "All rights reserved.",
+    "alt_text"             => "Hello! We are happy with your contact. Soon, we will contact you. Thanks ;)"
+  ]
 );
 
 $errors = array(
@@ -46,12 +67,14 @@ $errors = array(
     "generic" => "Error sending your message. Please check your email or try again later."
   ]
 );
-$error_message = $errors[$lang_type];
+
+$error_message_translated = $errors[$lang_type];
+$body_message_translated  = $message_body[$lang_type];
 
 foreach($entries as $key => $value) {
   if (empty($value) && $key !== ENTRY_TYPE_EMAIL) {
     $response->$key = [
-      "text" => $error_message[$key],
+      "text" => $error_message_translated[$key],
       "type" => STATUS_TYPE_WARN
     ];
     $response->status = STATUS_TYPE_WARN;
@@ -76,9 +99,10 @@ function is_even($e): bool
 }
 
 try {
-//   $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+//  $mail->SMTPDebug = SMTP::DEBUG_SERVER;
 
   // Server settings
+  $mail             = new PHPMailer(true);
   $mail->isSMTP();
   $mail->Host       = 'email-ssl.com.br';
   $mail->SMTPAuth   = true;
@@ -91,17 +115,26 @@ try {
   $mail->setFrom('develop@azzurracapital.com.br', 'Develop');
   $mail->addAddress($email_address, $name);
 
+  // Replace variables body
+  $body = str_replace('$greeting_text_top', $body_message_translated["greeting_text_top"], $body);
+  $body = str_replace('$greeting_text_bottom', $body_message_translated["greeting_text_bottom"], $body);
+  $body = str_replace('$greeting_text_end', $body_message_translated["greeting_text_end"], $body);
+  $body = str_replace('$greeting_btn', $body_message_translated["greeting_btn"], $body);
+  $body = str_replace('$copyright', $body_message_translated["copyright"], $body);
+  $body = str_replace('$name', $name, $body);
+  $body = str_replace('$yarn', $yarn, $body);
+
   //Content
   $mail->IsHTML(true);
   $mail->CharSet = 'UTF-8';
 
   $mail->Subject = $subject;
-  $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-  $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+  $mail->Body    = $body;
+  $mail->AltBody = 'Olá $name! Estamos felizes com seu contato. Em breve entraremos em contato com você. Obrigado ;)';
 
   if (array_every($entries, "is_even")) {
     $response->success = [
-      "text" => $error_message[STATUS_TYPE_SUCCESS],
+      "text" => $error_message_translated[STATUS_TYPE_SUCCESS],
       "type" => STATUS_TYPE_SUCCESS
     ];
     $response->status = STATUS_TYPE_SUCCESS;
@@ -113,12 +146,12 @@ try {
 } catch (Exception $e) {
   if (empty($email)) {
     $response->email = [
-      "text" => $error_message['email'],
+      "text" => $error_message_translated['email'],
       "type" => STATUS_TYPE_ERROR
     ];
   } else {
     $response->generic = [
-      "text" => "O campo {$error_message['generic']} é obrigatório.",
+      "text" => "O campo {$error_message_translated['generic']} é obrigatório.",
       "type" => STATUS_TYPE_ERROR
     ];
   }
