@@ -23,7 +23,7 @@ $lang          = $_POST[ENTRY_TYPE_LANG];
 $check         = empty($name) || empty($subject);
 $lang_type     = $lang ?? 'pt-BR';
 $body_address  = strval(file_get_contents('template/address_mail.php'));
-$body_replyTo  = strval(file_get_contents('template/with_copy.php'));
+$body_with_copy  = strval(file_get_contents('template/with_copy.php'));
 $yarn          = date("Y");
 
 $response = (object) [];
@@ -52,24 +52,24 @@ $msg_body_address = array(
   ]
 );
 
-$msg_body_reply_to = array(
+$msg_body_with_copy = array(
   "pt-BR" => [
     "title"                  => 'Um novo contato se cadastrou no site',
     "description"            => "O contato se cadastrou no site através do fomulário de contato:",
     "subject"                => "Novo contato",
-    "reply_to_name_label"    => "Nome",
-    "reply_to_email_label"   => "E-mail",
-    "reply_to_subject_label" => "Assunto",
-    "reply_to_message_label" => "Mensagem",
+    "with_copy_name_label"    => "Nome",
+    "with_copy_email_label"   => "E-mail",
+    "with_copy_subject_label" => "Assunto",
+    "with_copy_message_label" => "Mensagem",
   ],
   "en" => [
     "title"                  => 'A new contact registered on the site',
     "description"            => "The contact registered on the site using the contact form:",
     "subject"                => "New contact",
-    "reply_to_name_label"    => "Name",
-    "reply_to_email_label"   => "Email",
-    "reply_to_subject_label" => "Subject",
-    "reply_to_message_label" => "Message",
+    "with_copy_name_label"    => "Name",
+    "with_copy_email_label"   => "Email",
+    "with_copy_subject_label" => "Subject",
+    "with_copy_message_label" => "Message",
   ]
 );
 
@@ -92,7 +92,7 @@ $errors = array(
 
 $error_message_translated     = $errors["$lang_type"];
 $msg_body_address_translated  = $msg_body_address["$lang_type"];
-$msg_body_reply_to_translated = $msg_body_reply_to["$lang_type"];
+$msg_body_with_copy_translated = $msg_body_with_copy["$lang_type"];
 
 foreach($entries as $key => $value) {
   if (empty($value) && $key !== ENTRY_TYPE_EMAIL) {
@@ -143,20 +143,20 @@ try {
   $body_address = str_replace('$yarn', $yarn, $body_address);
 
   // Replace variables body :: ReplyTo
-  $body_replyTo = str_replace('$title', $msg_body_reply_to_translated["title"], $body_replyTo);
-  $body_replyTo = str_replace('$description', $msg_body_reply_to_translated["description"], $body_replyTo);
+  $body_with_copy = str_replace('$title', $msg_body_with_copy_translated["title"], $body_with_copy);
+  $body_with_copy = str_replace('$description', $msg_body_with_copy_translated["description"], $body_with_copy);
 
   // Replace variables body :: ReplyTo - Label
-  $body_replyTo = str_replace('$reply_to_name_label', $msg_body_reply_to_translated["reply_to_name_label"], $body_replyTo);
-  $body_replyTo = str_replace('$reply_to_email_label', $msg_body_reply_to_translated["reply_to_email_label"], $body_replyTo);
-  $body_replyTo = str_replace('$reply_to_subject_label', $msg_body_reply_to_translated["reply_to_subject_label"], $body_replyTo);
-  $body_replyTo = str_replace('$reply_to_message_label', $msg_body_reply_to_translated["reply_to_message_label"], $body_replyTo);
+  $body_with_copy = str_replace('$with_copy_name_label', $msg_body_with_copy_translated["with_copy_name_label"], $body_with_copy);
+  $body_with_copy = str_replace('$with_copy_email_label', $msg_body_with_copy_translated["with_copy_email_label"], $body_with_copy);
+  $body_with_copy = str_replace('$with_copy_subject_label', $msg_body_with_copy_translated["with_copy_subject_label"], $body_with_copy);
+  $body_with_copy = str_replace('$with_copy_message_label', $msg_body_with_copy_translated["with_copy_message_label"], $body_with_copy);
 
   // Replace variables body :: ReplyTo - Value
-  $body_replyTo = str_replace('$reply_to_name_value', $name, $body_replyTo);
-  $body_replyTo = str_replace('$reply_to_email_value', $email_address, $body_replyTo);
-  $body_replyTo = str_replace('$reply_to_subject_value', $subject, $body_replyTo);
-  $body_replyTo = str_replace('$reply_to_message_value', $message, $body_replyTo);
+  $body_with_copy = str_replace('$with_copy_name_value', $name, $body_with_copy);
+  $body_with_copy = str_replace('$with_copy_email_value', $email_address, $body_with_copy);
+  $body_with_copy = str_replace('$with_copy_subject_value', $subject, $body_with_copy);
+  $body_with_copy = str_replace('$with_copy_message_value', $message, $body_with_copy);
 
   //Content
   $mail->IsHTML(true);
@@ -182,8 +182,8 @@ try {
     $mail->clearAllRecipients();
     $mail->setFrom('develop@azzurracapital.com.br', 'Azzurra Capital');
     $mail->addAddress('familiasilva.daniellima@gmail.com', 'Daniel Lima');
-    $mail->Subject = $msg_body_reply_to_translated["subject"] . ' - ' . $name;
-    $mail->Body    = $body_replyTo;
+    $mail->Subject = $msg_body_with_copy_translated["subject"] . ' - ' . $name;
+    $mail->Body    = $body_with_copy;
     $mail->AltBody = $msg_body_address_translated["alt_text"];
     $mail->send();
   }
