@@ -147,8 +147,11 @@
   </tr>
   <tr>
     <td align="center">
-      <table border="0" cellpadding="0" cellspacing="0" width="580"
-             style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 12.8px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255,255,255);">
+      <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="580"
+             style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 12.8px; font-style: normal;
+             font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto;
+             text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing:
+              0px; -webkit-text-stroke-width: 0px; background: #ffffff;">
         <tbody>
         <tr id="header" valign="top">
           <td colspan="3" style="font-family: arial, sans-serif; margin: 0px;">
@@ -164,12 +167,9 @@
             </table>
           </td>
         </tr>
-        <tr id="main">
-          <td width="12"
-              style="font-family: arial, sans-serif; margin: 0px; border-left-width: 1px; border-left-style: solid; border-left-color: rgb(221, 221, 221); background: url('https://ci4.googleusercontent.com/proxy/N0L944HCjnvwWRXBljU4ZfipjEACBbT74c9tnfqjqcKRHYJAfxxlQr8rOPL_ETHsSXpPLpwREJOI33BTHDZw2jjZ=s0-d-e1-ft#http:///i/scr/scr_emailLeftBorder_13wx1h.gif') 0% 50% repeat-y;"
-              bgcolor="url('https"><img src="http://azzurracapital.com.br/img/newsletters/email-resposta/unnamed-3.gif"
-                                        border="0" alt="" class="CToWUd"></td>
-          <td width="530"
+        <tr id="main" bgcolor="#ffffff" style="background: #ffffff;">
+          <td width="12" style="font-family: arial, sans-serif; margin: 0px;"></td>
+          <td width="556"
               style="font-family: arial, sans-serif; margin: 0px; width: 530px; word-wrap: break-word; padding: 12px;">
             <table width="100%">
               <tbody>
@@ -186,30 +186,27 @@
                   <p style="margin: 11px 0px; padding: 0px;">$description</p>
 
                   <p style="margin: 11px 0px; padding: 0px;">
-                    <strong>$reply_to_name_label: </strong>$reply_to_name_value
+                    <strong>$with_copy_name_label: </strong>$with_copy_name_value
                   </p>
 
                   <p style="margin: 11px 0px; padding: 0px;">
-                    <strong>$reply_to_email_label: </strong>$reply_to_email_value
+                    <strong>$with_copy_email_label: </strong>$with_copy_email_value
                   </p>
 
                   <p style="margin: 11px 0px; padding: 0px;">
-                    <strong>$reply_to_subject_label: </strong>$reply_to_subject_value
+                    <strong>$with_copy_subject_label: </strong>$with_copy_subject_value
                   </p>
 
                   <p style="margin: 11px 0px; padding: 0px;">
-                    <strong>$reply_to_message_label: </strong>
+                    <strong>$with_copy_message_label: </strong>
                     <br><br>
-                    $reply_to_message_value
+                    $with_copy_message_value
                   </p>
               </tr>
               </tbody>
             </table>
           </td>
-          <td width="12"
-              style="font-family: arial, sans-serif; margin: 0px; border-right-width: 1px; border-right-style: solid; border-right-color: rgb(221, 221, 221); background: url('https://ci6.googleusercontent.com/proxy/tJTSIiFFJTeNg6bI5dXgfivt4w1ZtT2c02j-j3GFrBF0ZzIyiv2nvAOyuL-RION8gcGrrOpUgynLsDbpQcdYS5EVlQ=s0-d-e1-ft#http:///i/scr/scr_emailRightBorder_13wx1h.gif') 0% 50% repeat-y;"
-              bgcolor="url('https"><img src="http://azzurracapital.com.br/img/newsletters/email-resposta/unnamed-3.gif"
-                                        border="0" alt="" class="CToWUd"></td>
+          <td width="12"style="font-family: arial, sans-serif; margin: 0px;"></td>
         </tr>
         </tbody>
       </table>

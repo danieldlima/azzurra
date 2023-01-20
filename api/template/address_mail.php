@@ -133,7 +133,8 @@
         <tr>
           <td align="center" bgcolor="#0C1225" valign="top"
               style="font-family: arial, sans-serif; margin: 0px; padding-right: 30px; padding-left: 30px; background-color: #0f1337;">
-            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 643px;">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 643px;
+            background: #ffffff">
               <tbody>
               <tr>
                 <td align="center" valign="top" bgcolor="#0f1337"
@@ -158,28 +159,8 @@
             <table align="center" border="0" cellpadding="0" cellspacing="0" width="643">
               <tbody>
               <tr>
-                <td align="center" valign="top" bgcolor="#FFFFFF" style="font-family: arial, sans-serif; margin: 0px;">
-                  <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"
-                         style="max-width: 640px;">
-                    <tbody>
-                    <tr>
-                      <td align="center" valign="top" bgcolor="#FFFFFF"
-                          style="font-family: arial, sans-serif; margin: 0px;">
-                        <table align="center" bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" width="100%"
-                               style="border-collapse: separate; border-top-left-radius: 4px; border-top-right-radius: 4px; background-color: rgb(255, 255, 255);">
-                          <tbody>
-                          <tr>
-                            <td width="100%" align="center" valign="top" bgcolor="#FFFFFF"
-                                style="font-family: arial, sans-serif; margin: 0px; padding-top: 40px; padding-bottom: 0px;">
-
-                            </td>
-                          </tr>
-                          </tbody>
-                        </table>
-                      </td>
-                    </tr>
-                    </tbody>
-                  </table>
+                <td height="40" align="center" valign="top" bgcolor="#FFFFFF" style="font-family: arial, sans-serif;
+                margin: 0px; height: 40px">
                 </td>
               </tr>
               </tbody>
