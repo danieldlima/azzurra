@@ -41,42 +41,42 @@ function RegulatoryInformationSection() {
                   return (
                     <>
                       <DocumentFileCard
-                        to="/documents/5. Formulário de Referência.docx"
+                        to="/documents/5. Formulário de Referência.pdf"
                         title="Formulário de Referência"
                       />
 
                       <DocumentFileCard
-                        to="/documents/11. Política de Conheça Seu Cliente e Prevenção e Combate à Lavagem de Dinheiro.docx"
+                        to="/documents/11. Política de Conheça Seu Cliente e Prevenção e Combate à Lavagem de Dinheiro.pdf"
                         title="conheça seu cliente e prevenção e combate à lavagem de dinheiro"
                       />
 
                       <DocumentFileCard
-                        to="/documents/12. Código de Ética.docx"
+                        to="/documents/12. Código de Ética.pdf"
                         title="código de ética"
                       />
 
                       <DocumentFileCard
-                        to="/documents/13. Regras, Procedimentos e Descrição dos Controles Internos.docx"
+                        to="/documents/13. Regras, Procedimentos e Descrição dos Controles Internos.pdf"
                         title="regras, procedimentos e descrição dos controles internos"
                       />
 
                       <DocumentFileCard
-                        to="/documents/14. Política de Compra e Venda de Valores Mobiliários.docx"
+                        to="/documents/14. Política de Compra e Venda de Valores Mobiliários.pdf"
                         title="política de compra e venda de valores mobiliários"
                       />
 
                       <DocumentFileCard
-                        to="/documents/15. Manual Previsto no art. 25 da Instrução CVM 558_15.docx"
+                        to="/documents/15. Manual Previsto no art. 25 da Instrução CVM 558_15.pdf"
                         title="manual de segregação de atividades"
                       />
 
                       <DocumentFileCard
-                        to="/documents/16. Política de Gestão de Riscos.docx"
+                        to="/documents/16. Política de Gestão de Riscos.pdf"
                         title="política de gestão de riscos"
                       />
 
                       <DocumentFileCard
-                        to="/documents/17. Política de Rateio e Divisão de Ordens.docx"
+                        to="/documents/17. Política de Rateio e Divisão de Ordens.pdf"
                         title="política de rateio e divisão de ordens"
                       />
                     </>
