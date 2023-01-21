@@ -73,7 +73,7 @@ function ContactSection() {
                 <span className={'inline sm:hidden'}>{' - '}</span>
 
                 <span className="inline sm:block">
-                  Conj. 81 - Edifício JK TOWER
+                  Conj. 81 - Edifício JK Tower
                 </span>
                 <span className={'inline sm:hidden'}>{' - '}</span>
 
