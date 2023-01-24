@@ -41,7 +41,7 @@ function RegulatoryInformationSection() {
                   return (
                     <>
                       <DocumentFileCard
-                        to="/documents/5. Formulário de Referência.pdf"
+                        to="/documents/5. Formulário de Referência--v2.pdf"
                         title="Formulário de Referência"
                       />
 
