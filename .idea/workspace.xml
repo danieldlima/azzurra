@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f52c6ca-1be1-47f0-ae31-ceefa39145e8" name="Changes" comment="refactor(home): add new files json data">
-      <change afterPath="$PROJECT_DIR$/content/home/pt/AboutSection-JSON-Content.json" afterDir="false" />
+    <list default="true" id="7f52c6ca-1be1-47f0-ae31-ceefa39145e8" name="Changes" comment="refactor(aboutsection): add json data file to AboutSection component">
+      <change afterPath="$PROJECT_DIR$/content/home/pt/InvestmentPolicySection-JSON-Content.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/Home/components/AboutSection/components/AboutItem/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/Home/components/AboutSection/components/AboutItem/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/Home/components/AboutSection/components/DetailsSectionCompass/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/Home/components/AboutSection/components/DetailsSectionCompass/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/Home/components/AboutSection/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/Home/components/AboutSection/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/Home/components/InvestmentPolicySection/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/Home/components/InvestmentPolicySection/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -389,7 +386,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674683402143</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="refactor(aboutsection): add json data file to AboutSection component">
+      <created>1674686527901</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1674686527901</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -407,7 +411,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat(templates): create contact form section layout" />
     <MESSAGE value="feat(templates): create field styles in contact form section" />
     <MESSAGE value="fix(templates): fix fields focus" />
     <MESSAGE value="fix(textareafield): fix textarea focus in mobile view" />
@@ -432,7 +435,8 @@
     <MESSAGE value="feat(modaç): create Modal component" />
     <MESSAGE value="refactor(teamsection): update text in json data" />
     <MESSAGE value="refactor(home): add new files json data" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor(home): add new files json data" />
+    <MESSAGE value="refactor(aboutsection): add json data file to AboutSection component" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor(aboutsection): add json data file to AboutSection component" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
