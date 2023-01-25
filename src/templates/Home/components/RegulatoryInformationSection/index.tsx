@@ -3,6 +3,8 @@ import { useState } from 'react';
 
 import { ParentSize } from '@visx/responsive';
 
+import JSONData from '@content/home/pt/RegulatoryInformationSection-JSON-Content.json';
+
 import DocumentFileCard from '@components/DocumentFileCard';
 import Container from '@components/Layout/Container';
 import Text from '@components/Text';
@@ -20,11 +22,16 @@ function RegulatoryInformationSection() {
         <Container className={'relative flex px-6 xl:px-0'}>
           <div className={'relative w-full lg:w-6/12 lg:pr-8'}>
             <div className={'mb-2 sm:mb-8'}>
-              <Text label={'Informações Regulatórias'} />
+              <Text label={JSONData.title} />
 
-              <p className="w-full pb-4 lg:pb-0 normal-case text-xl font-light mb-1">
-                Clique abaixo para acessar os arquivos:
-              </p>
+              {JSONData.description.map((paragraph, idx) => (
+                <p
+                  key={idx}
+                  className="w-full pb-4 lg:pb-0 normal-case text-xl font-light mb-1"
+                >
+                  {paragraph}
+                </p>
+              ))}
             </div>
 
             <div>
@@ -38,49 +45,15 @@ function RegulatoryInformationSection() {
                 {({ height }) => {
                   onChangeHeight(height);
 
-                  return (
-                    <>
+                  return JSONData.documents.map((document) => {
+                    return (
                       <DocumentFileCard
-                        to="/documents/5. Formulário de Referência--v2.pdf"
-                        title="Formulário de Referência"
+                        key={document.id}
+                        title={document.title}
+                        to={document.file}
                       />
-
-                      <DocumentFileCard
-                        to="/documents/11. Política de Conheça Seu Cliente e Prevenção e Combate à Lavagem de Dinheiro.pdf"
-                        title="conheça seu cliente e prevenção e combate à lavagem de dinheiro"
-                      />
-
-                      <DocumentFileCard
-                        to="/documents/12. Código de Ética.pdf"
-                        title="código de ética"
-                      />
-
-                      <DocumentFileCard
-                        to="/documents/13. Regras, Procedimentos e Descrição dos Controles Internos.pdf"
-                        title="regras, procedimentos e descrição dos controles internos"
-                      />
-
-                      <DocumentFileCard
-                        to="/documents/14. Política de Compra e Venda de Valores Mobiliários.pdf"
-                        title="política de compra e venda de valores mobiliários"
-                      />
-
-                      <DocumentFileCard
-                        to="/documents/15. Manual Previsto no art. 25 da Instrução CVM 558_15.pdf"
-                        title="manual de segregação de atividades"
-                      />
-
-                      <DocumentFileCard
-                        to="/documents/16. Política de Gestão de Riscos.pdf"
-                        title="política de gestão de riscos"
-                      />
-
-                      <DocumentFileCard
-                        to="/documents/17. Política de Rateio e Divisão de Ordens.pdf"
-                        title="política de rateio e divisão de ordens"
-                      />
-                    </>
-                  );
+                    );
+                  });
                 }}
               </ParentSize>
             </div>
