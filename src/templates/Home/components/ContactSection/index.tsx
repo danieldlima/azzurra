@@ -1,8 +1,10 @@
 import * as React from 'react';
-import { useContext, useMemo } from 'react';
+import { Fragment, useContext, useMemo } from 'react';
 
 import { useDimensions } from '@root/modules/hooks';
 import { HomeContext } from '@root/modules/providers';
+
+import JSONData from '@content/home/pt/ContactSection-JSON-Content.json';
 
 import ContactForm from '@templates/Home/components/ContactSection/components/ContactForm';
 import NewsletterForm from '@templates/Home/components/ContactSection/components/NewsletterForm';
@@ -51,42 +53,45 @@ function ContactSection() {
           <h3
             className={`lg:w-6/12 text-5xl sm:text-7xl mb-6 mobile-landscape:mb-4 sm:mb-4 md:mb-14 text-azzurra-navy-blue`}
           >
-            Fale com{' '}
-            <span className="inline-block mobile-landscape:block">
-              a <strong>Azzurra Capital</strong>
-            </span>
+            {JSONData.title[0]}{' '}
+            <span
+              className="inline-block mobile-landscape:block"
+              dangerouslySetInnerHTML={{
+                __html: JSONData.title[1]
+              }}
+            />
           </h3>
 
           <div className="flex flex-col lg:flex-row gap-10 mobile-landscape:flex-row mobile-landscape:gap-20">
             <div className="text-black">
-              <p className="font-bold text-xl">LIGUE PARA A AZZURRA CAPITAL:</p>
-              <a href="tel:+551132631089" className="block text-lg font-light">
-                +55 (11) 3263-1089
-              </a>
-              <a href="tel:+5511944466662" className="block text-lg font-light">
-                +55 (11) 94446-6662
-              </a>
+              <p className="font-bold text-xl">{JSONData.phone.title}</p>
+              {JSONData.phone.items.map((item, idx) => {
+                return (
+                  <a
+                    key={idx}
+                    href={item.href}
+                    className="block text-lg font-light"
+                  >
+                    {item.label}
+                  </a>
+                );
+              })}
             </div>
 
             <div className="text-black normal-case">
-              <p className="font-bold text-xl">OU FAÇA UMA VISITA:</p>
+              <p className="font-bold text-xl">{JSONData.address.title}</p>
 
               <p>
-                <span className="inline sm:block">
-                  R. Leopoldo Couto Magalhães Júnior, 110
-                </span>
-                <span className={'inline sm:hidden'}>{' - '}</span>
-
-                <span className="inline sm:block">
-                  Conj. 81 - Edifício JK Tower
-                </span>
-                <span className={'inline sm:hidden'}>{' - '}</span>
-
-                <span className="inline-block sm:block">
-                  Itaim Bibi - São Paulo - SP
-                </span>
-
-                <span className="block">CEP: 04542-000</span>
+                {JSONData.address.text.map((label, idx) => {
+                  return (
+                    <Fragment key={idx}>
+                      <span className="inline sm:block">{label}</span>
+                      {idx > 1 ? null : (
+                        <span className={'inline sm:hidden'}>{' - '}</span>
+                      )}
+                    </Fragment>
+                  );
+                })}
               </p>
             </div>
           </div>
@@ -96,7 +101,7 @@ function ContactSection() {
           <ButtonLink
             href="mailto:contato@azzurracapital.com.br"
             icon={<Mail />}
-            title="Envie sua mensagem"
+            title={JSONData.button}
             className={'mx-0'}
           />
         </div>
