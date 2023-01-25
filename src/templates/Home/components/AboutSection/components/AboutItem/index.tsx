@@ -9,7 +9,7 @@ interface AboutItemProps {
   icon: JSX.Element;
   title?: string;
   id?: string;
-  description: string;
+  description: string[];
   className?: string;
 }
 
@@ -34,14 +34,17 @@ const AboutItem = ({
           <div className="w-5/6 flex flex-col grid-in-description">
             <Text label={title} className={'mb-2 sm:mb-4'} />
 
-            <Text
-              as="p"
-              size="paragraph"
-              fontWeight="normal"
-              color="black"
-              className={'mb-2 sm:mb-4'}
-              label={description}
-            />
+            {description.map((text, idx) => (
+              <Text
+                key={idx}
+                as="p"
+                size="paragraph"
+                fontWeight="normal"
+                color="black"
+                className={'mb-2 sm:mb-4'}
+                label={text}
+              />
+            ))}
           </div>
         </GridAboutCard>
       </Container>

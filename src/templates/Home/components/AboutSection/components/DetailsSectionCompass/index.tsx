@@ -4,6 +4,8 @@ import { useContext, useRef } from 'react';
 import { HomeContext } from '@root/modules/providers';
 import { addClassName } from '@root/modules/utils';
 
+import JSONData from '@content/home/pt/AboutSection-JSON-Content.json';
+
 import AboutMandala from '@components/Icons/AboutMandala';
 import IcCentralization from '@components/Icons/Centralization';
 import IcCompass from '@components/Icons/Compass';
@@ -17,13 +19,46 @@ import AboutItem from '../AboutItem';
 import ButtonCompassDetails from '../ButtonCompassDetails';
 import CardFamilyOffice from '../CardFamilyOffice';
 
-function DetailsSectionCompass() {
+interface DetailsSectionCompassFeaturesCards {
+  id: number;
+  title: string;
+  description: string;
+}
+
+interface DetailsSectionCompassFeatures {
+  title: string;
+  description: string;
+  cards: DetailsSectionCompassFeaturesCards[];
+}
+interface DetailsSectionCompassContent {
+  title: string;
+  button: string[] | null;
+  description: string[];
+  features: DetailsSectionCompassFeatures | null;
+}
+
+export interface DetailsSectionCompassProps {
+  data: {
+    id: string;
+    title: string;
+    description: string[];
+    content: DetailsSectionCompassContent | null;
+  };
+}
+
+function DetailsSectionCompass({ data }: DetailsSectionCompassProps) {
   const { aboutSection } = useContext(HomeContext);
 
   const aboutCompassRef = useRef<HTMLDivElement>(null!);
 
   const { isDetailsOpen } = aboutSection?.compassItem;
   const isHidden = !isDetailsOpen ? ' hidden ' : '';
+
+  const icons = {
+    0: <IcManagement className={'w-full h-full'} />,
+    1: <IcConsolidation className={'w-full h-full'} />,
+    2: <IcCentralization className={'w-full h-full'} />
+  };
 
   function handleClick() {
     const element = document.getElementById('about-compass');
@@ -46,8 +81,8 @@ function DetailsSectionCompass() {
     >
       <AboutItem
         id="why-azzurra"
-        title="Por que a Azzurra Capital?"
-        description="Com foco no cliente e utilizando uma visão 360°, buscamos entender suas necessidades e construímos relacionamentos por meio da tomada de decisão feita em conjunto."
+        title={data.title}
+        description={data.description}
         icon={<IcCompass className="w-full" />}
       >
         <ButtonCompassDetails
@@ -56,7 +91,10 @@ function DetailsSectionCompass() {
           arrowAngle={aboutSection?.compassItem.isDetailsOpen ? 180 : 0}
           label={
             <>
-              Foco no cliente: <strong>Visão 360º</strong>
+              {!data.content?.button?.length ? null : data.content?.button[0]}{' '}
+              <strong>
+                {!data.content?.button?.length ? null : data.content?.button[1]}
+              </strong>
             </>
           }
         />
@@ -88,37 +126,16 @@ function DetailsSectionCompass() {
               </div>
 
               <div className={'flex flex-col gap-6 sm:gap-3'}>
-                <Text
-                  as="p"
-                  size="paragraph"
-                  fontWeight="normal"
-                  color="black"
-                  label={
-                    'Com base nas necessidades, expectativas e perfis de risco do cliente, oferecemos uma gestão de ' +
-                    'patrimônio sem conflito de interesses, utilizando uma plataforma com arquitetura aberta.'
-                  }
-                />
-
-                <Text
-                  as="p"
-                  size="paragraph"
-                  fontWeight="normal"
-                  color="black"
-                  label={
-                    'A independência na escolha de parceiros e custodiantes se traduz em eficiência na ' +
-                    'execução, acesso a diferentes mercados e custos competitivos.'
-                  }
-                />
-
-                <Text
-                  as="p"
-                  size="paragraph"
-                  fontWeight="normal"
-                  color="black"
-                  label={
-                    'Nossa remuneração é baseada no patrimônio sob nossa gestão.'
-                  }
-                />
+                {data.content?.description.map((paragraph, idx) => (
+                  <Text
+                    key={idx}
+                    as="p"
+                    size="paragraph"
+                    fontWeight="normal"
+                    color="black"
+                    label={paragraph}
+                  />
+                ))}
               </div>
 
               <div className="mb-4 sm:mb-10 text-black text-white">
@@ -126,7 +143,7 @@ function DetailsSectionCompass() {
                   as="h4"
                   size="paragraph"
                   className={'uppercase'}
-                  label={'Multi-Family Office'}
+                  label={data.content?.features?.title}
                 />
 
                 <Text
@@ -135,9 +152,7 @@ function DetailsSectionCompass() {
                   fontWeight="normal"
                   color="black"
                   className={'mb-8'}
-                  label={
-                    'Buscamos a perpetuação do patrimônio por gerações através de:'
-                  }
+                  label={data.content?.features?.description}
                 />
 
                 <div
@@ -145,31 +160,16 @@ function DetailsSectionCompass() {
                     'grid grid-rows-1 md:grid-cols-3 gap-10 px-6 sm:px-0'
                   }
                 >
-                  <CardFamilyOffice
-                    title="GESTÃO"
-                    description={
-                      'Gestão de recursos levando em consideração a política individual de investimentos e teses ' +
-                      'de investimento mais aderentes.'
-                    }
-                    icons={<IcManagement className={'w-full h-full'} />}
-                  />
-
-                  <CardFamilyOffice
-                    title="Consolidação"
-                    description={
-                      'Consolidação do patrimônio total do cliente, com tecnologia própria.'
-                    }
-                    icons={<IcConsolidation className={'w-full h-full'} />}
-                  />
-
-                  <CardFamilyOffice
-                    title="Centralização"
-                    description={
-                      'Centralização da intermediação e coordenação de todas as relações que envolvem ' +
-                      'o patrimônio do cliente, incluindo aspectos familiares e/ou societários.'
-                    }
-                    icons={<IcCentralization className={'w-full h-full'} />}
-                  />
+                  {data.content?.features?.cards.map((card) => {
+                    return (
+                      <CardFamilyOffice
+                        key={card.id}
+                        title={card.title}
+                        description={card.description}
+                        icons={icons[card.id as never]}
+                      />
+                    );
+                  })}
                 </div>
               </div>
             </div>

@@ -2,6 +2,8 @@ import * as React from 'react';
 
 import Container from '@root/components/Layout/Container';
 
+import JSONData from '@content/home/pt/AboutSection-JSON-Content.json';
+
 import IcAbout from '@components/Icons/About';
 import IcLighthouse from '@components/Icons/Lighthouse';
 import GridAboutCard from '@components/Layout/GridAboutCard';
@@ -9,42 +11,46 @@ import GridAboutCard from '@components/Layout/GridAboutCard';
 import AboutItem from './components/AboutItem';
 import DetailsSectionCompass from './components/DetailsSectionCompass';
 
-// contact-section
 const AboutSection = () => {
+  const icons = {
+    0: <IcAbout className="w-full" />,
+    2: <IcLighthouse className="w-full" />
+  };
+
   return (
     <section id="about">
       <div className="flex flex-col items-center justify-center mobile-landscape:pb-10 pb-20 pt-16 sm:pb-24 sm:pt-12 gap-16">
-        <AboutItem
-          id="meet-azzurra"
-          title="Conheça a Azzurra Capital"
-          description="O mundo dos investimentos é um oceano de oportunidades. Por meio da experiência de seus sócios com mais de 20 anos no setor de serviços financeiros, a Azzurra Capital navega em direção à construção e preservação do patrimônio dos nossos clientes. Atuando desde o público afluente ao Private, temos a estrutura de um Multi-Family Oﬃce focado em prover serviços de gestão de recursos no mercado doméstico e global."
-          icon={<IcAbout className="w-full" />}
-        />
+        {JSONData.items.map(({ id, title, description, content }, idx) => {
+          return id !== 'about-compass' ? (
+            <AboutItem
+              key={id}
+              id={id}
+              title={title}
+              description={description}
+              icon={icons[idx as never]}
+            >
+              {!content ? null : (
+                <Container>
+                  <GridAboutCard>
+                    <div className="grid-in-description mt-8 pr-8 lg:pr-0">
+                      <h4 className="text-xl sm:text-2xl font-bold text-azzurra-navy-blue mb-2 sm:mb-4">
+                        {content.title}
+                      </h4>
 
-        <DetailsSectionCompass />
-
-        <AboutItem
-          id="capacity-and-services"
-          title="Capacidades & Serviços"
-          description="A Azzurra Capital faz um trabalho profundo de análise dos aspectos patrimoniais relacionados à família: verifica como ela é composta, seus membros, os objetivos e as demandas. Um plano de longo prazo é apresentado, propondo um acompanhamento patrimonial e uma estrutura para a sucessão. Após essas etapas, realizamos a execução do plano proposto e acompanhamos todos os seus desdobramentos."
-          icon={<IcLighthouse className="w-full" />}
-        >
-          <Container>
-            <GridAboutCard>
-              <div className="grid-in-description mt-8 pr-8 lg:pr-0">
-                <h4 className="text-xl sm:text-2xl font-bold text-azzurra-navy-blue mb-2 sm:mb-4">
-                  GESTÃO DE RECURSOS
-                </h4>
-
-                <p className="text-lg leading-6">
-                  Gerenciamento de carteiras administradas consolidadas e
-                  cotizadas em um só sistema. Acessamos o mercado inteiro sem
-                  limitações para investimentos em ativos.
-                </p>
-              </div>
-            </GridAboutCard>
-          </Container>
-        </AboutItem>
+                      {content.description?.map((paragraph, idx) => (
+                        <p key={idx} className="text-lg leading-6">
+                          {paragraph}
+                        </p>
+                      ))}
+                    </div>
+                  </GridAboutCard>
+                </Container>
+              )}
+            </AboutItem>
+          ) : (
+            <DetailsSectionCompass data={{ id, title, description, content }} />
+          );
+        })}
       </div>
     </section>
   );
