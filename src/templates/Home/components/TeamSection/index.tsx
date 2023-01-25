@@ -1,6 +1,6 @@
 import React from 'react';
 
-import JSONData from '@content/TeamSection-pt_BR-JSON-Content.json';
+import JSONData from '@content/home/pt/TeamSection-JSON-Content.json';
 
 import Container from '@components/Layout/Container';
 import SectionMask from '@components/SectionMask';

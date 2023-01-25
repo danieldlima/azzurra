@@ -1,0 +1,27 @@
+{
+  "sliders": [
+    {
+      "id": 0,
+      "title": ["Bons ventos para", "os seus investimentos!"],
+      "description": "Conheça a Azzurra Capital, a gestora de recursos que vai guiar a jornada rumo ao seu futuro.",
+      "button": "Assista ao vídeo",
+      "background": {
+        "poster": "./images/azzurra__hero-banner.webp",
+        "fallback": {
+          "src": "../../../../images/azzurra__hero-banner.jpg",
+          "alt": "Imagem do mar com um barco a direita"
+        },
+        "source": [
+          {
+            "type": "webp",
+            "src": "./video/azzurra__hero-video.webm"
+          },
+          {
+            "type": "mp4",
+            "src": "./video/azzurra__hero-video.mp4"
+          }
+        ]
+      }
+    }
+  ]
+}

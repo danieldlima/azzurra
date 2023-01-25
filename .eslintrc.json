@@ -49,6 +49,7 @@
           "/^@visx/",
           "/^@elastic/",
           "/^@root/",
+          "/^@content/",
           "/^@core/",
           "/^@assets/",
           "/^@types/",

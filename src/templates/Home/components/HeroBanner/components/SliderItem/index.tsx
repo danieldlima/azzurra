@@ -8,6 +8,26 @@ interface SliderItemProps {
   description: string;
   minHeight?: string;
   onOpen?: (make: boolean) => void;
+  button?: {
+    label?: string;
+  };
+  modal?: {
+    poster: string;
+    fallback: {
+      src: string;
+      alt: string;
+    };
+    source: [
+      {
+        type: string;
+        src: string;
+      },
+      {
+        type: string;
+        src: string;
+      }
+    ];
+  };
   element: ReactNode;
 }
 
@@ -15,6 +35,8 @@ function SliderItem({
   title,
   description,
   element,
+  button,
+  modal,
   minHeight = 'h-full'
 }: SliderItemProps) {
   const [open, setOpen] = useState(false);
@@ -76,18 +98,20 @@ function SliderItem({
                 'animate-[entrance-b_0.7s_ease-out_1.4s_1_normal_forwards] sm:animate-entrance-l opacity-0 '
               }
             >
-              <button
-                onClick={handleToggle}
-                className={
-                  'border-2 rounded-full px-8 text-white px-8 py-1.5 text-white uppercase text-lg font-bold ' +
-                  'transition-all bg-white/0 hover:text-azzurra-navy-blue hover:bg-white active:scale-90 ' +
-                  'active:shadow-highlight'
-                }
-              >
-                <span className="inline-block leading-none">
-                  Assista ao vídeo
-                </span>
-              </button>
+              {!button?.label ? null : (
+                <button
+                  onClick={handleToggle}
+                  className={
+                    'border-2 rounded-full px-8 text-white px-8 py-1.5 text-white uppercase text-lg font-bold ' +
+                    'transition-all bg-white/0 hover:text-azzurra-navy-blue hover:bg-white active:scale-90 ' +
+                    'active:shadow-highlight'
+                  }
+                >
+                  <span className="inline-block leading-none">
+                    {button.label}
+                  </span>
+                </button>
+              )}
             </div>
 
             <Modal onClose={handleToggle} open={open}>
@@ -104,19 +128,14 @@ function SliderItem({
                     controls
                     loop
                     preload="auto"
-                    poster="./images/azzurra__hero-banner.webp"
+                    poster={modal?.poster}
                     className={
                       'w-full h-full video[poster]:w-full video[poster]:h-full'
                     }
                   >
-                    <source
-                      src="./video/azzurra__hero-video.webm"
-                      type="video/webm"
-                    />
-                    <source
-                      src="./video/azzurra__hero-video.mp4"
-                      type="video/mp4"
-                    />
+                    {modal?.source.map(({ src, type }, idx) => (
+                      <source key={idx} src={src} type={`video/${type}`} />
+                    ))}
                   </video>
                 </div>
               </div>
