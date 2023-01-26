@@ -8,7 +8,7 @@ import AboutSection, {
 import ContactSection, {
   ContactSectionProps
 } from '@templates/Home/components/ContactSection';
-import Footer from '@templates/Home/components/Footer';
+import Footer, { FooterProps } from '@templates/Home/components/Footer';
 import HeroBanner, {
   HeroBannerProps
 } from '@templates/Home/components/HeroBanner';
@@ -30,6 +30,7 @@ interface HomeProps {
     teamSection: TeamSectionProps['data'];
     regulatoryInformationSection: RegulatoryInformationSectionProps['data'];
     contactSection: ContactSectionProps['data'];
+    footerSection: FooterProps['data'];
   };
 }
 
@@ -50,7 +51,7 @@ const Home = ({ data }: HomeProps) => {
         </section>
         <ContactSection data={data.contactSection} />
       </main>
-      <Footer />
+      <Footer data={data.footerSection} />
     </HomeProvider>
   );
 };

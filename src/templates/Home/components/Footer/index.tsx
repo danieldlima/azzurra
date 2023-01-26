@@ -7,12 +7,58 @@ import Anbima1 from '@images/azzurra__ic__anbima--1.png';
 import Anbima2 from '@images/azzurra__ic__anbima--2.png';
 
 import { HomeContext } from '@root/modules/providers';
+import { addClassName } from '@root/modules/utils';
 
 import AzzurraBrand from '@components/Icons/AzzurraBrand';
 import Container from '@components/Layout/Container';
 
-function Footer() {
+export interface ChildrenLinkItem {
+  id: number;
+  label: string;
+  offset: number;
+  link: string;
+}
+
+export interface LinkItem extends ChildrenLinkItem {
+  items: LinkItem[] | null;
+}
+
+export interface LanguageButtons {
+  id: number;
+  label: string;
+  alt: string;
+  lgn: string;
+  disabled: boolean;
+}
+
+export interface FooterProps {
+  data: {
+    nav: LinkItem[];
+    copyright: string;
+    language: {
+      title: string;
+      buttons: LanguageButtons[];
+    };
+  };
+}
+
+function Footer({ data }: FooterProps) {
   const { footer, aboutSection } = useContext(HomeContext);
+
+  const flags = {
+    0: {
+      url: BrFrag,
+      bg: 'bg-[#229e45]',
+      className: 'h-4 max-w-none max-h-none'
+    },
+    1: {
+      url: UsFrag,
+      bg: 'bg-transparent',
+      className: 'h-8 max-w-none max-h-none'
+    }
+  };
+
+  if (!data) return null;
 
   return (
     <footer
@@ -35,143 +81,88 @@ function Footer() {
           <div className="w-full lg:w-7/12 text-white flex flex-row flex-wrap">
             <div className="w-8/12 md:w-4/12">
               <ul className={'list-none leading-7'}>
-                <li>
-                  <Link
-                    spy
-                    smooth
-                    to="about"
-                    offset={-50}
-                    duration={500}
-                    className={
-                      'cursor-pointer hover:text-azzurra-opaque-gold hover:underline transition-all font-bold' +
-                      ' uppercase' +
-                      ' text-base'
-                    }
-                  >
-                    A AZZURRA capital
-                  </Link>
-                  <ul className={'ml-3'}>
-                    <li>
+                {data.nav.map((item) => {
+                  return (
+                    <li key={item.id}>
                       <Link
                         spy
                         smooth
-                        to="meet-azzurra"
-                        offset={-80}
+                        to={item.link}
+                        offset={item.offset}
                         duration={500}
                         className={
-                          'cursor-pointer hover:text-azzurra-opaque-gold hover:underline transition-all'
+                          'cursor-pointer hover:text-azzurra-opaque-gold hover:underline transition-all font-bold' +
+                          ' uppercase' +
+                          ' text-base'
                         }
                       >
-                        Conheça a Azzurra Capital
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        spy
-                        smooth
-                        to="why-azzurra"
-                        offset={-100}
-                        duration={500}
-                        className={
-                          'cursor-pointer hover:text-azzurra-opaque-gold hover:underline transition-all'
-                        }
-                      >
-                        Por que a Azzurra Capital?
+                        {item.label}
                       </Link>
 
-                      <ul className={'ml-3'}>
-                        <li>
-                          <Link
-                            spy
-                            smooth
-                            to="about-compass"
-                            offset={80}
-                            duration={500}
-                            className={
-                              'cursor-pointer hover:text-azzurra-opaque-gold hover:underline transition-all'
-                            }
-                            onClick={() => {
-                              if (
-                                aboutSection?.compassItem &&
-                                aboutSection.compassItem.setIsDetailsOpen
-                              ) {
-                                aboutSection.compassItem.setIsDetailsOpen(true);
-                              }
-                            }}
-                          >
-                            Explore a nossa visão
-                          </Link>
-                        </li>
-                      </ul>
+                      {!item.items
+                        ? null
+                        : item.items.map((child) => {
+                            return (
+                              <ul key={child.id} className={'ml-3'}>
+                                <li>
+                                  <Link
+                                    spy
+                                    smooth
+                                    to={child.link}
+                                    offset={child.offset}
+                                    duration={500}
+                                    className={
+                                      'cursor-pointer hover:text-azzurra-opaque-gold hover:underline transition-all'
+                                    }
+                                  >
+                                    {child.label}
+                                  </Link>
+                                </li>
+
+                                {!child.items
+                                  ? null
+                                  : child.items.map((childTwo) => {
+                                      return (
+                                        <ul
+                                          key={childTwo.id}
+                                          className={'ml-3'}
+                                        >
+                                          <li>
+                                            <Link
+                                              spy
+                                              smooth
+                                              to={childTwo.link}
+                                              offset={childTwo.offset}
+                                              duration={500}
+                                              className={
+                                                'cursor-pointer hover:text-azzurra-opaque-gold hover:underline transition-all'
+                                              }
+                                              onClick={() => {
+                                                if (
+                                                  childTwo.link ===
+                                                    'about-compass' &&
+                                                  aboutSection?.compassItem &&
+                                                  aboutSection.compassItem
+                                                    .setIsDetailsOpen
+                                                ) {
+                                                  aboutSection.compassItem.setIsDetailsOpen(
+                                                    true
+                                                  );
+                                                }
+                                              }}
+                                            >
+                                              {childTwo.label}
+                                            </Link>
+                                          </li>
+                                        </ul>
+                                      );
+                                    })}
+                              </ul>
+                            );
+                          })}
                     </li>
-                    <li>
-                      <Link
-                        spy
-                        smooth
-                        to="capacity-and-services"
-                        offset={-100}
-                        duration={500}
-                        className={
-                          'cursor-pointer hover:text-azzurra-opaque-gold hover:underline transition-all'
-                        }
-                      >
-                        Capacidade & Serviços
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
-                <li className={'uppercase'}>
-                  <Link
-                    spy
-                    smooth
-                    to="team"
-                    offset={-50}
-                    duration={500}
-                    className={
-                      'cursor-pointer hover:text-azzurra-opaque-gold hover:underline transition-all font-bold' +
-                      ' uppercase' +
-                      ' text-base'
-                    }
-                  >
-                    NOSSO TIME
-                  </Link>
-                </li>
-                <li className={'uppercase'}>
-                  <Link
-                    spy
-                    smooth
-                    to="investment-policy"
-                    duration={500}
-                    className={
-                      'cursor-pointer hover:text-azzurra-opaque-gold hover:underline transition-all font-bold' +
-                      ' uppercase' +
-                      ' text-base'
-                    }
-                  >
-                    política de investimento
-                  </Link>
-                </li>
-                <li className={'uppercase hidden'}>
-                  <button className="font-bold uppercase text-sm">
-                    blog azzurra
-                  </button>
-                </li>
-                <li className={'uppercase'}>
-                  <Link
-                    spy
-                    smooth
-                    to="contact"
-                    offset={-50}
-                    duration={500}
-                    className={
-                      'cursor-pointer hover:text-azzurra-opaque-gold hover:underline transition-all font-bold' +
-                      ' uppercase' +
-                      ' text-base'
-                    }
-                  >
-                    CONTATO
-                  </Link>
-                </li>
+                  );
+                })}
               </ul>
             </div>
 
@@ -186,49 +177,44 @@ function Footer() {
               <ul>
                 <li>
                   <span className="block font-bold uppercase text-sm mb-2">
-                    selecione o seu idioma
+                    {data.language.title}
                   </span>
-                  <ul className={'ml-3 text-base'}>
-                    <li className={'mb-3'}>
-                      <button className={'flex items-center gap-2'}>
-                        <span
-                          className={
-                            'w-8 h-8 sm:w-6 sm:h-6 rounded-full flex justify-center ' +
-                            'items-center overflow-hidden bg-[#229e45]'
-                          }
-                        >
-                          <img
-                            src={BrFrag}
-                            className={'h-4 max-w-none max-h-none'}
-                            alt="Bandeira do Brasil"
-                          />
-                        </span>
-                        <span>Português</span>
-                      </button>
-                    </li>
 
-                    <li>
-                      <button
-                        className={
-                          'flex items-center gap-2 disabled:opacity-75'
-                        }
-                        disabled
-                      >
-                        <span
-                          className={
-                            'w-8 h-8 sm:w-6 sm:h-6 rounded-full flex justify-center ' +
-                            'items-center overflow-hidden'
-                          }
-                        >
-                          <img
-                            src={UsFrag}
-                            className={'h-8 max-w-none max-h-none'}
-                            alt="Bandeira EUA"
-                          />
-                        </span>
-                        <span>English</span>
-                      </button>
-                    </li>
+                  <ul className={'ml-3 text-base'}>
+                    {data.language.buttons.map((btn, idx) => {
+                      return (
+                        <li key={btn.id} className={'mb-3'}>
+                          <button
+                            className={
+                              'flex items-center gap-2' +
+                              addClassName(
+                                btn.disabled ? 'disabled:opacity-75' : ''
+                              )
+                            }
+                            disabled={btn.disabled}
+                          >
+                            <span
+                              className={
+                                'w-8 h-8 sm:w-6 sm:h-6 rounded-full flex justify-center items-center ' +
+                                'overflow-hidden ' +
+                                addClassName(
+                                  flags[idx as keyof typeof flags].bg
+                                )
+                              }
+                            >
+                              <img
+                                src={flags[btn.id as keyof typeof flags].url}
+                                className={
+                                  flags[btn.id as keyof typeof flags].className
+                                }
+                                alt={btn.alt}
+                              />
+                            </span>
+                            <span>{btn.label}</span>
+                          </button>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </li>
               </ul>
@@ -238,7 +224,7 @@ function Footer() {
 
         <div className={'text-left lg:text-right text-white text-sm'}>
           <p>
-            All Rights reserved - Azzurra Capital - {new Date().getFullYear()}
+            {data.copyright} - {new Date().getFullYear()}
           </p>
         </div>
       </Container>
