@@ -4,7 +4,7 @@ import { useContext, useRef } from 'react';
 import { HomeContext } from '@root/modules/providers';
 import { addClassName } from '@root/modules/utils';
 
-import JSONData from '@content/home/pt/AboutSection-JSON-Content.json';
+import { AboutSectionItem } from '@templates/Home/components/AboutSection';
 
 import AboutMandala from '@components/Icons/AboutMandala';
 import IcCentralization from '@components/Icons/Centralization';
@@ -19,31 +19,8 @@ import AboutItem from '../AboutItem';
 import ButtonCompassDetails from '../ButtonCompassDetails';
 import CardFamilyOffice from '../CardFamilyOffice';
 
-interface DetailsSectionCompassFeaturesCards {
-  id: number;
-  title: string;
-  description: string;
-}
-
-interface DetailsSectionCompassFeatures {
-  title: string;
-  description: string;
-  cards: DetailsSectionCompassFeaturesCards[];
-}
-interface DetailsSectionCompassContent {
-  title: string;
-  button: string[] | null;
-  description: string[];
-  features: DetailsSectionCompassFeatures | null;
-}
-
 export interface DetailsSectionCompassProps {
-  data: {
-    id: string;
-    title: string;
-    description: string[];
-    content: DetailsSectionCompassContent | null;
-  };
+  data: AboutSectionItem;
 }
 
 function DetailsSectionCompass({ data }: DetailsSectionCompassProps) {

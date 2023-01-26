@@ -2,8 +2,6 @@ import * as React from 'react';
 
 import Container from '@root/components/Layout/Container';
 
-import JSONData from '@content/home/pt/AboutSection-JSON-Content.json';
-
 import IcAbout from '@components/Icons/About';
 import IcLighthouse from '@components/Icons/Lighthouse';
 import GridAboutCard from '@components/Layout/GridAboutCard';
@@ -11,7 +9,40 @@ import GridAboutCard from '@components/Layout/GridAboutCard';
 import AboutItem from './components/AboutItem';
 import DetailsSectionCompass from './components/DetailsSectionCompass';
 
-const AboutSection = () => {
+interface AboutSectionFeaturesCards {
+  id: number;
+  title: string;
+  description: string;
+}
+
+interface AboutSectionFeatures {
+  title: string;
+  description: string;
+  cards: AboutSectionFeaturesCards[];
+}
+interface AboutSectionContent {
+  title: string;
+  button: string[] | null;
+  description: string[];
+  features: AboutSectionFeatures | null;
+}
+
+export interface AboutSectionItem {
+  id: string;
+  title: string;
+  description: string[];
+  content: AboutSectionContent | null;
+}
+
+export interface AboutSectionProps {
+  data: {
+    items: AboutSectionItem[];
+  };
+}
+
+const AboutSection = ({ data }: AboutSectionProps) => {
+  if (!data) return null;
+
   const icons = {
     0: <IcAbout className="w-full" />,
     2: <IcLighthouse className="w-full" />
@@ -20,7 +51,7 @@ const AboutSection = () => {
   return (
     <section id="about">
       <div className="flex flex-col items-center justify-center mobile-landscape:pb-10 pb-20 pt-16 sm:pb-24 sm:pt-12 gap-16">
-        {JSONData.items.map(({ id, title, description, content }, idx) => {
+        {data.items.map(({ id, title, description, content }, idx) => {
           return id !== 'about-compass' ? (
             <AboutItem
               key={id}

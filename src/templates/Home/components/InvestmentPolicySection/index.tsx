@@ -4,8 +4,6 @@ import { Element, scroller } from 'react-scroll/modules';
 import { useBreakpointType } from '@root/modules/hooks';
 import { getVisibility } from '@root/modules/utils';
 
-import JSONData from '@content/home/pt/InvestmentPolicySection-JSON-Content.json';
-
 import InvestmentPolicyMandala from '@components/Icons/InvestmentPolicyMandala';
 import Container from '@components/Layout/Container';
 import Title from '@components/Title';
@@ -17,7 +15,22 @@ export interface InvestmentStep {
   id: number;
 }
 
-function InvestmentPolicySection() {
+export interface InvestmentPolicySectionStep {
+  id: number;
+  name: string;
+  title: string;
+  color: string;
+  description: string[];
+}
+
+export interface InvestmentPolicySectionProps {
+  data: {
+    title: string[];
+    steps: InvestmentPolicySectionStep[];
+  };
+}
+
+function InvestmentPolicySection({ data }: InvestmentPolicySectionProps) {
   const [investmentStepHovered, setInvestmentStepHovered] = useState<
     InvestmentStep | undefined
   >(undefined);
@@ -28,6 +41,8 @@ function InvestmentPolicySection() {
   const breakpoint = useBreakpointType(
     typeof window !== 'undefined' ? window.innerWidth : 0
   );
+
+  if (!data?.title || !data?.steps.length) return null;
 
   function handleBtnToTop(e: MouseEvent<SVGPathElement>) {
     const target = e.currentTarget as SVGPathElement;
@@ -75,7 +90,7 @@ function InvestmentPolicySection() {
           >
             <Title
               className={'mb-8 sm:mb-24 md:mb-14'}
-              label={JSONData.title as never}
+              label={data.title as never}
             />
             <div
               className={
@@ -96,7 +111,7 @@ function InvestmentPolicySection() {
             name={'investment-policy-steps'}
             className="w-full mobile-landscape:w-7/12 lg:w-6/12 flex flex-col gap-8 px-6 xl:px-0"
           >
-            {JSONData.steps.map((step) => {
+            {data.steps.map((step) => {
               return (
                 <Element
                   key={step.id}

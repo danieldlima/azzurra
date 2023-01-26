@@ -4,8 +4,6 @@ import { Fragment, useContext, useMemo } from 'react';
 import { useDimensions } from '@root/modules/hooks';
 import { HomeContext } from '@root/modules/providers';
 
-import JSONData from '@content/home/pt/ContactSection-JSON-Content.json';
-
 import ContactForm from '@templates/Home/components/ContactSection/components/ContactForm';
 import NewsletterForm from '@templates/Home/components/ContactSection/components/NewsletterForm';
 
@@ -18,7 +16,27 @@ const options = {
   optimizedType: 'throttle'
 } as never;
 
-function ContactSection() {
+export interface PhoneItem {
+  label: string;
+  href: string;
+}
+
+export interface ContactSectionProps {
+  data: {
+    title: string[];
+    button: string;
+    phone: {
+      title: string;
+      items: PhoneItem[];
+    };
+    address: {
+      title: string;
+      text: string[];
+    };
+  };
+}
+
+function ContactSection({ data }: ContactSectionProps) {
   const [newsletterRef, newsletterDimension] = useDimensions(options);
   const [sectionRef, sectionDimension] = useDimensions(options);
 
@@ -34,6 +52,8 @@ function ContactSection() {
   if (footer?.y) {
     footer?.y?.setValue(yPosition);
   }
+
+  if (!data) return null;
 
   return (
     <section
@@ -53,19 +73,19 @@ function ContactSection() {
           <h3
             className={`lg:w-6/12 text-5xl sm:text-7xl mb-6 mobile-landscape:mb-4 sm:mb-4 md:mb-14 text-azzurra-navy-blue`}
           >
-            {JSONData.title[0]}{' '}
+            {data.title[0]}{' '}
             <span
               className="inline-block mobile-landscape:block"
               dangerouslySetInnerHTML={{
-                __html: JSONData.title[1]
+                __html: data.title[1]
               }}
             />
           </h3>
 
           <div className="flex flex-col lg:flex-row gap-10 mobile-landscape:flex-row mobile-landscape:gap-20">
             <div className="text-black">
-              <p className="font-bold text-xl">{JSONData.phone.title}</p>
-              {JSONData.phone.items.map((item, idx) => {
+              <p className="font-bold text-xl">{data.phone.title}</p>
+              {data.phone.items.map((item, idx) => {
                 return (
                   <a
                     key={idx}
@@ -79,10 +99,10 @@ function ContactSection() {
             </div>
 
             <div className="text-black normal-case">
-              <p className="font-bold text-xl">{JSONData.address.title}</p>
+              <p className="font-bold text-xl">{data.address.title}</p>
 
               <p>
-                {JSONData.address.text.map((label, idx) => {
+                {data.address.text.map((label, idx) => {
                   return (
                     <Fragment key={idx}>
                       <span className="inline sm:block">{label}</span>
@@ -101,7 +121,7 @@ function ContactSection() {
           <ButtonLink
             href="mailto:contato@azzurracapital.com.br"
             icon={<Mail />}
-            title={JSONData.button}
+            title={data.button}
             className={'mx-0'}
           />
         </div>

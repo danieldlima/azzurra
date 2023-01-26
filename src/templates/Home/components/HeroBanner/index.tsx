@@ -4,8 +4,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { StaticImage } from 'gatsby-plugin-image';
 import { Pagination, EffectFade, Autoplay } from 'swiper';
 
-import JSONData from '@content/home/pt/HeroSection-JSON-Content.json';
-
 import SectionMask from '@components/SectionMask';
 
 import SliderItem from './components/SliderItem';
@@ -22,7 +20,39 @@ const initialPagination = {
   bulletActiveClass: 'bg-azzurra-dark-gold opacity-100 border-opacity-100'
 };
 
-const HeroBanner = () => {
+interface FallbackSlider {
+  src: string;
+  alt: string;
+}
+
+interface SourceSlider {
+  type: string;
+  src: string;
+}
+
+interface BackgroundSlider {
+  poster: string;
+  fallback: FallbackSlider;
+  source: SourceSlider[];
+}
+
+interface Slider {
+  id: number;
+  title: string[];
+  description: string;
+  button: string;
+  background: BackgroundSlider;
+}
+
+export interface HeroBannerProps {
+  data: {
+    sliders: Slider[];
+  };
+}
+
+const HeroBanner = ({ data }: HeroBannerProps) => {
+  if (!data.sliders.length) return null;
+
   const minHeight = 'min-h-[700px]';
 
   return (
@@ -43,67 +73,61 @@ const HeroBanner = () => {
         }}
         pagination={initialPagination}
       >
-        {JSONData.sliders.map(
-          ({ id, background, title, description, button }) => {
-            return (
-              <SwiperSlide
-                key={id}
-                className={`${minHeight} azzurra-swiper-slider__wrapper`}
-              >
-                <SliderItem
-                  minHeight={minHeight}
-                  title={title as never}
-                  description={description}
-                  button={{ label: button }}
-                  modal={background as never}
-                  element={
-                    <div className={'w-full h-full bg-azzurra-navy-blue-fb'}>
-                      <div
+        {data.sliders.map(({ id, background, title, description, button }) => {
+          return (
+            <SwiperSlide
+              key={id}
+              className={`${minHeight} azzurra-swiper-slider__wrapper`}
+            >
+              <SliderItem
+                minHeight={minHeight}
+                title={title as never}
+                description={description}
+                button={{ label: button }}
+                modal={background as never}
+                element={
+                  <div className={'w-full h-full bg-azzurra-navy-blue-fb'}>
+                    <div
+                      className={
+                        'entrance-opacity w-full h-full hidden object-cover lg:block'
+                      }
+                    >
+                      <video
+                        autoPlay
+                        muted
+                        loop
+                        preload="auto"
+                        poster={background.poster}
                         className={
-                          'entrance-opacity w-full h-full hidden object-cover lg:block'
+                          'w-full h-full video[poster]:w-full video[poster]:h-full object-cover'
                         }
                       >
-                        <video
-                          autoPlay
-                          muted
-                          loop
-                          preload="auto"
-                          poster={background.poster}
-                          className={
-                            'w-full h-full video[poster]:w-full video[poster]:h-full object-cover'
-                          }
-                        >
-                          {background.source.map(({ src, type }, idx) => (
-                            <source
-                              key={idx}
-                              src={src}
-                              type={`video/${type}`}
-                            />
-                          ))}
-                        </video>
-                      </div>
-
-                      <StaticImage
-                        breakpoints={[320, 640, 768, 1024, 1280, 1536, 1920]}
-                        quality={100}
-                        width={1920}
-                        height={1080}
-                        layout={'fullWidth'}
-                        imgClassName={'w-[150%] -left-2/4 sm:w-full sm:left-0'}
-                        className={
-                          'h-full w-full flex items-center justify-center ' +
-                          `mobile-landscape:min-h-[700px] ${minHeight}`
-                        }
-                        src="../../../../images/azzurra__hero-banner.jpg"
-                        alt={background.fallback.alt}
-                      />
+                        {background.source.map(({ src, type }, idx) => (
+                          <source key={idx} src={src} type={`video/${type}`} />
+                        ))}
+                      </video>
                     </div>
-                  }
-                />
-              </SwiperSlide>
-            );
-          }
-        )}
+
+                    <StaticImage
+                      breakpoints={[320, 640, 768, 1024, 1280, 1536, 1920]}
+                      quality={100}
+                      width={1920}
+                      height={1080}
+                      layout={'fullWidth'}
+                      imgClassName={'w-[150%] -left-2/4 sm:w-full sm:left-0'}
+                      className={
+                        'h-full w-full flex items-center justify-center ' +
+                        `mobile-landscape:min-h-[700px] ${minHeight}`
+                      }
+                      src="../../../../images/azzurra__hero-banner.jpg"
+                      alt={background.fallback.alt}
+                    />
+                  </div>
+                }
+              />
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
       <SectionMask />
     </div>

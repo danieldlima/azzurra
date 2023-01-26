@@ -3,14 +3,30 @@ import { useState } from 'react';
 
 import { ParentSize } from '@visx/responsive';
 
-import JSONData from '@content/home/pt/RegulatoryInformationSection-JSON-Content.json';
-
 import DocumentFileCard from '@components/DocumentFileCard';
 import Container from '@components/Layout/Container';
 import Text from '@components/Text';
 
-function RegulatoryInformationSection() {
+export interface Document {
+  id: number;
+  title: string;
+  file: string;
+}
+
+export interface RegulatoryInformationSectionProps {
+  data: {
+    title: string[];
+    description: string[];
+    documents: Document[];
+  };
+}
+
+function RegulatoryInformationSection({
+  data
+}: RegulatoryInformationSectionProps) {
   const [height, setHeight] = useState(654);
+
+  if (!data) return null;
 
   function onChangeHeight(value: number) {
     setHeight(value);
@@ -22,9 +38,9 @@ function RegulatoryInformationSection() {
         <Container className={'relative flex px-6 xl:px-0'}>
           <div className={'relative w-full lg:w-6/12 lg:pr-8'}>
             <div className={'mb-2 sm:mb-8'}>
-              <Text label={JSONData.title} />
+              <Text label={data.title} />
 
-              {JSONData.description.map((paragraph, idx) => (
+              {data.description.map((paragraph, idx) => (
                 <p
                   key={idx}
                   className="w-full pb-4 lg:pb-0 normal-case text-xl font-light mb-1"
@@ -45,7 +61,7 @@ function RegulatoryInformationSection() {
                 {({ height }) => {
                   onChangeHeight(height);
 
-                  return JSONData.documents.map((document) => {
+                  return data.documents.map((document) => {
                     return (
                       <DocumentFileCard
                         key={document.id}
