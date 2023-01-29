@@ -5,6 +5,7 @@ import BrFrag from '@images/azzurra__ic-br__flag.svg';
 import UsFrag from '@images/azzurra__ic-us__flag.svg';
 import Anbima1 from '@images/azzurra__ic__anbima--1.png';
 import Anbima2 from '@images/azzurra__ic__anbima--2.png';
+import { Link as GatsbyLink } from 'gatsby-link';
 
 import { HomeContext } from '@root/modules/providers';
 import { addClassName } from '@root/modules/utils';
@@ -27,6 +28,7 @@ export interface LanguageButtons {
   id: number;
   label: string;
   alt: string;
+  link: string;
   lgn: string;
   disabled: boolean;
 }
@@ -184,14 +186,16 @@ function Footer({ data }: FooterProps) {
                     {data.language.buttons.map((btn, idx) => {
                       return (
                         <li key={btn.id} className={'mb-3'}>
-                          <button
+                          <GatsbyLink
+                            to={btn?.link}
+                            title={btn.alt}
                             className={
                               'flex items-center gap-2' +
                               addClassName(
                                 btn.disabled ? 'disabled:opacity-75' : ''
                               )
                             }
-                            disabled={btn.disabled}
+                            activeClassName={'font-semibold'}
                           >
                             <span
                               className={
@@ -211,7 +215,7 @@ function Footer({ data }: FooterProps) {
                               />
                             </span>
                             <span>{btn.label}</span>
-                          </button>
+                          </GatsbyLink>
                         </li>
                       );
                     })}
