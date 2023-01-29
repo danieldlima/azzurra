@@ -2,20 +2,20 @@
   "nav": [
     {
       "id": 0,
-      "label": "A AZZURRA CAPITAL",
+      "label": "AZZURRA CAPITAL",
       "offset": -50,
       "link": "about",
       "items": [
         {
           "id": 0,
-          "label": "Conheça a Azzurra Capital",
+          "label": "Meet Azzurra Capital",
           "offset": -80,
           "link": "meet-azzurra",
           "items": null
         },
         {
           "id": 1,
-          "label": "Por que a Azzurra Capital?",
+          "label": "Why choose Azzurra Capital?",
           "offset": -100,
           "link": "why-azzurra",
           "items": [
@@ -23,7 +23,7 @@
               "id": 0,
               "link": "about-compass",
               "offset": 80,
-              "label": "Explore a nossa visão"
+              "label": "Explore our vision"
             }
           ]
         },
@@ -31,41 +31,42 @@
           "id": 2,
           "link": "capacity-and-services",
           "offset": -100,
-          "label": "Capacidade & Serviços",
+          "label": "Skills & Services",
           "items": null
         }
       ]
     },
     {
       "id": 1,
-      "label": "NOSSO TIME",
+      "label": "OUR TEAM",
       "offset": -50,
       "link": "team",
       "items": null
     },
     {
       "id": 2,
-      "label": "POLÍTICA DE INVESTIMENTO",
+      "label": "INVESTMENT POLICY",
       "offset": 0,
       "link": "investment-policy",
       "items": null
     },
     {
       "id": 3,
-      "label": "CONTATO",
+      "label": "CONTACT US",
       "offset": -50,
       "link": "contact",
       "items": null
     }
   ],
   "language": {
-    "title": "SELECIONE O SEU IDIOMA",
+    "title": "SELECT YOUR LANGUAGE",
     "buttons": [
       {
         "id": 0,
         "label": "Português",
         "alt": "Bandeira do Brasil",
         "lgn": "pt",
+        "link": "/",
         "disabled": false
       },
       {
@@ -73,7 +74,8 @@
         "label": "English",
         "alt": "Bandeira dos EUA",
         "lgn": "en",
-        "disabled": true
+        "link": "/en",
+        "disabled": false
       }
     ]
   },

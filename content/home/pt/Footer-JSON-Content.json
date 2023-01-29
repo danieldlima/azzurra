@@ -66,6 +66,7 @@
         "label": "Português",
         "alt": "Bandeira do Brasil",
         "lgn": "pt",
+        "link": "/",
         "disabled": false
       },
       {
@@ -73,6 +74,7 @@
         "label": "English",
         "alt": "Bandeira dos EUA",
         "lgn": "en",
+        "link": "/en",
         "disabled": true
       }
     ]
