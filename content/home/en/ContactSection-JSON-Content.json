@@ -1,11 +1,11 @@
 {
   "title": [
-    "Fale com",
-    "a <strong>Azzurra Capital</strong>"
+    "Talk to",
+    "<strong>Azzurra Capital</strong>"
   ],
   "button": "Envie sua mensagem",
   "phone": {
-    "title": "LIGUE PARA A AZZURRA CAPITAL:",
+    "title": "CALL AZZURRA CAPITAL:",
     "items": [
       {
         "label": "+55 (11) 3263-1089",
@@ -18,7 +18,7 @@
     ]
   },
   "address": {
-    "title": "OU FAÇA UMA VISITA:",
+    "title": "OR VISIT US:",
     "text": [
       "R. Leopoldo Couto Magalhães Júnior, 110",
       "Conj. 81 - Edifício JK Tower",
