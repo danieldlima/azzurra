@@ -7,6 +7,7 @@ import ContactSection from '@content/home/pt/ContactSection-JSON-Content.json';
 import FooterSection from '@content/home/pt/Footer-JSON-Content.json';
 import HeroSection from '@content/home/pt/HeroSection-JSON-Content.json';
 import InvestmentPolicySection from '@content/home/pt/InvestmentPolicySection-JSON-Content.json';
+import NavItems from '@content/home/pt/NavItems-JSON-Content.json';
 import RegulatoryInformationSection from '@content/home/pt/RegulatoryInformationSection-JSON-Content.json';
 import TeamSection from '@content/home/pt/TeamSection-JSON-Content.json';
 
@@ -19,7 +20,7 @@ import Navigation from '@components/Layout/Navigation';
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <>
-      <Navigation />
+      <Navigation items={NavItems.items} />
       <Home
         data={{
           heroSection: HeroSection,

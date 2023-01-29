@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": 0,
+      "link": "about",
+      "label": "A AZZURRA capital"
+    },
+    {
+      "id": 1,
+      "link": "team",
+      "label": "Nosso time"
+    },
+    {
+      "id": 2,
+      "link": "investment",
+      "label": "Política de investimento"
+    },
+    {
+      "id": 3,
+      "link": "contact",
+      "label": "Contato"
+    }
+  ]
+}

@@ -10,7 +10,17 @@ import AzzurraBrand from '@components/Icons/AzzurraBrand';
 import Container from '@components/Layout/Container';
 import NavItem from '@components/Layout/Navigation/components/NavItem';
 
-function Navigation() {
+interface NavigationItem {
+  id: number;
+  link: string;
+  label: string;
+}
+
+interface NavigationProps {
+  items?: NavigationItem[] | null;
+}
+
+function Navigation({ items }: NavigationProps) {
   const [open, setOpen] = useState(false);
   const [isScroll, setIsScroll] = useState(false);
 
@@ -61,6 +71,8 @@ function Navigation() {
     scroll.scrollToTop();
   }
 
+  if (!items) return null;
+
   return (
     <>
       <nav
@@ -102,19 +114,11 @@ function Navigation() {
                   `${!isScroll ? '-left-12' : 'left-0'}`
                 }
               >
-                <NavItem to="about" label="A AZZURRA capital" />
-
-                <NavItem to="team" label="Nosso time" />
-
-                <NavItem to="investment" label="Política de investimento" />
-
-                <NavItem
-                  to="investment-policy"
-                  label="Blog azzurra"
-                  className={'hidden'}
-                />
-
-                <NavItem to="contact" label="Contato" />
+                {items.map((item) => {
+                  return (
+                    <NavItem key={item.id} to={item.link} label={item.label} />
+                  );
+                })}
               </div>
             </div>
           </Container>
@@ -202,38 +206,13 @@ function Navigation() {
                 `${open ? 'opacity-100' : 'opacity-0'} `
               }
             >
-              <li className="flex justify-center items-center">
-                <NavItem
-                  to="about"
-                  label="A AZZURRA capital"
-                  onClick={handleClick}
-                />
-              </li>
-
-              <li className="flex justify-center items-center">
-                <NavItem to="team" label="Nosso time" onClick={handleClick} />
-              </li>
-
-              <li className="flex justify-center items-center">
-                <NavItem
-                  to="investment"
-                  label="Política de investimento"
-                  onClick={handleClick}
-                />
-              </li>
-
-              <li className="flex justify-center items-center">
-                <NavItem
-                  to="investment-policy"
-                  label="Blog azzurra"
-                  className={'hidden'}
-                  onClick={handleClick}
-                />
-              </li>
-
-              <li className="flex justify-center items-center">
-                <NavItem to="contact" label="Contato" onClick={handleClick} />
-              </li>
+              {items.map(({ id, link, label }) => {
+                return (
+                  <li key={id} className="flex justify-center items-center">
+                    <NavItem to={link} label={label} onClick={handleClick} />
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>
