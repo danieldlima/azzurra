@@ -2,40 +2,43 @@
   "items": [
     {
       "id": "meet-azzurra",
-      "title": "Conheça a Azzurra Capital",
-      "description": ["O mundo dos investimentos é um oceano de oportunidades. Por meio da experiência de seus sócios com mais de 20 anos no setor de serviços financeiros, a Azzurra Capital navega em direção à construção e preservação do patrimônio dos nossos clientes. Atuando desde o público afluente ao Private, temos a estrutura de um Multi-Family Oﬃce focado em prover serviços de gestão de recursos no mercado doméstico e global."],
+      "title": "Meet Azzurra Capital",
+      "description": ["The investment world is an ocean of opportunities. Through its partners’ expertise of over 20 years in the financial sector, Azzurra Capital navigates towards the construction and preservation of our clients’ assets. From high-income to Private customers, our Multi-Family Oﬃce structure is focused on providing asset management services in the domestic and global markets."],
       "content": null
     },
     {
       "id": "about-compass",
-      "title": "Por que a Azzurra Capital?",
-      "description": ["Com foco no cliente e utilizando uma visão 360°, buscamos entender suas necessidades e construímos relacionamentos por meio da tomada de decisão feita em conjunto."],
+      "title": "Why choose Azzurra Capital?",
+      "description": ["Focused on the client and using a 360° view, we understand your needs and build relationships through joint decision-making."],
       "content": {
-        "title": "Nossa visão 360º",
+        "title": "Our 360° view",
         "description": [
-          "Com base nas necessidades, expectativas e perfis de risco do cliente, oferecemos uma gestão de patrimônio sem conflito de interesses, utilizando uma plataforma com arquitetura aberta.",
-          "A independência na escolha de parceiros e custodiantes se traduz em eficiência na execução, acesso a diferentes mercados e custos competitivos.",
-          "Nossa remuneração é baseada no patrimônio sob nossa gestão."
+          "Based on the client's needs, expectations and risk profile, we offer asset management without conflicts of interest, using an open architecture investment platform.",
+          "The independence in choosing partners and custodians translates into efficient execution, access to different markets and competitive costs.",
+          "Our compensation is based on the assets under our management."
         ],
-        "button": ["Foco no cliente:", "Visão 360º"],
+        "button": {
+          "open": ["Focus on the client:", "360° view"],
+          "close": "Close"
+        },
         "features": {
           "title": "MULTI-FAMILY OFFICE",
-          "description": "Buscamos a perpetuação do patrimônio por gerações através de:",
+          "description": "We seek to perpetuate the growth across generations through:",
           "cards": [
             {
               "id": 0,
-              "title": "GESTÃO",
-              "description": "Gestão de recursos levando em consideração a política individual de investimentos e teses de investimento mais aderentes."
+              "title": "MANAGEMENT",
+              "description": "Asset management considering the individual investment policy and the most adherent investment theses."
             },
             {
               "id": 1,
-              "title": "CONSOLIDAÇÃO",
-              "description": "Consolidação do patrimônio total do cliente, com tecnologia própria."
+              "title": "CONSOLIDATION",
+              "description": "Consolidation of the client's total assets, with our own technology."
             },
             {
               "id": 2,
-              "title": "CENTRALIZAÇÃO",
-              "description": "Centralização da intermediação e coordenação de todas as relações que envolvem o patrimônio do cliente, incluindo aspectos familiares e/ou societários."
+              "title": "CENTRALIZATION",
+              "description": "Centralization of the intermediation and coordination of all relationships involving the client's assets, including family and/or corporate aspects."
             }
           ]
         }
@@ -43,14 +46,14 @@
     },
     {
       "id": "capacity-and-services",
-      "title": "Capacidades & Serviços",
+      "title": "Skills & Services",
       "description": [
-        "A Azzurra Capital faz um trabalho profundo de análise dos aspectos patrimoniais relacionados à família: verifica como ela é composta, seus membros, os objetivos e as demandas. Um plano de longo prazo é apresentado, propondo um acompanhamento patrimonial e uma estrutura para a sucessão. Após essas etapas, realizamos a execução do plano proposto e acompanhamos todos os seus desdobramentos."
+        "Azzurra Capital develops an in-depth analysis of the equity aspects related to the family: its composition, members, objectives and demands. A long-term plan is presented, proposing an equity follow-up and a structure for its succession. After these steps, we execute the proposed plan and monitor its development."
       ],
       "content": {
-        "title": "GESTÃO DE RECURSOS",
+        "title": "ASSET MANAGEMENT",
         "description": [
-          "Gerenciamento de carteiras administradas consolidadas e cotizadas em um só sistema. Acessamos o mercado inteiro sem limitações para investimentos em ativos."
+          "Portfolios management consolidated and quoted in one single system. We access the entire market without limitations for asset investments."
         ],
         "button": null,
         "features": null

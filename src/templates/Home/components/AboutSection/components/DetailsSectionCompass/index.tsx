@@ -68,9 +68,13 @@ function DetailsSectionCompass({ data }: DetailsSectionCompassProps) {
           arrowAngle={aboutSection?.compassItem.isDetailsOpen ? 180 : 0}
           label={
             <>
-              {!data.content?.button?.length ? null : data.content?.button[0]}{' '}
+              {!data.content?.button?.open?.length
+                ? null
+                : data.content?.button.open[0]}{' '}
               <strong>
-                {!data.content?.button?.length ? null : data.content?.button[1]}
+                {!data.content?.button?.open?.length
+                  ? null
+                  : data.content?.button.open[1]}
               </strong>
             </>
           }
@@ -91,7 +95,7 @@ function DetailsSectionCompass({ data }: DetailsSectionCompassProps) {
               }
             >
               <div>
-                <Text as="h4" size="lg" label={'Nossa visão 360º'} />
+                <Text as="h4" size="lg" label={data.content?.title} />
               </div>
 
               <div
@@ -155,7 +159,10 @@ function DetailsSectionCompass({ data }: DetailsSectionCompassProps) {
       </div>
 
       <div className={`w-full px-4 lg:px-0 -mt-6 ${isHidden}`}>
-        <ButtonCompassDetails label="Fechar" onClick={handleClick} />
+        <ButtonCompassDetails
+          label={data.content?.button?.close}
+          onClick={handleClick}
+        />
       </div>
     </div>
   );

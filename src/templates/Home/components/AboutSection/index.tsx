@@ -22,7 +22,10 @@ interface AboutSectionFeatures {
 }
 interface AboutSectionContent {
   title: string;
-  button: string[] | null;
+  button: {
+    open: string[] | null;
+    close: string | null;
+  } | null;
   description: string[];
   features: AboutSectionFeatures | null;
 }

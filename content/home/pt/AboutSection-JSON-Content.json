@@ -17,7 +17,10 @@
           "A independência na escolha de parceiros e custodiantes se traduz em eficiência na execução, acesso a diferentes mercados e custos competitivos.",
           "Nossa remuneração é baseada no patrimônio sob nossa gestão."
         ],
-        "button": ["Foco no cliente:", "Visão 360º"],
+        "button": {
+          "open": ["Focus on the client:", "360° view"],
+          "close": "Fechar"
+        },
         "features": {
           "title": "MULTI-FAMILY OFFICE",
           "description": "Buscamos a perpetuação do patrimônio por gerações através de:",
