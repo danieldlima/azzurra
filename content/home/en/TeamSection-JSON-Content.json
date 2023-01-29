@@ -1,7 +1,7 @@
 {
   "title": [
-    "Conheça",
-    "nosso time"
+    "Meet our",
+    "team"
   ],
   "cards": [
     {
@@ -9,7 +9,7 @@
       "name": "Leonardo Prates",
       "bio": {
         "fullName": "",
-        "text": "Possui mais de 15 anos de experiência em importantes instituições financeiras no Brasil e no Exterior. Dentre elas, destacada atuação como Senior Financial Advisor em Instituições Internacionais. Formado em Economia pela PUC-SP. Possui a certificação CGA / CGE (Anbima). Credenciado como gestor de recursos/administrador de carteiras na CVM."
+        "text": "15 years of experience serving important financial institutions in Brazil and abroad. Among these positions, outstanding performance as Senior Financial Advisor in International Institutions. He holds an Economics degree from PUC-SP. He holds a CGA/CGE certification from ANBIMA and is also certified asset manager/portfolio administrator at CVM."
       }
     },
     {
@@ -17,7 +17,7 @@
       "name": "Leandro Alves",
       "bio": {
         "fullName": "LEANDRO CALDEIRA ALVES",
-        "text": "Possui mais de 7 anos de experiência em importantes instituições financeiras no Exterior como Financial Advisor. Atuou em grande instituição financeira brasileira por mais de 8 anos. Graduado em Gestão Comercial, com MBA em Gestão de Negócios pela Fundação Getúlio Vargas, MBA em Gestão Comercial pela Fundação Dom Cabral. Possui certificação CPA-20 pela ANBIMA."
+        "text": "He has over 7 years of experience in important financial institutions abroad as a Financial Advisor, having worked at a large Brazilian financial institution for more than 8 years. He holds a Commercial Management degree, an MBA in Business Management from Fundação Getúlio Vargas, an MBA in Commercial Management from Fundação Dom Cabral. He also holds a CPA-20 certification from ANBIMA."
       }
     },
     {
@@ -25,7 +25,7 @@
       "name": "ANTONIO CARLOS",
       "bio": {
         "fullName": "ANTONIO CARLOS GOMES JUNIOR",
-        "text": "Há 10 anos atuando como Financial Advisor e Corretor de Seguros de Vida e Previdência,  trabalhou em grandes bancos como gestor de negócios na área de financiamentos. Tem MBA em Finanças pela FGV, cursos de Estratégias de Investimentos e Gestão de Portfólios pela Wharton (Penn University - USA), e título de International Financial Advisor por plataformas de investimentos globais. É um profissional com certificação de Planejador Financeiro Pessoal CFP e registrado na CVM como Consultor de Investimentos Mobiliários."
+        "text": "Acting as a Financial Advisor and Life and Pension Insurance Broker for the past 10 years, he has worked in large banks as a business manager in the financial sector. He holds an MBA in Finance from FGV, courses in Investment Strategies and Portfolio Management from Wharton (Penn University - USA), and the title of International Financial Advisor for global investment platforms. He is a Certified Financial Planner (CFP) and a CVM Securities Consultant."
       }
     },
     {
@@ -33,7 +33,7 @@
       "name": "Robson Guedes",
       "bio": {
         "fullName": "",
-        "text": "Antes de atuar como gestor de recursos, teve experiência como consultor em Big Four, economista-pesquisador na Federação das Indústrias do Paraná (FIEP) e no segmento de distribuição de produtos financeiros. Bacharel em Ciências Econômicas e mestre em Tecnologia, com pesquisa em valoração de ativos tecnológicos. Possui a certificação CGA (Anbima). Credenciado como gestor de recursos/administrador de carteiras na CVM."
+        "text": "Before acting as an asset manager, he worked as a Big Four consultant, an economist-researcher at Federação das Indústrias do Paraná (Paraná Industries Federation – FIEP) and in the financial products distribution. He holds a Bachelor’s degree in Economic Sciences and a Master’s degree in Technology, with research in valuation of technological assets. He a has CGA certification (ANBIMA) and is certified asset manager/portfolio administrator at CVM."
       }
     },
     {
@@ -41,7 +41,7 @@
       "name": "RODRIGO MELATI",
       "bio": {
         "fullName": "",
-        "text": "Economista, professor de certificação para gestores pela FK Partners, certificado em fusões e aquisições pelo INSPER. Atuou em áreas de planejamento comercial em multinacionais. Atuou também com carteiras administradas e foi gestor de fundos de investimentos em renda variável. Possui a certificação CGA / CGE (Anbima). Credenciado como gestor de recursos/administrador de carteiras na CVM."
+        "text": "Economist, professor for managers certification from FK Partners, certified from INSPER in mergers and acquisitions (M&As), he has worked in commercial planning areas in global companies. He has also worked with managed portfolios and managed variable income funds. He holds a CGA/CGE certification from ANBIMA and is also certified asset manager/portfolio administrator at CVM."
       }
     }
   ]
