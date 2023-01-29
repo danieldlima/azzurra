@@ -1,0 +1,60 @@
+{
+  "items": [
+    {
+      "id": "meet-azzurra",
+      "title": "Conheça a Azzurra Capital",
+      "description": ["O mundo dos investimentos é um oceano de oportunidades. Por meio da experiência de seus sócios com mais de 20 anos no setor de serviços financeiros, a Azzurra Capital navega em direção à construção e preservação do patrimônio dos nossos clientes. Atuando desde o público afluente ao Private, temos a estrutura de um Multi-Family Oﬃce focado em prover serviços de gestão de recursos no mercado doméstico e global."],
+      "content": null
+    },
+    {
+      "id": "about-compass",
+      "title": "Por que a Azzurra Capital?",
+      "description": ["Com foco no cliente e utilizando uma visão 360°, buscamos entender suas necessidades e construímos relacionamentos por meio da tomada de decisão feita em conjunto."],
+      "content": {
+        "title": "Nossa visão 360º",
+        "description": [
+          "Com base nas necessidades, expectativas e perfis de risco do cliente, oferecemos uma gestão de patrimônio sem conflito de interesses, utilizando uma plataforma com arquitetura aberta.",
+          "A independência na escolha de parceiros e custodiantes se traduz em eficiência na execução, acesso a diferentes mercados e custos competitivos.",
+          "Nossa remuneração é baseada no patrimônio sob nossa gestão."
+        ],
+        "button": ["Foco no cliente:", "Visão 360º"],
+        "features": {
+          "title": "MULTI-FAMILY OFFICE",
+          "description": "Buscamos a perpetuação do patrimônio por gerações através de:",
+          "cards": [
+            {
+              "id": 0,
+              "title": "GESTÃO",
+              "description": "Gestão de recursos levando em consideração a política individual de investimentos e teses de investimento mais aderentes."
+            },
+            {
+              "id": 1,
+              "title": "CONSOLIDAÇÃO",
+              "description": "Consolidação do patrimônio total do cliente, com tecnologia própria."
+            },
+            {
+              "id": 2,
+              "title": "CENTRALIZAÇÃO",
+              "description": "Centralização da intermediação e coordenação de todas as relações que envolvem o patrimônio do cliente, incluindo aspectos familiares e/ou societários."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "capacity-and-services",
+      "title": "Capacidades & Serviços",
+      "description": [
+        "A Azzurra Capital faz um trabalho profundo de análise dos aspectos patrimoniais relacionados à família: verifica como ela é composta, seus membros, os objetivos e as demandas. Um plano de longo prazo é apresentado, propondo um acompanhamento patrimonial e uma estrutura para a sucessão. Após essas etapas, realizamos a execução do plano proposto e acompanhamos todos os seus desdobramentos."
+      ],
+      "content": {
+        "title": "GESTÃO DE RECURSOS",
+        "description": [
+          "Gerenciamento de carteiras administradas consolidadas e cotizadas em um só sistema. Acessamos o mercado inteiro sem limitações para investimentos em ativos."
+        ],
+        "button": null,
+        "features": null
+      }
+    }
+  ]
+}

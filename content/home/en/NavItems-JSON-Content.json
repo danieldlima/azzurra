@@ -3,35 +3,35 @@
     {
       "id": 0,
       "link": "about",
-      "label": "A AZZURRA capital"
+      "label": "AZZURRA CAPITAL"
     },
     {
       "id": 1,
       "link": "team",
-      "label": "Nosso time"
+      "label": "OUR TEAM"
     },
     {
       "id": 2,
       "link": "investment",
-      "label": "Política de investimento"
+      "label": "INVESTMENT POLICY"
     },
     {
       "id": 3,
       "link": "contact",
-      "label": "Contato"
+      "label": "CONTACT US"
     }
   ],
   "languages": [
     {
       "id": 0,
       "label": "PT",
-      "title": "Português - BR",
+      "title": "Brazilian Portuguese",
       "link": "/"
     },
     {
       "id": 1,
       "label": "EN",
-      "title": "Inglês - EUA",
+      "title": "US English",
       "link": "/en"
     }
   ]
