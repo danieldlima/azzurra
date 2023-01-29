@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { animateScroll as scroll, Link } from 'react-scroll';
 
+import { Link as GatsbyLink } from 'gatsby';
 import { useLockedBody } from 'usehooks-ts';
 
 import { useScrollDirection } from '@root/modules/hooks';
@@ -16,11 +17,21 @@ interface NavigationItem {
   label: string;
 }
 
-interface NavigationProps {
-  items?: NavigationItem[] | null;
+interface LanguageItem {
+  id: number;
+  label: string;
+  link: string;
+  title: string;
 }
 
-function Navigation({ items }: NavigationProps) {
+interface NavigationProps {
+  data?: {
+    nav: NavigationItem[] | null;
+    languages: LanguageItem[] | null;
+  };
+}
+
+function Navigation({ data }: NavigationProps) {
   const [open, setOpen] = useState(false);
   const [isScroll, setIsScroll] = useState(false);
 
@@ -71,7 +82,7 @@ function Navigation({ items }: NavigationProps) {
     scroll.scrollToTop();
   }
 
-  if (!items) return null;
+  if (!data || !data?.nav) return null;
 
   return (
     <>
@@ -110,15 +121,41 @@ function Navigation({ items }: NavigationProps) {
 
               <div
                 className={
-                  'relative md:flex items-center space-x-1 uppercase sm:px-4 xl:px-0 transition-all ' +
-                  `${!isScroll ? '-left-12' : 'left-0'}`
+                  'relative md:flex w-full items-center space-x-1 uppercase sm:px-4 xl:px-0 transition-all ' +
+                  `justify-between ${!isScroll ? '-left-12' : 'left-0'}`
                 }
               >
-                {items.map((item) => {
-                  return (
-                    <NavItem key={item.id} to={item.link} label={item.label} />
-                  );
-                })}
+                <div>
+                  {data.nav.map((item) => {
+                    return (
+                      <NavItem
+                        key={item.id}
+                        to={item.link}
+                        label={item.label}
+                      />
+                    );
+                  })}
+                </div>
+
+                <div className={'flex gap-4 text-white uppercase font-normal'}>
+                  {data.languages?.map(({ id, link, title, label }) => {
+                    return (
+                      <GatsbyLink
+                        key={id}
+                        to={link}
+                        title={title}
+                        className={
+                          'flex items-center justify-center bg-white/40 rounded-full text-sm w-8 h-8 hover:scale-105'
+                        }
+                        activeClassName={
+                          'text-azzurra-navy-blue bg-white/80 font-semibold'
+                        }
+                      >
+                        {label}
+                      </GatsbyLink>
+                    );
+                  })}
+                </div>
               </div>
             </div>
           </Container>
@@ -206,7 +243,7 @@ function Navigation({ items }: NavigationProps) {
                 `${open ? 'opacity-100' : 'opacity-0'} `
               }
             >
-              {items.map(({ id, link, label }) => {
+              {data.nav.map(({ id, link, label }) => {
                 return (
                   <li key={id} className="flex justify-center items-center">
                     <NavItem to={link} label={label} onClick={handleClick} />

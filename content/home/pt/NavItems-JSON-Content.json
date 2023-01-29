@@ -1,5 +1,5 @@
 {
-  "items": [
+  "nav": [
     {
       "id": 0,
       "link": "about",
@@ -19,6 +19,20 @@
       "id": 3,
       "link": "contact",
       "label": "Contato"
+    }
+  ],
+  "languages": [
+    {
+      "id": 0,
+      "label": "PT",
+      "title": "Português do brasil",
+      "link": "/"
+    },
+    {
+      "id": 1,
+      "label": "EN",
+      "title": "Inglês dos EUA",
+      "link": "en"
     }
   ]
 }

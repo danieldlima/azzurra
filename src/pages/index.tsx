@@ -20,7 +20,7 @@ import Navigation from '@components/Layout/Navigation';
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <>
-      <Navigation items={NavItems.items} />
+      <Navigation data={NavItems} />
       <Home
         data={{
           heroSection: HeroSection,
