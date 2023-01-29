@@ -136,26 +136,30 @@ function Navigation({ data }: NavigationProps) {
                     );
                   })}
                 </div>
+              </div>
 
-                <div className={'flex gap-4 text-white uppercase font-normal'}>
-                  {data.languages?.map(({ id, link, title, label }) => {
-                    return (
-                      <GatsbyLink
-                        key={id}
-                        to={link}
-                        title={title}
-                        className={
-                          'flex items-center justify-center bg-white/40 rounded-full text-sm w-8 h-8 hover:scale-105'
-                        }
-                        activeClassName={
-                          'text-azzurra-navy-blue bg-white/80 font-semibold'
-                        }
-                      >
-                        {label}
-                      </GatsbyLink>
-                    );
-                  })}
-                </div>
+              <div
+                className={
+                  'flex h-full items-center gap-4 text-white uppercase font-normal'
+                }
+              >
+                {data.languages?.map(({ id, link, title, label }) => {
+                  return (
+                    <GatsbyLink
+                      key={id}
+                      to={link}
+                      title={title}
+                      className={
+                        'flex items-center justify-center bg-white/40 rounded-full text-xs w-7 h-7 hover:scale-105'
+                      }
+                      activeClassName={
+                        'text-azzurra-navy-blue bg-white/80 font-semibold'
+                      }
+                    >
+                      {label}
+                    </GatsbyLink>
+                  );
+                })}
               </div>
             </div>
           </Container>
@@ -229,7 +233,7 @@ function Navigation({ data }: NavigationProps) {
 
           <div
             className={
-              'overflow-hidden transition-all duration-300 flex items-center justify-center ' +
+              'overflow-hidden transition-all duration-300 flex flex-col items-center justify-center ' +
               `${
                 open
                   ? 'h-full bg-azzurra-navy-blue/95 backdrop-blur-nav-light'
@@ -240,7 +244,7 @@ function Navigation({ data }: NavigationProps) {
             <ul
               className={
                 'w-5/6 text-center text-white font-bold text-2xl px-4 uppercase text-center ' +
-                `${open ? 'opacity-100' : 'opacity-0'} `
+                `mb-10 ${open ? 'opacity-100' : 'opacity-0'} `
               }
             >
               {data.nav.map(({ id, link, label }) => {
@@ -251,6 +255,30 @@ function Navigation({ data }: NavigationProps) {
                 );
               })}
             </ul>
+
+            <div
+              className={
+                'flex items-center gap-4 text-white uppercase font-normal'
+              }
+            >
+              {data.languages?.map(({ id, link, title, label }) => {
+                return (
+                  <GatsbyLink
+                    key={id}
+                    to={link}
+                    title={title}
+                    className={
+                      'relative h-fit flex items-center justify-center bg-white/40 rounded-full w-12 h-12'
+                    }
+                    activeClassName={
+                      'text-azzurra-navy-blue bg-white/80 font-semibold'
+                    }
+                  >
+                    <span className="block">{label}</span>
+                  </GatsbyLink>
+                );
+              })}
+            </div>
           </div>
         </div>
       </nav>

@@ -66,7 +66,8 @@ module.exports = {
       },
       fontSize: {
         'person-name': ['1.125rem', '1.25rem'],
-        'person-bio': ['1rem', '1.25rem']
+        'person-bio': ['1rem', '1.25rem'],
+        language: ['0.75rem', 1]
       },
       screens: {
         'mobile-landscape': {
