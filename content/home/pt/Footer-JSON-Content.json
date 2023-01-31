@@ -65,6 +65,7 @@
         "id": 0,
         "label": "Português",
         "alt": "Bandeira do Brasil",
+        "title": "Português",
         "lgn": "pt",
         "link": "/",
         "disabled": false
@@ -73,6 +74,7 @@
         "id": 1,
         "label": "English",
         "alt": "Bandeira dos EUA",
+        "title": "English",
         "lgn": "en",
         "link": "/en",
         "disabled": true
