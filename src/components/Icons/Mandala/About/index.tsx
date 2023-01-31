@@ -1,6 +1,6 @@
 import React from 'react';
 
-function AboutMandala({ className }: IconBaseProps) {
+export function AboutMandala({ className }: IconBaseProps) {
   return (
     <svg
       className={className}
@@ -133,5 +133,3 @@ function AboutMandala({ className }: IconBaseProps) {
     </svg>
   );
 }
-
-export default AboutMandala;

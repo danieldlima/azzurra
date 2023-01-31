@@ -69,6 +69,9 @@ module.exports = {
         'person-bio': ['1rem', '1.25rem'],
         language: ['0.75rem', 1]
       },
+      scale: {
+        101: '1.01'
+      },
       screens: {
         'mobile-landscape': {
           raw: '(min-width: 321px) and (max-width: 896px) and (orientation: landscape)'

@@ -6,11 +6,11 @@ import { addClassName } from '@root/modules/utils';
 
 import { AboutSectionItem } from '@templates/Home/components/AboutSection';
 
-import AboutMandala from '@components/Icons/AboutMandala';
 import IcCentralization from '@components/Icons/Centralization';
 import IcCompass from '@components/Icons/Compass';
 import IcConsolidation from '@components/Icons/Consolidation';
 import IcManagement from '@components/Icons/Management';
+import { AboutMandala } from '@components/Icons/Mandala/About';
 import Container from '@components/Layout/Container';
 import GridAboutCard from '@components/Layout/GridAboutCard';
 import Text from '@components/Text';

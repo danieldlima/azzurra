@@ -4,7 +4,7 @@ import { Element, scroller } from 'react-scroll/modules';
 import { useBreakpointType } from '@root/modules/hooks';
 import { getVisibility } from '@root/modules/utils';
 
-import InvestmentPolicyMandala from '@components/Icons/InvestmentPolicyMandala';
+import { InvestmentPolicyMandala } from '@components/Icons/Mandala/InvestmentPolicy';
 import Container from '@components/Layout/Container';
 import Title from '@components/Title';
 
