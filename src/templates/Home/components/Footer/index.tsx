@@ -5,6 +5,7 @@ import BrFrag from '@images/azzurra__ic-br__flag.svg';
 import UsFrag from '@images/azzurra__ic-us__flag.svg';
 import Anbima1 from '@images/azzurra__ic__anbima--1.png';
 import Anbima2 from '@images/azzurra__ic__anbima--2.png';
+import { useLocation } from '@reach/router';
 import { Link as GatsbyLink } from 'gatsby-link';
 
 import { HomeContext } from '@root/modules/providers';
@@ -28,6 +29,7 @@ export interface LanguageButtons {
   id: number;
   label: string;
   alt: string;
+  title: string;
   link: string;
   lgn: string;
   disabled: boolean;
@@ -46,6 +48,16 @@ export interface FooterProps {
 
 function Footer({ data }: FooterProps) {
   const { footer, aboutSection } = useContext(HomeContext);
+  const location = useLocation();
+
+  const defaultNavClassName = [
+    'px-1',
+    'focus-visible:outline',
+    'focus-visible:outline-offset-2',
+    'focus-visible:outline-2',
+    'focus-visible:outline-azzurra-opaque-gold/80',
+    'rounded'
+  ];
 
   const flags = {
     0: {
@@ -82,7 +94,11 @@ function Footer({ data }: FooterProps) {
 
           <div className="w-full lg:w-7/12 text-white flex flex-row flex-wrap">
             <div className="w-8/12 md:w-4/12">
-              <ul className={'list-none leading-7'}>
+              <ul
+                className={
+                  'list-none leading-7 [&>li:not(:last-of-type)]:mb-0.5'
+                }
+              >
                 {data.nav.map((item) => {
                   return (
                     <li key={item.id}>
@@ -92,10 +108,11 @@ function Footer({ data }: FooterProps) {
                         to={item.link}
                         offset={item.offset}
                         duration={500}
+                        tabIndex={0}
                         className={
-                          'cursor-pointer hover:text-azzurra-opaque-gold hover:underline transition-all font-bold' +
-                          ' uppercase' +
-                          ' text-base'
+                          'cursor-pointer hover:text-azzurra-opaque-gold hover:underline transition-all font-bold ' +
+                          'uppercase text-base' +
+                          addClassName(defaultNavClassName)
                         }
                       >
                         {item.label}
@@ -105,7 +122,12 @@ function Footer({ data }: FooterProps) {
                         ? null
                         : item.items.map((child) => {
                             return (
-                              <ul key={child.id} className={'ml-3'}>
+                              <ul
+                                key={child.id}
+                                className={
+                                  'ml-3 [&>li:not(:last-of-type)]:mb-1.5 mt-0.5'
+                                }
+                              >
                                 <li>
                                   <Link
                                     spy
@@ -113,8 +135,10 @@ function Footer({ data }: FooterProps) {
                                     to={child.link}
                                     offset={child.offset}
                                     duration={500}
+                                    tabIndex={0}
                                     className={
-                                      'cursor-pointer hover:text-azzurra-opaque-gold hover:underline transition-all'
+                                      'cursor-pointer hover:text-azzurra-opaque-gold hover:underline transition-all' +
+                                      addClassName(defaultNavClassName)
                                     }
                                   >
                                     {child.label}
@@ -127,7 +151,9 @@ function Footer({ data }: FooterProps) {
                                       return (
                                         <ul
                                           key={childTwo.id}
-                                          className={'ml-3'}
+                                          className={
+                                            'ml-3 [&>li:not(:last-of-type)]:mb-1.5'
+                                          }
                                         >
                                           <li>
                                             <Link
@@ -136,8 +162,13 @@ function Footer({ data }: FooterProps) {
                                               to={childTwo.link}
                                               offset={childTwo.offset}
                                               duration={500}
+                                              tabIndex={0}
                                               className={
-                                                'cursor-pointer hover:text-azzurra-opaque-gold hover:underline transition-all'
+                                                'cursor-pointer hover:text-azzurra-opaque-gold hover:underline ' +
+                                                'transition-all ' +
+                                                addClassName(
+                                                  defaultNavClassName
+                                                )
                                               }
                                               onClick={() => {
                                                 if (
@@ -175,32 +206,50 @@ function Footer({ data }: FooterProps) {
               </div>
             </div>
 
-            <div className="w-full md:w-4/12 flex justify-start mt-10 md:mt-0">
-              <ul>
+            <nav
+              aria-label="Breadcrumb"
+              className="w-full md:w-4/12 flex justify-start mt-10 md:mt-0"
+            >
+              <ol>
                 <li>
-                  <span className="block font-bold uppercase text-sm mb-2">
+                  <span className="block font-bold uppercase text-sm mb-2 pl-2">
                     {data.language.title}
                   </span>
 
-                  <ul className={'ml-3 text-base'}>
+                  <ol className={'text-base'}>
                     {data.language.buttons.map((btn, idx) => {
                       return (
-                        <li key={btn.id} className={'mb-3'}>
+                        <li key={btn.id} className={'mb-0.5'}>
                           <GatsbyLink
                             to={btn?.link}
-                            title={btn.alt}
-                            className={
-                              'flex items-center gap-2' +
-                              addClassName(
-                                btn.disabled ? 'disabled:opacity-75' : ''
-                              )
-                            }
-                            activeClassName={'font-semibold'}
+                            title={btn.title}
+                            aria-current={location.pathname === btn.link}
+                            className={addClassName([
+                              'flex',
+                              'items-center',
+                              'gap-2',
+                              'grayscale',
+                              'hover:grayscale-0',
+                              'transition-all',
+                              'px-2',
+                              'py-1.5',
+                              'bg-white/0',
+                              'rounded',
+                              'border',
+                              'border-white/0',
+                              'hover:border-white/20',
+                              'hover:bg-white/10',
+                              'focus-visible:bg-white/10',
+                              'focus-visible:border-white/20',
+                              'focus-visible:outline-0',
+                              btn.disabled ? 'disabled:opacity-75' : ''
+                            ])}
+                            activeClassName={'font-semibold !grayscale-0'}
                           >
                             <span
                               className={
                                 'w-8 h-8 sm:w-6 sm:h-6 rounded-full flex justify-center items-center ' +
-                                'overflow-hidden ' +
+                                'overflow-hidden' +
                                 addClassName(
                                   flags[idx as keyof typeof flags].bg
                                 )
@@ -219,10 +268,10 @@ function Footer({ data }: FooterProps) {
                         </li>
                       );
                     })}
-                  </ul>
+                  </ol>
                 </li>
-              </ul>
-            </div>
+              </ol>
+            </nav>
           </div>
         </div>
 
