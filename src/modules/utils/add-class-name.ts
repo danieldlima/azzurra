@@ -1,3 +1,5 @@
-export function addClassName(className = '') {
-  return className ? ` ${className}` : '';
+export function addClassName(className: string[] | string = '') {
+  const classes = Array.isArray(className) ? className : [className];
+
+  return ` ${classes.join(' ')} `;
 }
