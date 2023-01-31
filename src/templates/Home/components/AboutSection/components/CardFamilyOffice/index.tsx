@@ -16,7 +16,7 @@ function CardFamilyOffice({
   return (
     <div
       className={
-        'flex flex-col bg-white hover:bg-azzurra-opaque-gold rounded-lg p-6 justify-center'
+        'flex flex-col bg-white hover:bg-azzurra-opaque-gold rounded-lg p-6 justify-start cursor-help'
       }
     >
       <div className={'mb-6 w-20 h-20 mx-auto text-azzurra-brown'}>{icons}</div>
@@ -35,7 +35,7 @@ function CardFamilyOffice({
           size="paragraph"
           fontWeight="normal"
           color="black"
-          className={'transition-all cursor-help'}
+          className={'transition-all'}
           label={description}
         />
       </div>
