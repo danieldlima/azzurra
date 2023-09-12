@@ -5,9 +5,6 @@ const path = require('path');
 
 /** @type {import('tailwindcss').Config} */
 const config: GatsbyConfig = {
-  siteMetadata: {
-    siteUrl: `https://www.yourdomain.tld`
-  },
   graphqlTypegen: true,
   plugins: [
     'gatsby-plugin-postcss',
@@ -17,11 +14,21 @@ const config: GatsbyConfig = {
     'gatsby-plugin-svgr',
     `gatsby-plugin-sass`,
     {
+      resolve: `gatsby-plugin-portal`,
+      options: {
+        key: 'portal',
+        id: 'portal'
+      }
+    },
+    {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
         alias: {
           '@root': path.resolve(__dirname, 'src'),
           '@static': path.resolve(__dirname, 'static'),
+          '@content': path.resolve(__dirname, 'content'),
+          '@constant': path.resolve(__dirname, 'src/constant'),
+          '@images': path.resolve(__dirname, 'src/images'),
           '@components': path.resolve(__dirname, 'src/components'),
           '@pages': path.resolve(__dirname, 'src/pages'),
           '@styles': path.resolve(__dirname, 'src/styles'),

@@ -1,0 +1,29 @@
+{
+  "title": [
+    "Talk to",
+    "<strong>Azzurra Capital</strong>"
+  ],
+  "button": "Send a message",
+  "phone": {
+    "title": "CALL AZZURRA CAPITAL:",
+    "items": [
+      {
+        "label": "+55 (11) 3263-1089",
+        "href": "tel:+551132631089"
+      },
+      {
+        "label": "+55 (11) 94446-6662",
+        "href": "tel:+5511944466662"
+      }
+    ]
+  },
+  "address": {
+    "title": "OR VISIT US:",
+    "text": [
+      "R. Leopoldo Couto Magalhães Júnior, 110",
+      "Conj. 81 - Edifício JK Tower",
+      "Itaim Bibi - São Paulo - SP",
+      "CEP: 04542-000"
+    ]
+  }
+}

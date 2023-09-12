@@ -3,10 +3,11 @@ import React, { createContext, PropsWithChildren, useState } from 'react';
 export type HomeProviderProps = PropsWithChildren;
 
 export interface AboutCompassItem {
-  isDetailsOpen?: boolean;
+  isDetailsOpen: boolean;
   setIsDetailsOpen?: (make: boolean) => void;
-  toggleDetails?: () => void;
+  toggleDetails: () => void;
 }
+
 export interface HomeContextProps {
   aboutSection: {
     layout: {
@@ -14,12 +15,24 @@ export interface HomeContextProps {
     };
     compassItem: AboutCompassItem;
   };
+  investmentPolicySection: {
+    mandalaId: number | null;
+    setMandalaId: (make: number | null) => void;
+  };
+  footer?: {
+    y?: {
+      value: number;
+      setValue: (position: number) => void;
+    };
+  };
 }
 
 export const HomeContext = createContext<HomeContextProps>(null!);
 
 export const HomeProvider = ({ children }: HomeProviderProps) => {
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
+  const [mandalaId, setMandalaId] = useState<number | null>(null);
+  const [footer, setFooter] = useState(0);
 
   function toggleDetails() {
     setIsDetailsOpen((prevState) => !prevState);
@@ -28,6 +41,13 @@ export const HomeProvider = ({ children }: HomeProviderProps) => {
   return (
     <HomeContext.Provider
       value={{
+        footer: {
+          y: {
+            value: footer,
+            setValue: setFooter
+          }
+        },
+        investmentPolicySection: { mandalaId, setMandalaId },
         aboutSection: {
           layout: {
             grid: `grid grid-cols-about-card grid-areas-about-card gap-x-4 sm:gap-x-10`

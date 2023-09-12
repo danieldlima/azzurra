@@ -1,0 +1,38 @@
+{
+  "nav": [
+    {
+      "id": 0,
+      "link": "about",
+      "label": "AZZURRA CAPITAL"
+    },
+    {
+      "id": 1,
+      "link": "team",
+      "label": "OUR TEAM"
+    },
+    {
+      "id": 2,
+      "link": "investment",
+      "label": "INVESTMENT POLICY"
+    },
+    {
+      "id": 3,
+      "link": "contact",
+      "label": "CONTACT US"
+    }
+  ],
+  "languages": [
+    {
+      "id": 0,
+      "label": "PT",
+      "title": "Brazilian Portuguese",
+      "link": "/"
+    },
+    {
+      "id": 1,
+      "label": "EN",
+      "title": "US English",
+      "link": "/en"
+    }
+  ]
+}

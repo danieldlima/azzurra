@@ -1,0 +1,46 @@
+{
+  "title": ["Regulatory Information"],
+  "description": ["Click to access the files:"],
+  "documents": [
+    {
+      "id": 0,
+      "title": "Formulário de Referência",
+      "file": "/documents/5. Formulário de Referência--v2.pdf"
+    },
+    {
+      "id": 1,
+      "title": "Conheça seu cliente e prevenção e combate à lavagem de dinheiro",
+      "file": "/documents/11. Política de Conheça Seu Cliente e Prevenção e Combate à Lavagem de Dinheiro.pdf"
+    },
+    {
+      "id": 2,
+      "title": "Código de ética",
+      "file": "/documents/12. Código de Ética.pdf"
+    },
+    {
+      "id": 3,
+      "title": "Regras, procedimentos e descrição dos controles internos",
+      "file": "/documents/13. Regras, Procedimentos e Descrição dos Controles Internos.pdf"
+    },
+    {
+      "id": 4,
+      "title": "Política de compra e venda de valores mobiliários",
+      "file": "/documents/14. Política de Compra e Venda de Valores Mobiliários.pdf"
+    },
+    {
+      "id": 5,
+      "title": "Manual de segregação de atividades",
+      "file": "/documents/15. Manual Previsto no art. 25 da Instrução CVM 558_15.pdf"
+    },
+    {
+      "id": 6,
+      "title": "Política de gestão de riscos",
+      "file": "/documents/16. Política de Gestão de Riscos.pdf"
+    },
+    {
+      "id": 7,
+      "title": "Política de rateio e divisão de ordens",
+      "file": "/documents/17. Política de Rateio e Divisão de Ordens.pdf"
+    }
+  ]
+}

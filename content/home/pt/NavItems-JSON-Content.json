@@ -1,0 +1,38 @@
+{
+  "nav": [
+    {
+      "id": 0,
+      "link": "about",
+      "label": "A AZZURRA capital"
+    },
+    {
+      "id": 1,
+      "link": "team",
+      "label": "Nosso time"
+    },
+    {
+      "id": 2,
+      "link": "investment",
+      "label": "Política de investimento"
+    },
+    {
+      "id": 3,
+      "link": "contact",
+      "label": "Contato"
+    }
+  ],
+  "languages": [
+    {
+      "id": 0,
+      "label": "PT",
+      "title": "Português - BR",
+      "link": "/"
+    },
+    {
+      "id": 1,
+      "label": "EN",
+      "title": "Inglês - EUA",
+      "link": "/en"
+    }
+  ]
+}

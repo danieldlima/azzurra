@@ -1,0 +1,54 @@
+{
+  "title": [
+    "Investment",
+    "Policy"
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "investment-step-1",
+      "title": "01 | INVESTOR PROFILE AND CURRENT PORTFOLIO ANALYSIS",
+      "color": "gold-100",
+      "description": [
+        "Initial diagnosis that will be made by assessing the investor's expectation of term, liquidity and risk tolerance, so that investment planning can be realistically aligned with expectations during the construction of a tailored portfolio, and that is adequate to the goals’ needs."
+      ]
+    },
+    {
+      "id": 1,
+      "name": "investment-step-2",
+      "color": "navy-blue",
+      "title": "02 | MACRO AND MICROECONOMIC SCENARIO ANALYSIS",
+      "description": [
+        "Definition of an effective Investment Policy in order to drive and discipline investments over time, according to the economic scenario."
+      ]
+    },
+    {
+      "id": 2,
+      "name": "investment-step-3",
+      "color": "light-blue",
+      "title": "03 | PORTFOLIO ELABORATION AND PRESENTATION",
+      "description": [
+        "According to the defined Investment Policy, the assets that may compose the portfolio will be evaluated and they’ll will be tailored considering liquidity needs and risk profile, and the suggested strategies to pursue the investor's objectives will be presented."
+      ]
+    },
+    {
+      "id": 3,
+      "name": "investment-step-4",
+      "color": "opaque-gold",
+      "title": "04 | PORTFOLIO IMPLEMENTATION",
+      "description": [
+        "The execution of the implementation is fully carried out by Azzurra Capital, in the format of managed portfolio or exclusive fund, observing the provisions of CVM Instruction 558/2015."
+      ]
+    },
+    {
+      "id": 4,
+      "name": "investment-step-5",
+      "color": "brown",
+      "title": "05 | FOLLOW-UP AND PERIODIC MEETINGS WITH THE INVESTOR",
+      "description": [
+        "The clients will have electronic access to their portfolios on the Azzurra Capital website, so that they can monitor the performance of their investments, as well as consult their statements through the platform.",
+        "Constant monitoring of client portfolios is carried out by investment specialists and the frequency of meetings is established in common agreement with the client to assess the adopted strategy and portfolio adjustments when necessary."
+      ]
+    }
+  ]
+}

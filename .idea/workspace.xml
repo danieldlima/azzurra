@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f52c6ca-1be1-47f0-ae31-ceefa39145e8" name="Changes" comment="feat(detailssection): create detail view of section about">
-      <change afterPath="$PROJECT_DIR$/src/components/Icons/Centralization/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Icons/Consolidation/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Icons/Management/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templates/Home/components/CardFamilyOffice/index.tsx" afterDir="false" />
+    <list default="true" id="7f52c6ca-1be1-47f0-ae31-ceefa39145e8" name="Changes" comment="refactor(template): add props to home template">
+      <change afterPath="$PROJECT_DIR$/content/home/pt/Footer-JSON-Content.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Text/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Text/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/Home/components/AboutItem/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/Home/components/AboutItem/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/Home/components/ButtonCompassDetails/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/Home/components/ButtonCompassDetails/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/Home/components/DetailsSectionCompass/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/Home/components/DetailsSectionCompass/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/Home/components/Footer/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/Home/components/Footer/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/Home/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/Home/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +39,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/famil/Dev/clientes/Murilhas/Azzurra/web/src/images&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/famil/Dev/clientes/Murilhas/Azzurra/web/public_dev&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -61,19 +56,24 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\web\public_dev" />
+      <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\web\public" />
       <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\web\src\images" />
-      <recent name="\\wsl$\Ubuntu-20.04\home\danielslima\Dev\freela\murilhas\azzurra\web\src\images" />
-      <recent name="\\wsl$\Ubuntu-20.04\home\danielslima\Dev\freela\murilhas\azzurra\web" />
-      <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\static\documents" />
-      <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\static\images" />
+      <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\web\src\types" />
+      <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\web\src\modules\utils" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\web\src\templates\Home\components" />
-      <recent name="\\wsl$\Ubuntu-20.04\home\danielslima\Dev\freela\murilhas\azzurra\web\src" />
-      <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\src\components\Buttons\ButtonLink" />
-      <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\src\type" />
-      <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\src" />
+      <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\web\content\home\pt" />
+      <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\web" />
+      <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\web\src\templates\Home\components\ContactSection\components" />
+      <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\web\src\templates\Home\components\NewsletterSection\components" />
+      <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\web\src\templates\Home\components\ContactSection\components\ContactForm" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ComposerRunConfigurationType" factoryName="Composer Script">
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -100,6 +100,13 @@
       <workItem from="1671811257937" duration="4920000" />
       <workItem from="1671816265119" duration="14520000" />
       <workItem from="1671832840573" duration="14586000" />
+      <workItem from="1671986602230" duration="13792000" />
+      <workItem from="1672002466480" duration="27444000" />
+      <workItem from="1672036939375" duration="5207000" />
+      <workItem from="1672077504748" duration="43934000" />
+      <workItem from="1673904009912" duration="4904000" />
+      <workItem from="1673910024168" duration="13560000" />
+      <workItem from="1673988274344" duration="20901000" />
     </task>
     <task id="LOCAL-00001" summary="feat(root): create hero layout">
       <created>1667971988256</created>
@@ -178,25 +185,288 @@
       <option name="project" value="LOCAL" />
       <updated>1671841885582</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="feat(TeamSection): create team section and organized folders">
+      <created>1671858015320</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1671858015320</updated>
+    </task>
+    <task id="LOCAL-00013" summary="feat(teamSection): create person card layout">
+      <created>1671942570192</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1671942570192</updated>
+    </task>
+    <task id="LOCAL-00014" summary="feat(teamsection): finished team section&#10;&#10;Added scroll to the card in-person bio section and added props in the&#10;PersonCard component.">
+      <created>1671989837738</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1671989837738</updated>
+    </task>
+    <task id="LOCAL-00015" summary="refactor(components): create SectionMask component">
+      <created>1671992685073</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1671992685073</updated>
+    </task>
+    <task id="LOCAL-00016" summary="feat(templates): create Investment Policy section">
+      <created>1672000941664</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1672000941664</updated>
+    </task>
+    <task id="LOCAL-00017" summary="feat(templates): create a Regulatory Information section">
+      <created>1672010528323</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1672010528323</updated>
+    </task>
+    <task id="LOCAL-00018" summary="feat(templates): create contact form section layout">
+      <created>1672018519034</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1672018519034</updated>
+    </task>
+    <task id="LOCAL-00019" summary="feat(templates): create field styles in contact form section">
+      <created>1672031524614</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1672031524614</updated>
+    </task>
+    <task id="LOCAL-00020" summary="fix(templates): fix fields focus">
+      <created>1672035145991</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1672035145991</updated>
+    </task>
+    <task id="LOCAL-00021" summary="fix(textareafield): fix textarea focus in mobile view">
+      <created>1672036187554</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1672036187554</updated>
+    </task>
+    <task id="LOCAL-00022" summary="fix(formsection): create newsletter form layout">
+      <created>1672039471340</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1672039471340</updated>
+    </task>
+    <task id="LOCAL-00023" summary="fix(footer): create logic to get it y position of the newsletter section">
+      <created>1672091483754</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1672091483754</updated>
+    </task>
+    <task id="LOCAL-00024" summary="fix(footer): create content for the footer section">
+      <created>1672102131270</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1672102131270</updated>
+    </task>
+    <task id="LOCAL-00025" summary="feat(menu): create initial layout to nav menu">
+      <created>1672116747150</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1672116747150</updated>
+    </task>
+    <task id="LOCAL-00026" summary="feat(pages): create Head component">
+      <created>1673912619067</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1673912619067</updated>
+    </task>
+    <task id="LOCAL-00027" summary="refactor(navigation): invoke the handleScroll function on initial load">
+      <created>1673912904882</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1673912904882</updated>
+    </task>
+    <task id="LOCAL-00028" summary="style(personcard): fix code style">
+      <created>1673912947502</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1673912947502</updated>
+    </task>
+    <task id="LOCAL-00029" summary="refactor(footer): disable US translate button in beta version">
+      <created>1673913043824</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1673913043824</updated>
+    </task>
+    <task id="LOCAL-00030" summary="feat(contactsection): hidde contact form in beta version">
+      <created>1673913113615</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1673913113615</updated>
+    </task>
+    <task id="LOCAL-00031" summary="refactor(contactsection): add useEffect to update contact section Y position">
+      <created>1673914459152</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1673914459152</updated>
+    </task>
+    <task id="LOCAL-00032" summary="feat: change background of nav">
+      <created>1673914603947</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1673914603947</updated>
+    </task>
+    <task id="LOCAL-00033" summary="feat(footer): add hover buttons anchors and fix offset anchors">
+      <created>1673915139088</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1673915139088</updated>
+    </task>
+    <task id="LOCAL-00034" summary="feat(footer): remove blur effect in nav">
+      <created>1673915632223</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1673915632223</updated>
+    </task>
+    <task id="LOCAL-00035" summary="fix(herobanner): fix video path">
+      <created>1673989829231</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1673989829231</updated>
+    </task>
+    <task id="LOCAL-00036" summary="chore(gatsby-config): fix unused code">
+      <created>1673989846026</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1673989846026</updated>
+    </task>
+    <task id="LOCAL-00037" summary="fix(personcard): fix the height of biography content in the personal card">
+      <created>1673990203639</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1673990203639</updated>
+    </task>
+    <task id="LOCAL-00038" summary="refactor(personcard): add bio that was empty">
+      <created>1673991370359</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1673991370359</updated>
+    </task>
+    <task id="LOCAL-00039" summary="refactor(teamsection): update text in json data">
+      <created>1674677933652</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1674677933652</updated>
+    </task>
+    <task id="LOCAL-00040" summary="refactor(home): add new files json data">
+      <created>1674683402143</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1674683402143</updated>
+    </task>
+    <task id="LOCAL-00041" summary="refactor(aboutsection): add json data file to AboutSection component">
+      <created>1674686527901</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1674686527901</updated>
+    </task>
+    <task id="LOCAL-00042" summary="refactor(investmentpolicysection): add json data file to InvestmentPolicySection component">
+      <created>1674687671909</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1674687671909</updated>
+    </task>
+    <task id="LOCAL-00043" summary="refactor(regulatoryinformationsection): add json data file to RegulatoryInformationSection component">
+      <created>1674688463447</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1674688463447</updated>
+    </task>
+    <task id="LOCAL-00044" summary="refactor(contactsection): add json data file to ContactSection component">
+      <created>1674691087223</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1674691087223</updated>
+    </task>
+    <task id="LOCAL-00045" summary="refactor(template): add props to home template">
+      <created>1674693878124</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1674693878124</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat(root): create hero layout" />
-    <MESSAGE value="feat(home): created column of the Regulatory Documents" />
-    <MESSAGE value="refactor(home): finished the home page layout" />
-    <MESSAGE value="refactor(images): converted the SVG file in a component React" />
-    <MESSAGE value="refactor(images): updated .gitignore file to ignore IDE settings" />
-    <MESSAGE value="feat(pages): created NotFound page" />
-    <MESSAGE value="refactor(root): add initial setup the project" />
-    <MESSAGE value="refactor(herobanner): finished hero banner" />
-    <MESSAGE value="refactor(herobanner): organize folder and fix code styles" />
-    <MESSAGE value="refactor(about): finished about section layout closed" />
-    <MESSAGE value="feat(detailssection): create detail view of section about" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(detailssection): create detail view of section about" />
+    <MESSAGE value="fix(footer): create logic to get it y position of the newsletter section" />
+    <MESSAGE value="fix(footer): create content for the footer section" />
+    <MESSAGE value="feat(menu): create initial layout to nav menu" />
+    <MESSAGE value="feat(pages): create Head component" />
+    <MESSAGE value="feat(contactsection): hidde contact form in version build 1" />
+    <MESSAGE value="refactor(navigation): invoke the handleScroll function on initial load" />
+    <MESSAGE value="style(personcard): fix code style" />
+    <MESSAGE value="refactor(footer): disable US translate button in beta version" />
+    <MESSAGE value="feat(contactsection): hidde contact form in beta version" />
+    <MESSAGE value="refactor(contactsection): add useEffect to update contact section Y position" />
+    <MESSAGE value="feat: change background of nav" />
+    <MESSAGE value="feat(footer): add hover buttons anchors and fix offset anchors" />
+    <MESSAGE value="feat(footer): remove blur effect in nav" />
+    <MESSAGE value="fix(herobanner): fix video path" />
+    <MESSAGE value="chore(gatsby-config): fix unused code" />
+    <MESSAGE value="fix(personcard): fix the height of biography content in the personal card" />
+    <MESSAGE value="refactor(personcard): add bio that was empty" />
+    <MESSAGE value="feat(modaç): create Modal component" />
+    <MESSAGE value="refactor(teamsection): update text in json data" />
+    <MESSAGE value="refactor(home): add new files json data" />
+    <MESSAGE value="refactor(aboutsection): add json data file to AboutSection component" />
+    <MESSAGE value="refactor(investmentpolicysection): add json data file to InvestmentPolicySection component" />
+    <MESSAGE value="refactor(regulatoryinformationsection): add json data file to RegulatoryInformationSection component" />
+    <MESSAGE value="refactor(contactsection): add json data file to ContactSection component" />
+    <MESSAGE value="refactor(template): add props to home template" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor(template): add props to home template" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
