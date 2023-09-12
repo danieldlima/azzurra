@@ -4,21 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f52c6ca-1be1-47f0-ae31-ceefa39145e8" name="Changes" comment="feat(pages): created NotFound page">
-      <change afterPath="$PROJECT_DIR$/src/components/DocumentFileCard/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/documents/11. Política de Conheça Seu Cliente e Prevenção e Combate à Lavagem de Dinheiro.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/documents/12. Código de Ética.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/documents/13. Regras, Procedimentos e Descrição dos Controles Internos.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/documents/14. Política de Compra e Venda de Valores Mobiliários.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/documents/15. Manual Previsto no art. 25 da Instrução CVM 558_15.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/documents/16. Política de Gestão de Riscos.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/documents/17. Política de Rateio e Divisão de Ordens.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/documents/5. Formulário de Referência.docx" afterDir="false" />
+    <list default="true" id="7f52c6ca-1be1-47f0-ae31-ceefa39145e8" name="Changes" comment="feat(detailssection): create detail view of section about">
+      <change afterPath="$PROJECT_DIR$/src/components/Icons/Centralization/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Icons/Consolidation/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Icons/Management/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/templates/Home/components/CardFamilyOffice/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ContentPage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContentPage/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/home.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/home.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Text/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Text/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/Home/components/AboutItem/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/Home/components/AboutItem/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/Home/components/ButtonCompassDetails/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/Home/components/ButtonCompassDetails/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/Home/components/DetailsSectionCompass/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/Home/components/DetailsSectionCompass/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,6 +24,13 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="develop" />
+      </map>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -37,36 +39,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/famil/Dev/clientes/Murilhas/Azzurra/azzurra-initial/static/documents",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\Users\\famil\\Dev\\clientes\\Murilhas\\Azzurra\\azzurra-initial\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/famil/Dev/clientes/Murilhas/Azzurra/web/src/images&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettier.import.notification.dismissed&quot;: &quot;true&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;\\\\wsl$\\Ubuntu-20.04\\home\\danielslima\\Dev\\freela\\murilhas\\azzurra\\web\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\famil\\Dev\\clientes\\Murilhas\\Azzurra\\web\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\web\src\images" />
+      <recent name="\\wsl$\Ubuntu-20.04\home\danielslima\Dev\freela\murilhas\azzurra\web\src\images" />
+      <recent name="\\wsl$\Ubuntu-20.04\home\danielslima\Dev\freela\murilhas\azzurra\web" />
       <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\static\documents" />
       <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\static\images" />
-      <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\src\static" />
-      <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\public" />
-      <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\public\static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\web\src\templates\Home\components" />
+      <recent name="\\wsl$\Ubuntu-20.04\home\danielslima\Dev\freela\murilhas\azzurra\web\src" />
       <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\src\components\Buttons\ButtonLink" />
       <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\src\type" />
       <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\src" />
-      <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial\static" />
-      <recent name="C:\Users\famil\Dev\clientes\Murilhas\Azzurra\azzurra-initial" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -83,6 +89,17 @@
       <workItem from="1668005451222" duration="29945000" />
       <workItem from="1669260064782" duration="4899000" />
       <workItem from="1669596588211" duration="7123000" />
+      <workItem from="1671495911793" duration="2276000" />
+      <workItem from="1671498251805" duration="10213000" />
+      <workItem from="1671513353798" duration="2933000" />
+      <workItem from="1671517393801" duration="10238000" />
+      <workItem from="1671753739160" duration="10543000" />
+      <workItem from="1671769813713" duration="605000" />
+      <workItem from="1671770755981" duration="8779000" />
+      <workItem from="1671806484052" duration="1775000" />
+      <workItem from="1671811257937" duration="4920000" />
+      <workItem from="1671816265119" duration="14520000" />
+      <workItem from="1671832840573" duration="14586000" />
     </task>
     <task id="LOCAL-00001" summary="feat(root): create hero layout">
       <created>1667971988256</created>
@@ -126,7 +143,42 @@
       <option name="project" value="LOCAL" />
       <updated>1668043836729</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="refactor(root): add initial setup the project">
+      <created>1671504146430</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1671504146430</updated>
+    </task>
+    <task id="LOCAL-00008" summary="refactor(herobanner): finished hero banner">
+      <created>1671762733410</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1671762733410</updated>
+    </task>
+    <task id="LOCAL-00009" summary="refactor(herobanner): organize folder and fix code styles">
+      <created>1671763219883</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1671763219883</updated>
+    </task>
+    <task id="LOCAL-00010" summary="refactor(about): finished about section layout closed">
+      <created>1671779697480</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1671779697480</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat(detailssection): create detail view of section about">
+      <created>1671841885582</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1671841885582</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,6 +191,15 @@
     <MESSAGE value="refactor(images): converted the SVG file in a component React" />
     <MESSAGE value="refactor(images): updated .gitignore file to ignore IDE settings" />
     <MESSAGE value="feat(pages): created NotFound page" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(pages): created NotFound page" />
+    <MESSAGE value="refactor(root): add initial setup the project" />
+    <MESSAGE value="refactor(herobanner): finished hero banner" />
+    <MESSAGE value="refactor(herobanner): organize folder and fix code styles" />
+    <MESSAGE value="refactor(about): finished about section layout closed" />
+    <MESSAGE value="feat(detailssection): create detail view of section about" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(detailssection): create detail view of section about" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
