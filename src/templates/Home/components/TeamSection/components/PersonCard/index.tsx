@@ -3,16 +3,18 @@ import React, { UIEvent, useEffect, useMemo, useRef, useState } from 'react';
 import useWindowSize from '@root/modules/hooks/useWindowSize';
 
 import IcArrowDown from '@components/Icons/ArrowDown';
+import { url } from 'inspector';
 
 interface PersonCardProps {
   name: string;
+  photo: string;
   bio: {
     fullName: string;
     text?: string;
   };
 }
 
-function PersonCard({ name, bio }: PersonCardProps) {
+function PersonCard({ name, photo, bio }: PersonCardProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isShadowBottom, setIsShadowBottom] = useState(false);
   const [isShadowTop, setIsShadowTop] = useState(false);
@@ -100,11 +102,15 @@ function PersonCard({ name, bio }: PersonCardProps) {
     <div
       ref={cardRef}
       className={
-        'relative w-full min-h-[350px] sm:min-h-[270px] bg-team-person-card bg-azzurra-gray-70 ' +
+        'relative w-full min-h-[350px] sm:min-h-[350px] bg-azzurra-gray-70 ' +
         'bg-cover bg-90% bg-no-repeat bg-center rounded-lg p-4 overflow-hidden'
       }
+      style={
+        {backgroundImage: `url("${photo}")`}
+      }
     >
-      <div className="w-full h-full flex items-center justify-center">
+      <div className="w-full h-full flex justify-center"
+      style={{alignItems: 'self-end'}}>
         <span
           className={
             'text-3xl block text-center font-bold text-white uppercase'

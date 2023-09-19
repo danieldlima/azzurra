@@ -9,6 +9,7 @@ import PersonCard from './components/PersonCard';
 export interface TeamCard {
   id: number;
   name: string;
+  photo: string;
   bio: {
     fullName: string;
     text: string;
@@ -47,7 +48,7 @@ function TeamSection({ data }: TeamSectionProps) {
           >
             {data.cards.map((card) => {
               return (
-                <PersonCard key={card.id} name={card.name} bio={card.bio} />
+                <PersonCard key={card.id} photo={card.photo} name={card.name} bio={card.bio} />
               );
             })}
           </div>

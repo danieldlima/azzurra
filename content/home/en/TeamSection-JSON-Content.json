@@ -7,41 +7,99 @@
     {
       "id": 0,
       "name": "Leonardo Prates",
+      "photo": "/images/profiles/10.png",
       "bio": {
-        "fullName": "",
-        "text": "15 years of experience serving important financial institutions in Brazil and abroad. Among these positions, outstanding performance as Senior Financial Advisor in International Institutions. He holds an Economics degree from PUC-SP. He holds a CGA/CGE certification from ANBIMA and is also certified asset manager/portfolio administrator at CVM."
+        "fullName": "Founding Partner and Portfolio Manager",
+        "text": "He has more than 15 years of experience in important financial institutions in Brazil and abroad. Among them, highlighted his work as a Senior Financial Advisor in International Institutions. Graduated in Economics from PUC-SP. He has the CGA / CGE (Anbima) certification. Accredited as a resource manager/portfolio administrator at the CVM."
       }
     },
     {
       "id": 1,
       "name": "Leandro Alves",
+      "photo": "/images/profiles/02.png",
       "bio": {
-        "fullName": "LEANDRO CALDEIRA ALVES",
-        "text": "He has over 7 years of experience in important financial institutions abroad as a Financial Advisor, having worked at a large Brazilian financial institution for more than 8 years. He holds a Commercial Management degree, an MBA in Business Management from Fundação Getúlio Vargas, an MBA in Commercial Management from Fundação Dom Cabral. He also holds a CPA-20 certification from ANBIMA."
+        "fullName": "Financial Advisor",
+        "text": "He has more than 7 years of experience in important financial institutions abroad as a Financial Advisor. He worked in a large Brazilian financial institution for more than 8 years. Graduated in Commercial Management, with an MBA in Business Management from Fundação Getúlio Vargas, MBA in Commercial Management from Fundação Dom Cabral. CPA-20 certified by ANBIMA."
       }
     },
     {
       "id": 2,
-      "name": "ANTONIO CARLOS",
+      "name": "Antonio Carlos",
+      "photo": "/images/profiles/04.png",
       "bio": {
-        "fullName": "ANTONIO CARLOS GOMES JUNIOR",
-        "text": "Acting as a Financial Advisor and Life and Pension Insurance Broker for the past 10 years, he has worked in large banks as a business manager in the financial sector. He holds an MBA in Finance from FGV, courses in Investment Strategies and Portfolio Management from Wharton (Penn University - USA), and the title of International Financial Advisor for global investment platforms. He is a Certified Financial Planner (CFP) and a CVM Securities Consultant."
+        "fullName": "Financial Advisor",
+        "text": "Working as a Financial Consultant and Life and Pension Insurance Broker for 10 years, he worked in large banks as a business manager in the financing area. He has an MBA in Finance from FGV, courses in Investment Strategies and Portfolio Management from Wharton (Penn University - USA), and the title of International Financial Advisor by international investment platforms. He is a professional with CFP Personal Financial Planner certification and registered with the CVM as a Securities Investment Consultant."
       }
     },
     {
       "id": 3,
-      "name": "Robson Guedes",
+      "name": "Carlos Henrique Ferreira",
+      "photo": "/images/profiles/09.png",
       "bio": {
-        "fullName": "",
-        "text": "Before acting as an asset manager, he worked as a Big Four consultant, an economist-researcher at Federação das Indústrias do Paraná (Paraná Industries Federation – FIEP) and in the financial products distribution. He holds a Bachelor’s degree in Economic Sciences and a Master’s degree in Technology, with research in valuation of technological assets. He a has CGA certification (ANBIMA) and is certified asset manager/portfolio administrator at CVM."
+        "fullName": "Financial Advisor",
+        "text": "He has more than 28 years of experience in large Brazilian financial institutions. Among his experiences, he stood out as General Manager in banks such as Safra and Itaú. Graduated in Business Administration and Postgraduate in Banking. He has the CPA-20 (ANBIMA) certification."
       }
     },
     {
       "id": 4,
-      "name": "RODRIGO MELATI",
+      "name": "Fernando Kurizini",
+      "photo": "/images/profiles/06.png",
       "bio": {
-        "fullName": "",
-        "text": "Economist, professor for managers certification from FK Partners, certified from INSPER in mergers and acquisitions (M&As), he has worked in commercial planning areas in global companies. He has also worked with managed portfolios and managed variable income funds. He holds a CGA/CGE certification from ANBIMA and is also certified asset manager/portfolio administrator at CVM."
+        "fullName": "Administrative/Financial Director",
+        "text": "He has worked in the financial market for 13 years, having spent time at major stock brokerages during his career. An economist, he has worked at Azzurra Capital since 2016, currently serving as Administrative/Financial Director. He has the CPA-20 (ANBIMA) certification."
+      }
+    },
+    {
+      "id": 5,
+      "name": "Jefferson Zinneck",
+      "photo": "/images/profiles/03.png",
+      "bio": {
+        "fullName": "Financial Advisor",
+        "text": "He has more than 30 years of experience in the Financial Market. Throughout his career he held prominent positions in large institutions such as Citibank and Banco Santander. He has a degree in engineering."
+      }
+    },
+    {
+      "id": 6,
+      "name": "Taciana Correa",
+      "photo": "/images/profiles/12.png",
+      "bio": {
+        "fullName": "Financial Advisor",
+        "text": "He has more than 10 years of experience in the Financial Market. Throughout his career he held prominent positions in large institutions such as Banco Bradesco and large industrial companies. Academic strength in mathematics."
+      }
+    },
+    {
+      "id": 7,
+      "name": "Dr. Rogério Bassit Sallum",
+      "photo": "/images/profiles/08.png",
+      "bio": {
+        "fullName": "Legal Director",
+        "text": "A lawyer for over 20 years, he has extensive experience in estate and succession planning, with an emphasis on private international law, family and succession law, real estate, notarial, registry and capital market law. As Legal Director at Azzurra Capital, he designs the best ways to structure our clients' investments, carry out planning and succession in multiple jurisdictions. He graduated in Law from Faculdades Metropolitanas Unidas (FMU), with a postgraduate degree in Civil Procedural Law from the Pontifical Catholic University of São Paulo (PUC/SP) and a postgraduate degree in Estate and Succession Planning from Fundação Getúlio Vargas (FGV)."
+      }
+    },
+    {
+      "id": 8,
+      "name": "Romero Arruda",
+      "photo": "/images/profiles/01.png",
+      "bio": {
+        "fullName": "Financial Advisor",
+        "text": "Agent in the national and international financial market with more than a decade of experience. Financial Consultant ANBIMA - CPA-20, lives and works in Brasília, in addition to also working in Goiânia. He is a lawyer focused on property legal consultancy and is a specialist in public budgeting at the Brazilian Legislative Institute-ILB. Currently, he is an analyst responsible for monitoring political and budgetary issues in the federal capital on the AZZURRA CAPITAL team."
+      }
+    },
+    {
+      "id": 9,
+      "name": "Breno de Paula",
+      "photo": "/images/profiles/07.png",
+      "bio": {
+        "fullName": "Financial Advisor",
+        "text": "He has been working in the financial market for 7 years and has CEA certification (Anbima Asset Specialist Certificate). Maintains its focus on understanding financial markets, investment strategies and risk management. Over the past three years, he has excelled in the analytical role, providing valuable insights that have significantly contributed to the success of his management teams."
+      }
+    },{
+      "id": 10,
+      "name": "Gabriela Resende",
+      "photo": "/images/profiles/azzurra__team-section__fallback-profile-img.png",
+      "bio": {
+        "fullName": "Risk and Compliance Director",
+        "text": "Graduated in law, she has been a lawyer for over 8 years, has a postgraduate degree in the Labor area and also specializes in Contracts. She has experience in managing private companies, currently director of the Risk and Compliance area at Azzurra Capital."
       }
     }
   ]
