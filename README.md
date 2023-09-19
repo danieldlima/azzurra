@@ -1,54 +1,59 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal TypeScript starter
-</h1>
+<h1><img src="./static/images/azzurra__social-media.jpg" alt="Azzurra web interface"></h1>
 
-## 🚀 Quick start
+## Web interface for Azzurra Capital
 
-1.  **Create a Gatsby site.**
+Project created with [Gatsby](https://www.gatsbyjs.com/) and [Typescript](https://www.typescriptlang.org/).
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+<br />
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby
-    ```
+### Base project and modules
 
-2.  **Start developing.**
+Clone the repository and run `yarn` from inside the root folder to install all dependencies.
 
-    Navigate into your new site’s directory and start it up.
+<br />
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+### Start
 
-3.  **Open the code and start customizing!**
+Use `yarn start` to run the app in development mode at [https://localhost:8000](http://localhost:8000/)
 
-    Your site is now running at http://localhost:8000!
+## Folder structure and relevant files
 
-    Edit `src/pages/index.tsx` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+    root
+    ├── public                             # Static files and base HTML and metadata from create-react-app
+    │
+    ├── src
+    │    ├── components                    # Components used in views
+    │    │    └── ...
+    │    │
+    │    ├── constants                     # Export named constants for the general app
+    │    │    └── ...
+    │    │
+    │    ├── images                        # Images used in views and components (svg, png, jpg, ...) to relative path
+    │    │    └── ...
+    │    │
+    │    ├── modules                       # Static assets imported at build time
+    │    │    ├── hooks                    # React hooks functions
+    │    │    │    └── ...
+    │    │    │
+    │    │    └── utils                    # Common small utility functions
+    │    │
+    │    ├── styles                        # Global styles and theme
+    │    │    └── ...
+    │    ├── pages                         # Pages for routing
+    │    │    ├── en                       # Home page for english language
+    │    │    │   └── ...
+    │    │    ├── 404.tsx                  # 404 page
+    │    │    └── index.tsx                # Home page for portuguese language
+    │    │
+    │    ├── templates                     # Templates for generating page or component used in many places
+    │    │    └── ...
+    │    │
+    │    └── types                         # Type files for components and functions
+    │         └── ...
+    │
+    │    
+    ├── tailwind.config.js                 # Tailwind configuration
+    ├── tsconfig.json                      # Typescript configuration
+    ├── tsconfig.paths.json                # Typescript project paths configuration
+    ├── gatsby-config.ts                   # Gatbsy configuration
+    └── ...
