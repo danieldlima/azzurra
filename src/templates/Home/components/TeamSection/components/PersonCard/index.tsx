@@ -189,7 +189,7 @@ function PersonCard({ name, bio }: PersonCardProps) {
             >
               <div
                 className={
-                  'overflow-y-scroll h-full before:absolute before:-bottom-[20px] before:left-2/4 ' +
+                  'ui__PersonCard__bio-container overflow-y-scroll h-full before:absolute before:-bottom-[20px] before:left-2/4 ' +
                   'before:-translate-x-2/4 before:w-[100%] before:h-8 before:rounded-[50%] before:bg-scroll-b ' +
                   'before:shadow-scroll-b ' +
                   `${

@@ -38,3 +38,23 @@
     box-shadow: none;
   }
 }
+
+.ui__PersonCard__bio-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+.ui__PersonCard__bio-container::-webkit-scrollbar-track {
+  background: rgba(221, 202, 150, 0.4);
+}
+
+/* Handle */
+.ui__PersonCard__bio-container::-webkit-scrollbar-thumb {
+  background: #6F5B3C;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+.ui__PersonCard__bio-container::-webkit-scrollbar-thumb:hover {
+  background: #625134;
+}
