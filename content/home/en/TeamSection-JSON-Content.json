@@ -101,6 +101,14 @@
         "fullName": "Risk and Compliance Director",
         "text": "Graduated in law, she has been a lawyer for over 8 years, has a postgraduate degree in the Labor area and also specializes in Contracts. She has experience in managing private companies, currently director of the Risk and Compliance area at Azzurra Capital."
       }
+    },{
+      "id": 11,
+      "name": "Paula Prates",
+      "photo": "/images/profiles/11.png",
+      "bio": {
+        "fullName": "",
+        "text": ""
+      }
     }
   ]
 }
