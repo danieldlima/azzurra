@@ -12,6 +12,7 @@ function HeadComponent({
 }: HeadComponentProps) {
   return (
     <>
+      <meta name="color-scheme" content="dark" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
       {/* @ts-ignore */}

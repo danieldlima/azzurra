@@ -180,10 +180,9 @@ function PersonCard({ name, bio }: PersonCardProps) {
             <div
               style={{ height: `calc(100% - ${bioContent.name.height}px)` }}
               className={
-                'min-h-[230px]' +
-                'card-bio-content relative after:absolute after:-top-8 after:left-2/4 after:-translate-x-2/4 ' +
-                'after:w-[150%] after:h-8 after:rounded-[50%] after:bg-scroll-t after:shadow-scroll-t ' +
-                'overflow-hidden h-[12rem] ' +
+                'card-bio-content relative after:absolute after:-top-8 after:left-2/4 ' +
+                'after:-translate-x-2/4 after:w-[150%] after:h-8 after:rounded-[50%] after:bg-scroll-t ' +
+                'after:shadow-scroll-t overflow-hidden h-[12rem] pb-4 ' +
                 `${isShadowTop ? 'after:opacity-100' : 'after:opacity-0'} `
               }
             >

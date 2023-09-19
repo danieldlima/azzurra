@@ -39,6 +39,10 @@
   }
 }
 
+.ui__PersonCard__bio-container {
+  scrollbar-color: #6F5B3C rgba(221, 202, 150, 0.4);
+}
+
 .ui__PersonCard__bio-container::-webkit-scrollbar {
   width: 8px;
 }

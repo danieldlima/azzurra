@@ -8,17 +8,17 @@
       "background": {
         "poster": "../images/azzurra__hero-banner.webp",
         "fallback": {
-          "src": "../../../../images/azzurra__hero-banner.jpg",
+          "src": "../images/azzurra__hero-banner.jpg",
           "alt": "Imagem do mar com um barco a direita"
         },
         "source": [
           {
-            "type": "webp",
+            "type": "webm",
             "src": "../video/azzurra__hero-video.webm"
           },
           {
             "type": "mp4",
-            "src": "../video/azzurra__hero-video.mp4"
+            "src": "./video/azzurra__hero-video.mp4"
           }
         ]
       }
