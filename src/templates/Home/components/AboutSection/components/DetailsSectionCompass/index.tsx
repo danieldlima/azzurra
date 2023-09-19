@@ -41,10 +41,7 @@ function DetailsSectionCompass({ data }: DetailsSectionCompassProps) {
     const element = document.getElementById('about-compass');
 
     if (aboutCompassRef.current) {
-      aboutCompassRef.current.scrollIntoView({
-        block: 'start',
-        behavior: 'smooth'
-      });
+      aboutCompassRef.current.scrollIntoView();
     } else if (!aboutCompassRef.current && element) {
       element.scrollIntoView({ block: 'start', behavior: 'smooth' });
     }

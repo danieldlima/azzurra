@@ -1,8 +1,4 @@
-import * as React from 'react';
-import { Fragment, useContext, useMemo } from 'react';
-
-import { useDimensions } from '@root/modules/hooks';
-import { HomeContext } from '@root/modules/providers';
+import React, { Fragment } from 'react';
 
 import ContactForm from '@templates/Home/components/ContactSection/components/ContactForm';
 import NewsletterForm from '@templates/Home/components/ContactSection/components/NewsletterForm';
@@ -10,11 +6,6 @@ import NewsletterForm from '@templates/Home/components/ContactSection/components
 import ButtonLink from '@components/Buttons/ButtonLink';
 import Mail from '@components/Icons/Mail';
 import Container from '@components/Layout/Container';
-
-const options = {
-  wait: 250,
-  optimizedType: 'throttle'
-} as never;
 
 export interface PhoneItem {
   label: string;
@@ -37,30 +28,11 @@ export interface ContactSectionProps {
 }
 
 function ContactSection({ data }: ContactSectionProps) {
-  const [newsletterRef, newsletterDimension] = useDimensions(options);
-  const [sectionRef, sectionDimension] = useDimensions(options);
-
-  const { footer } = useContext(HomeContext);
-
-  const yPosition = useMemo(() => {
-    return Math.abs(
-      // sectionDimension.sizes.bottom - newsletterDimension.sizes.bottom + 32
-      0
-    );
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [newsletterDimension.sizes.bottom, sectionDimension.sizes.bottom]);
-
-  if (footer?.y) {
-    footer?.y?.setValue(yPosition);
-  }
-
   if (!data) return null;
 
   return (
     <section
       id="contact"
-      ref={sectionRef}
       className={
         'relative lg:min-h-[560px] bg-contact-form bg-cover bg-bottom ' +
         'pt-20 pb-40 lg:pb-48 -mb-28'
@@ -137,7 +109,7 @@ function ContactSection({ data }: ContactSectionProps) {
           >
             <ContactForm />
 
-            <div ref={newsletterRef}>
+            <div>
               <NewsletterForm />
             </div>
           </div>
