@@ -47,6 +47,8 @@ function ContactSection({ data }: ContactSectionProps) {
       // sectionDimension.sizes.bottom - newsletterDimension.sizes.bottom + 32
       0
     );
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [newsletterDimension.sizes.bottom, sectionDimension.sizes.bottom]);
 
   if (footer?.y) {
