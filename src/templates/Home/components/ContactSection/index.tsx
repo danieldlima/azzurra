@@ -61,7 +61,7 @@ function ContactSection({ data }: ContactSectionProps) {
       ref={sectionRef}
       className={
         'relative lg:min-h-[560px] bg-contact-form bg-cover bg-bottom ' +
-        'pt-20 pb-40 lg:pb-48 mb-14 -mb-28'
+        'pt-20 pb-40 lg:pb-48 -mb-28'
       }
     >
       <Container

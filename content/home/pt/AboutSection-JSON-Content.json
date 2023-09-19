@@ -2,7 +2,7 @@
   "items": [
     {
       "id": "meet-azzurra",
-      "title": "Conheça a Azzurra Capital",
+      "title": "Conheça a Azzurra Capital 2",
       "description": ["O mundo dos investimentos é um oceano de oportunidades. Por meio da experiência de seus sócios com mais de 20 anos no setor de serviços financeiros, a Azzurra Capital navega em direção à construção e preservação do patrimônio dos nossos clientes. Atuando desde o público afluente ao Private, temos a estrutura de um Multi-Family Oﬃce focado em prover serviços de gestão de recursos no mercado doméstico e global."],
       "content": null
     },
@@ -11,14 +11,14 @@
       "title": "Por que a Azzurra Capital?",
       "description": ["Com foco no cliente e utilizando uma visão 360°, buscamos entender suas necessidades e construímos relacionamentos por meio da tomada de decisão feita em conjunto."],
       "content": {
-        "title": "Nossa visão 360º",
+        "title": "Nossa visão 360°",
         "description": [
           "Com base nas necessidades, expectativas e perfis de risco do cliente, oferecemos uma gestão de patrimônio sem conflito de interesses, utilizando uma plataforma com arquitetura aberta.",
           "A independência na escolha de parceiros e custodiantes se traduz em eficiência na execução, acesso a diferentes mercados e custos competitivos.",
           "Nossa remuneração é baseada no patrimônio sob nossa gestão."
         ],
         "button": {
-          "open": ["Focus on the client:", "360° view"],
+          "open": ["Foco no cliente:", "visão 360° view"],
           "close": "Fechar"
         },
         "features": {

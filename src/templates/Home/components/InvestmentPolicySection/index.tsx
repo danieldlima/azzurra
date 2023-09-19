@@ -1,4 +1,4 @@
-import React, { MouseEvent, useState } from 'react';
+import React, { Fragment, MouseEvent, useState } from 'react';
 import { Element, scroller } from 'react-scroll/modules';
 
 import { useBreakpointType } from '@root/modules/hooks';
@@ -92,6 +92,7 @@ function InvestmentPolicySection({ data }: InvestmentPolicySectionProps) {
               className={'mb-8 sm:mb-24 md:mb-14'}
               label={data.title as never}
             />
+
             <div
               className={
                 'md:w-2/3 mobile-landscape:w-full lg:w-full md:mx-auto investment-policy__mandala-wrapper'
@@ -133,7 +134,7 @@ function InvestmentPolicySection({ data }: InvestmentPolicySectionProps) {
                       <>
                         {step.description.map((paragraph, idx) => {
                           return (
-                            <>
+                            <Fragment key={idx}>
                               {paragraph}
                               {idx >= step.description.length ? null : (
                                 <>
@@ -141,7 +142,7 @@ function InvestmentPolicySection({ data }: InvestmentPolicySectionProps) {
                                   <br />
                                 </>
                               )}
-                            </>
+                            </Fragment>
                           );
                         })}
                       </>

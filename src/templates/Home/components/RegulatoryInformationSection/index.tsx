@@ -1,7 +1,6 @@
 import * as React from 'react';
-import { useState } from 'react';
 
-import { ParentSize } from '@visx/responsive';
+import { useElementSize } from 'usehooks-ts';
 
 import DocumentFileCard from '@components/DocumentFileCard';
 import Container from '@components/Layout/Container';
@@ -24,13 +23,9 @@ export interface RegulatoryInformationSectionProps {
 function RegulatoryInformationSection({
   data
 }: RegulatoryInformationSectionProps) {
-  const [height, setHeight] = useState(654);
+  const [documentGroupRef, { height }] = useElementSize();
 
   if (!data) return null;
-
-  function onChangeHeight(value: number) {
-    setHeight(value);
-  }
 
   return (
     <div id="regulatory-information" className={'mb-20 lg:mb-32'}>
@@ -51,27 +46,24 @@ function RegulatoryInformationSection({
             </div>
 
             <div>
-              <ParentSize
+              <div
+                ref={documentGroupRef}
                 className={
                   'grid grid-cols-2 grid-rows-4 mobile-landscape:grid-rows-2 mobile-landscape:grid-cols-4 xl:grid-cols-3' +
                   ' xl:grid-rows-3' +
                   ' justify-center lg:justify-start gap-4'
                 }
               >
-                {({ height }) => {
-                  onChangeHeight(height);
-
-                  return data.documents.map((document) => {
-                    return (
-                      <DocumentFileCard
-                        key={document.id}
-                        title={document.title}
-                        to={document.file}
-                      />
-                    );
-                  });
-                }}
-              </ParentSize>
+                {data.documents.map((document) => {
+                  return (
+                    <DocumentFileCard
+                      key={document.id}
+                      title={document.title}
+                      to={document.file}
+                    />
+                  );
+                })}
+              </div>
             </div>
           </div>
         </Container>
@@ -79,8 +71,8 @@ function RegulatoryInformationSection({
         <div
           style={{ height }}
           className={
-            'absolute bottom-0 left-1/2 w-6/12 hidden lg:flex justify-end bg-regulatory-information ' +
-            'bg-cover bg-center rounded-tl-lg rounded-bl-lg'
+            'ui__RegulatoryInformationSection__ghost-container absolute bottom-0 left-1/2 w-6/12 hidden lg:flex ' +
+            'justify-end bg-regulatory-information bg-cover bg-center rounded-tl-lg rounded-bl-lg'
           }
         />
       </div>

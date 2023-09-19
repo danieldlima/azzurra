@@ -83,7 +83,7 @@ function DetailsSectionCompass({ data }: DetailsSectionCompassProps) {
 
       <div
         className={
-          'w-full px-4 text-left -mt-6 sm:-mt-5 xl:px-0 bg-azzurra-gray-20 -mt-6 overflow-hidden transition-all' +
+          'w-full px-4 text-left sm:-mt-5 xl:px-0 bg-azzurra-gray-20 -mt-6 overflow-hidden transition-all' +
           addClassName(isDetailsOpen ? 'h-auto py-14' : 'h-0')
         }
       >
@@ -109,7 +109,7 @@ function DetailsSectionCompass({ data }: DetailsSectionCompassProps) {
               <div className={'flex flex-col gap-6 sm:gap-3'}>
                 {data.content?.description.map((paragraph, idx) => (
                   <Text
-                    key={idx}
+                    key={idx + paragraph}
                     as="p"
                     size="paragraph"
                     fontWeight="normal"
@@ -119,7 +119,7 @@ function DetailsSectionCompass({ data }: DetailsSectionCompassProps) {
                 ))}
               </div>
 
-              <div className="mb-4 sm:mb-10 text-black text-white">
+              <div className="mb-4 sm:mb-10 text-black">
                 <Text
                   as="h4"
                   size="paragraph"
