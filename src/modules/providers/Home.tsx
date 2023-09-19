@@ -1,6 +1,8 @@
-import React, { createContext, PropsWithChildren, useState } from 'react';
+import React, { createContext, ReactNode, useState } from 'react';
 
-export type HomeProviderProps = PropsWithChildren;
+export interface HomeProviderProps {
+  children: ReactNode;
+}
 
 export interface AboutCompassItem {
   isDetailsOpen: boolean;

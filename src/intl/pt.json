@@ -1,0 +1,17 @@
+{
+  "title": [
+    "Bons ventos para",
+    "os seus investimentos!"
+  ],
+  "description": "Conheça a Azzurra Capital, a gestora de recursos que vai guiar a jornada rumo ao seu futuro.",
+  "video": [
+    {
+      "type": "webp",
+      "src": "./video/azzurra__hero-video.webm"
+    },
+    {
+      "type": "mp4",
+      "src": "./video/azzurra__hero-video.mp4"
+    }
+  ]
+}

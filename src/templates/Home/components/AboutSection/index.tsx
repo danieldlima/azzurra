@@ -82,7 +82,10 @@ const AboutSection = ({ data }: AboutSectionProps) => {
               )}
             </AboutItem>
           ) : (
-            <DetailsSectionCompass data={{ id, title, description, content }} />
+            <DetailsSectionCompass
+              key={id}
+              data={{ id, title, description, content }}
+            />
           );
         })}
       </div>

@@ -111,8 +111,6 @@ const HeroBanner = ({ data }: HeroBannerProps) => {
                     <StaticImage
                       breakpoints={[320, 640, 768, 1024, 1280, 1536, 1920]}
                       quality={100}
-                      width={1920}
-                      height={1080}
                       layout={'fullWidth'}
                       imgClassName={'w-[150%] -left-2/4 sm:w-full sm:left-0'}
                       className={
