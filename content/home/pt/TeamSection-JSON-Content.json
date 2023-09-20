@@ -7,41 +7,107 @@
     {
       "id": 0,
       "name": "Leonardo Prates",
+      "photo": "/images/profiles/10.png",
       "bio": {
-        "fullName": "",
+        "fullName": "Sócio Fundador e Gestor de Carteiras",
         "text": "Possui mais de 15 anos de experiência em importantes instituições financeiras no Brasil e no Exterior. Dentre elas, destacada atuação como Senior Financial Advisor em Instituições Internacionais. Formado em Economia pela PUC-SP. Possui a certificação CGA / CGE (Anbima). Credenciado como gestor de recursos/administrador de carteiras na CVM."
       }
     },
     {
       "id": 1,
       "name": "Leandro Alves",
+      "photo": "/images/profiles/02.png",
       "bio": {
-        "fullName": "LEANDRO CALDEIRA ALVES",
+        "fullName": "Financial Advisor",
         "text": "Possui mais de 7 anos de experiência em importantes instituições financeiras no Exterior como Financial Advisor. Atuou em grande instituição financeira brasileira por mais de 8 anos. Graduado em Gestão Comercial, com MBA em Gestão de Negócios pela Fundação Getúlio Vargas, MBA em Gestão Comercial pela Fundação Dom Cabral. Possui certificação CPA-20 pela ANBIMA."
       }
     },
     {
       "id": 2,
-      "name": "ANTONIO CARLOS",
+      "name": "Antonio Carlos",
+      "photo": "/images/profiles/04.png",
       "bio": {
-        "fullName": "ANTONIO CARLOS GOMES JUNIOR",
+        "fullName": "Financial Advisor",
         "text": "Há 10 anos atuando como Financial Advisor e Corretor de Seguros de Vida e Previdência,  trabalhou em grandes bancos como gestor de negócios na área de financiamentos. Tem MBA em Finanças pela FGV, cursos de Estratégias de Investimentos e Gestão de Portfólios pela Wharton (Penn University - USA), e título de International Financial Advisor por plataformas de investimentos globais. É um profissional com certificação de Planejador Financeiro Pessoal CFP e registrado na CVM como Consultor de Investimentos Mobiliários."
       }
     },
     {
       "id": 3,
-      "name": "Robson Guedes",
+      "name": "Carlos Henrique Ferreira",
+      "photo": "/images/profiles/09.png",
       "bio": {
-        "fullName": "",
-        "text": "Antes de atuar como gestor de recursos, teve experiência como consultor em Big Four, economista-pesquisador na Federação das Indústrias do Paraná (FIEP) e no segmento de distribuição de produtos financeiros. Bacharel em Ciências Econômicas e mestre em Tecnologia, com pesquisa em valoração de ativos tecnológicos. Possui a certificação CGA (Anbima). Credenciado como gestor de recursos/administrador de carteiras na CVM."
+        "fullName": "Financial Advisor",
+        "text": "Possui mais de 28 anos de experiência em grandes instituições financeiras brasileiras. Dentre suas experiências, destacou-se na atuação como Gerente Geral em Bancos como Safra e Itaú. Formado em Administração de Empresas e Pós Graduação em Banking. Possui a certificação CPA-20 (ANBIMA)."
       }
     },
     {
       "id": 4,
-      "name": "RODRIGO MELATI",
+      "name": "Fernando Kurizini",
+      "photo": "/images/profiles/06.png",
+      "bio": {
+        "fullName": "Diretor Administrativo/Financeiro",
+        "text": "Atua no mercado financeiro há 13 anos com passagens em grandes corretoras de valores durante sua carreira. Economista, atua na Azzurra Capital desde 2016, desempenhando atualmente o papel de Diretor Administrativo/Financeiro. Possui a certificação CPA-20 (ANBIMA)."
+      }
+    },
+    {
+      "id": 5,
+      "name": "Jefferson Zinneck",
+      "photo": "/images/profiles/03.png",
+      "bio": {
+        "fullName": "Financial Advisor",
+        "text": "Possui mais de 30 anos de experiência no Mercado Financeiro. Ao decorrer de sua carreira ocupou posições de destaque em grandes instituições como Citibank e Banco Santander. Engenheiro por formação."
+      }
+    },
+    {
+      "id": 6,
+      "name": "Taciana Correa",
+      "photo": "/images/profiles/12.png",
+      "bio": {
+        "fullName": "Financial Advisor",
+        "text": "Possui mais de 10 anos de experiência no Mercado Financeiro. Ao decorrer de sua carreira ocupou posições de destaque em grandes instituições como Banco Bradesco e grandes empresas industriais. Matemática por formação."
+      }
+    },
+    {
+      "id": 7,
+      "name": "Dr. Rogério Bassit Sallum",
+      "photo": "/images/profiles/08.png",
+      "bio": {
+        "fullName": "Diretor Legal",
+        "text": "Advogado formado há mais de 20 anos, possui ampla experiência em planejamento patrimonial e sucessório, com ênfase em direito internacional privado, direito de família e sucessões, direito imobiliário, notarial, registral e mercado de capitais. Como Diretor Jurídico da Azzurra Capital, arquiteta as melhores formas de estruturar os investimentos de nossos clientes, efetuar o planejamento e a sua sucessão em múltiplas jurisdições. Graduou-se em Direito pela Faculdades Metropolitanas Unidas (FMU), sendo pós-graduado em Direito Processual Civil pela Pontifícia Universidade Católica de São Paulo (PUC/SP) e pós-graduado em Planejamento Patrimonial e Sucessório pela Fundação Getúlio Vargas (FGV)."
+      }
+    },
+    {
+      "id": 8,
+      "name": "Romero Arruda",
+      "photo": "/images/profiles/01.png",
+      "bio": {
+        "fullName": "Financial Advisor",
+        "text": "Agente no mercado financeiro nacional e internacional com mais de uma década de experiência. Consultor Financeiro ANBIMA - CPA-20, mora e atende em Brasília, além de atuar também em Goiânia. É advogado com foco em consultoria jurídica patrimonial e é especialista em orçamento público pelo Instituto Legislativo Brasileiro - ILB. Atualmente, é analista responsável pelo acompanhamento dos temas políticos e orçamentários na capital federal no time da AZZURRA CAPITAL."
+      }
+    },
+    {
+      "id": 9,
+      "name": "Breno de Paula",
+      "photo": "/images/profiles/07.png",
+      "bio": {
+        "fullName": "Financial Advisor",
+        "text": "Atua no mercado financeiro há 7 anos, possui a certificação CEA (Certificado de Especialista em Ativos Anbima). Mantém seu foco nos entendimentos dos mercados financeiros, estratégias de investimento e gestão de riscos. Nos últimos três anos, tem se destacado no papel analítico, fornecendo insights valiosos que contribuíram significativamente para o sucesso de suas equipes de gestão."
+      }
+    },{
+      "id": 10,
+      "name": "Gabriela Resende",
+      "photo": "/images/profiles/azzurra__team-section__fallback-profile-img.png",
+      "bio": {
+        "fullName": "Diretora de Risco e Compliance",
+        "text": "Formada em direito, advoga há mais de 8 anos, possui pós-graduação na área Trabalhista e também é especializada em Contratos. Tem experiência na administração de empresas privadas, atualmente diretora na área de Risco e Compliance da Azzurra Capital."
+      }
+    },{
+      "id": 11,
+      "name": "Paula Prates",
+      "photo": "/images/profiles/11.png",
       "bio": {
         "fullName": "",
-        "text": "Economista, professor de certificação para gestores pela FK Partners, certificado em fusões e aquisições pelo INSPER. Atuou em áreas de planejamento comercial em multinacionais. Atuou também com carteiras administradas e foi gestor de fundos de investimentos em renda variável. Possui a certificação CGA / CGE (Anbima). Credenciado como gestor de recursos/administrador de carteiras na CVM."
+        "text": ""
       }
     }
   ]
