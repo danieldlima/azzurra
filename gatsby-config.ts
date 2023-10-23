@@ -9,6 +9,13 @@ const config: GatsbyConfig = {
   plugins: [
     'gatsby-plugin-postcss',
     `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `photos`,
+        path: `${__dirname}/src/images`,
+      },
+    },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     'gatsby-plugin-svgr',
