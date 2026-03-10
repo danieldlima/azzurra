@@ -1,8 +1,10 @@
 import * as React from 'react';
 
 import { useLocation } from '@reach/router';
-import { HeadFC, Link, PageProps } from 'gatsby';
+import { HeadFC, Link, PageProps, navigate } from 'gatsby';
 
+import { getIsMaintenanceModeEnabled } from '@constant/maintenance';
+import { useMaintenanceMode } from '@root/modules/hooks';
 import { addClassName } from '@root/modules/utils';
 
 import NotFoundDataEn from '@content/home/en/404-JSON-Content.json';
@@ -11,9 +13,32 @@ import NotFoundDataPt from '@content/home/pt/404-JSON-Content.json';
 import ContentPage from '@components/ContentPage';
 import HeadComponent from '@components/HeadComponent';
 import ArrowLeft from '@components/Icons/ArrowLeft';
+import MaintenancePage from '@components/MaintenancePage';
 
 const NotFoundPage: React.FC<PageProps> = () => {
   const location = useLocation();
+  const isMaintenanceModeEnabled = useMaintenanceMode();
+
+  React.useEffect(() => {
+    if (!isMaintenanceModeEnabled) {
+      return;
+    }
+
+    navigate(
+      location.pathname.match(/.*(\/en\/?)/g)
+        ? '/en/maintenance/'
+        : '/maintenance/',
+      { replace: true }
+    );
+  }, [isMaintenanceModeEnabled, location.pathname]);
+
+  if (isMaintenanceModeEnabled) {
+    return (
+      <MaintenancePage
+        lang={location.pathname.match(/.*(\/en\/?)/g) ? 'en' : 'pt'}
+      />
+    );
+  }
 
   const isLngEn = /.*(\/en\/?)/g;
   const data = location.pathname.match(isLngEn)
@@ -58,6 +83,11 @@ const NotFoundPage: React.FC<PageProps> = () => {
 
 export default NotFoundPage;
 
-export const Head: HeadFC = () => (
-  <HeadComponent title="Azzurra Capital - Página não encontrada" />
-);
+export const Head: HeadFC = () =>
+  getIsMaintenanceModeEnabled() ? (
+    <HeadComponent title="Azzurra Capital - Maintenance">
+      <meta name="robots" content="noindex,nofollow" />
+    </HeadComponent>
+  ) : (
+    <HeadComponent title="Azzurra Capital - Página não encontrada" />
+  );

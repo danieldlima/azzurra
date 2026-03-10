@@ -16,6 +16,25 @@ Clone the repository and run `yarn` from inside the root folder to install all d
 
 Use `yarn start` to run the app in development mode at [https://localhost:8000](http://localhost:8000/)
 
+### Maintenance mode
+
+This project can be switched into maintenance mode with the `GATSBY_MAINTENANCE_MODE` environment variable.
+
+This repository reads the maintenance flag only from the root `.env` file loaded by `gatsby-config.ts`.
+
+- Set `GATSBY_MAINTENANCE_MODE=true` in `.env` to enable maintenance mode.
+- Set `GATSBY_MAINTENANCE_MODE=false` in `.env` to disable maintenance mode.
+
+An `.env.example` file is included as the template for the root `.env`.
+
+When the flag is enabled:
+
+- Gatsby pages render a maintenance screen instead of the website.
+- In development, `/` and `/en/` also redirect to `/maintenance/` and `/en/maintenance/` so the switch is obvious during testing.
+- The build generates a minimal Apache `.htaccess` for Locaweb hosting. When maintenance is enabled, it rewrites public requests to `/maintenance.html`, which prevents the public site and PHP contact endpoint from being accessed.
+
+Disable the flag and rebuild to publish the normal site again.
+
 ## Folder structure and relevant files
 
     root

@@ -2,5 +2,8 @@ node_modules/
 .cache/
 public
 src/types/gatsby-types.d.ts
+.env
+.env.*
+!.env.example
 
 .idea/*

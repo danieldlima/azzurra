@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import type { HeadFC, PageProps } from 'gatsby';
+import { navigate, type HeadFC, type PageProps } from 'gatsby';
 
 import AboutSection from '@content/home/pt/AboutSection-JSON-Content.json';
 import ContactSection from '@content/home/pt/ContactSection-JSON-Content.json';
@@ -15,10 +15,26 @@ import HeadquartersSection from '@content/home/pt/HeadquartersSection-JSON-Conte
 import Home from '@templates/Home';
 import { FooterProps } from '@templates/Home/components/Footer';
 
+import { getIsMaintenanceModeEnabled } from '@constant/maintenance';
+import { useMaintenanceMode } from '@root/modules/hooks';
+
 import HeadComponent from '@components/HeadComponent';
 import Navigation from '@components/Layout/Navigation';
+import MaintenancePage from '@components/MaintenancePage';
 
 const IndexPage: React.FC<PageProps> = () => {
+  const isMaintenanceModeEnabled = useMaintenanceMode();
+
+  React.useEffect(() => {
+    if (isMaintenanceModeEnabled && window.location.pathname !== '/maintenance/') {
+      navigate('/maintenance/', { replace: true });
+    }
+  }, [isMaintenanceModeEnabled]);
+
+  if (isMaintenanceModeEnabled) {
+    return <MaintenancePage lang="pt" />;
+  }
+
   return (
     <>
       <Navigation data={NavItems} />
@@ -40,4 +56,11 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <HeadComponent />;
+export const Head: HeadFC = () =>
+  getIsMaintenanceModeEnabled() ? (
+    <HeadComponent title="Azzurra Capital - Manutencao">
+      <meta name="robots" content="noindex,nofollow" />
+    </HeadComponent>
+  ) : (
+    <HeadComponent />
+  );
